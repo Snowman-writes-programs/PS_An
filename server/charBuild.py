@@ -100,12 +100,16 @@ def charBuildSetDefaultSkill():
         }
     }
 
+    saved_data = read_json(USER_JSON_PATH)
 
     data["playerDataDelta"]["modified"]["troop"]["chars"].update({
         str(charInstId): {
             "defaultSkillIndex": defaultSkillIndex
         }
     })
+
+    saved_data["user"]["troop"]["chars"][str(charInstId)]["defaultSkillIndex"] = defaultSkillIndex
+    write_json(saved_data, USER_JSON_PATH)
 
     return data
 
