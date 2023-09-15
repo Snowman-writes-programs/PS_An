@@ -228,3 +228,20 @@ def questGetAssistList():
     }
 
     return data
+
+
+def markStoryAcceKnown():
+    return {"playerDataDelta": {"modified": {"storyreview": {"tags": {"knownStoryAcceleration": 1}}}, "deleted": {}}}
+
+
+def confirmBattleCar():
+    return {
+        "playerDataDelta": {
+            "modified": {
+                "car": {
+                    "battleCar": request.get_json()["car"]
+                }
+            },
+            "deleted": {}
+        }
+    }

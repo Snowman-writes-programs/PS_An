@@ -98,6 +98,13 @@ app.add_url_rule('/quest/changeSquadName', methods=['POST'], view_func=quest.que
 app.add_url_rule('/quest/squadFormation', methods=['POST'], view_func=quest.questSquadFormation)
 app.add_url_rule('/quest/getAssistList', methods=['POST'], view_func=quest.questGetAssistList)
 
+app.add_url_rule('/storyreview/markStoryAcceKnown', methods=['POST'], view_func=quest.markStoryAcceKnown)
+
+app.add_url_rule('/act25side/battleStart', methods=['POST'], view_func=quest.questBattleStart)
+app.add_url_rule('/act25side/battleFinish', methods=['POST'], view_func=quest.questBattleFinish)
+
+app.add_url_rule('/car/confirmBattleCar', methods=['POST'], view_func=quest.confirmBattleCar)
+
 app.add_url_rule('/rlv2/createGame', methods=['POST'], view_func=rlv2.rlv2CreateGame)
 app.add_url_rule('/rlv2/chooseInitialRelic', methods=['POST'], view_func=rlv2.rlv2ChooseInitialRelic)
 app.add_url_rule('/rlv2/selectChoice', methods=['POST'], view_func=rlv2.rlv2SelectChoice)
