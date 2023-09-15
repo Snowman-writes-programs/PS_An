@@ -127,23 +127,17 @@ def charBuildChangeCharSkin():
         }
     }
 
-    if charInstId and skinId:
+    saved_data = read_json(USER_JSON_PATH)
+    data["playerDataDelta"]["modified"]["troop"]["chars"].update({
+        str(charInstId): {
+            "skin": skinId
+        }
+    })
 
-        saved_data = read_json(USER_JSON_PATH)
-        data["playerDataDelta"]["modified"]["troop"]["chars"].update({
-            str(charInstId): {
-                "skin": skinId
-            }
-        })
+    saved_data["user"]["troop"]["chars"][str(charInstId)]["skin"] = skinId
+    write_json(saved_data, USER_JSON_PATH)
 
-        saved_data["user"]["troop"]["chars"].update({
-            str(charInstId): {
-                "skin": skinId
-            }
-        })
-        write_json(saved_data, USER_JSON_PATH)
-
-        return data
+    return data
 
 
 def charBuildSetEquipment():
@@ -163,27 +157,21 @@ def charBuildSetEquipment():
         }
     }
 
-    if charInstId and equipId:
-
-        saved_data = read_json(USER_JSON_PATH)
-        data["playerDataDelta"]["modified"].update({
-            "troop": {
-                "chars": {
-                    str(charInstId): {
-                        "currentEquip": equipId
-                    }
+    saved_data = read_json(USER_JSON_PATH)
+    data["playerDataDelta"]["modified"].update({
+        "troop": {
+            "chars": {
+                str(charInstId): {
+                    "currentEquip": equipId
                 }
             }
-        })
+        }
+    })
 
-        saved_data["user"]["troop"]["chars"].update({
-            str(charInstId): {
-                "currentEquip": equipId
-            }
-        })
-        write_json(saved_data, USER_JSON_PATH)
+    saved_data["user"]["troop"]["chars"][str(charInstId)]["currentEquip"] = equipId
+    write_json(saved_data, USER_JSON_PATH)
 
-        return data
+    return data
 
 
 def charBuildChangeCharTemplate():
@@ -207,11 +195,7 @@ def charBuildChangeCharTemplate():
     }
 
     saved_data = read_json(USER_JSON_PATH)
-    saved_data["user"]["troop"]["chars"].update({
-        str(request_data["charInstId"]): {
-            "currentTmpl": request_data["templateId"]
-        }
-    })
+    saved_data["user"]["troop"]["chars"][str(request_data["charInstId"])]["currentTmpl"] = request_data["templateId"]
     write_json(saved_data, USER_JSON_PATH)
 
     return data
