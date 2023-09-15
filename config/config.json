@@ -81,6 +81,9 @@
     "crisisConfig": {
         "selectedCrisis": "cc12"
     },
+    "towerConfig": {
+        "season": "tower_season_3"
+    },
     "userConfig": {
         "restorePreviousStates": {
             "is2": false,

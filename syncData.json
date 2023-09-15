@@ -3691,6 +3691,30 @@
 						"reward": [1, 2, 3, 4, 5, 6],
 						"unlockHard": true,
 						"hardBest": 0
+					},
+					"tower_n_07": {
+						"best": 6,
+						"reward": [1, 2, 3, 4, 5, 6],
+						"unlockHard": true,
+						"hardBest": 0
+					},
+					"tower_n_08": {
+						"best": 6,
+						"reward": [1, 2, 3, 4, 5, 6],
+						"unlockHard": true,
+						"hardBest": 0
+					},
+					"tower_n_09": {
+						"best": 6,
+						"reward": [1, 2, 3, 4, 5, 6],
+						"unlockHard": true,
+						"hardBest": 0
+					},
+					"tower_n_10": {
+						"best": 6,
+						"reward": [1, 2, 3, 4, 5, 6],
+						"unlockHard": true,
+						"hardBest": 0
 					}
 				},
 				"hasTowerPass": 1,
@@ -3750,7 +3774,87 @@
 						"value": 15,
 						"target": 15,
 						"hasRecv": true
-					}
+					},
+					"tower_season2_1": {
+                        "value": 1,
+                        "target": 1,
+                        "hasRecv": true
+                    },
+                    "tower_season2_2": {
+                        "value": 1,
+                        "target": 1,
+                        "hasRecv": true
+                    },
+                    "tower_season2_3": {
+                        "value": 1,
+                        "target": 1,
+                        "hasRecv": true
+                    },
+                    "tower_season2_4": {
+                        "value": 1,
+                        "target": 1,
+                        "hasRecv": true
+                    },
+                    "tower_season2_5": {
+                        "value": 1,
+                        "target": 1,
+                        "hasRecv": true
+                    },
+                    "tower_season2_6": {
+                        "value": 1,
+                        "target": 1,
+                        "hasRecv": true
+                    },
+                    "tower_season2_7": {
+                        "value": 15,
+                        "target": 15,
+                        "hasRecv": true
+                    },
+                    "tower_season2_8": {
+                        "value": 15,
+                        "target": 15,
+                        "hasRecv": true
+                    },
+                    "tower_season3_1": {
+                        "value": 1,
+                        "target": 1,
+                        "hasRecv": true
+                    },
+                    "tower_season3_2": {
+                        "value": 1,
+                        "target": 1,
+                        "hasRecv": true
+                    },
+                    "tower_season3_3": {
+                        "value": 1,
+                        "target": 1,
+                        "hasRecv": true
+                    },
+                    "tower_season3_4": {
+                        "value": 1,
+                        "target": 1,
+                        "hasRecv": true
+                    },
+                    "tower_season3_5": {
+                        "value": 1,
+                        "target": 1,
+                        "hasRecv": true
+                    },
+                    "tower_season3_6": {
+                        "value": 1,
+                        "target": 1,
+                        "hasRecv": true
+                    },
+                    "tower_season3_7": {
+                        "value": 15,
+                        "target": 15,
+                        "hasRecv": true
+                    },
+                    "tower_season3_8": {
+                        "value": 15,
+                        "target": 15,
+                        "hasRecv": true
+                    }
 				},
 				"passWithGodCard": {},
 				"slots": {},

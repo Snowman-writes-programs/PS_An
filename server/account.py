@@ -527,6 +527,10 @@ def accountSyncData():
     player_data["user"]["status"]["secretarySkinId"] = secretarySkinId
     player_data["user"]["background"]["selected"] = background
 
+    season = config["towerConfig"]["season"]
+
+    player_data["user"]["tower"]["season"]["id"] = season
+
     write_json(player_data, USER_JSON_PATH)
     
     return player_data
