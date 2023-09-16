@@ -2269,7 +2269,15 @@
                                 "enemy_atk_3": 3,
                                 "enemy_dklord_3": 3,
                                 "enemy_dzom_3": 3,
-                                "enemy_defmagicresis_3": 3
+                                "enemy_defmagicresis_3": 3,
+                                "enemy_manfri_amod_3": 3,
+                                "enemy_manfri_bmod_3": 3,
+                                "global_costrecovery_3": 3,
+                                "global_squadnum_2": 3,
+                                "enemy_dmech_hidden_2": 3,
+                                "global_forbidloc_lt_1": 3,
+                                "enemy_def_1": 3,
+                                "trap_gunctrl_1": 3
                             },
                             "point": 9999,
                             "challenge": {
