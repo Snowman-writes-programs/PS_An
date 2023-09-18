@@ -53,45 +53,9 @@
                     "fts": 1665223849,
                     "rts": 1665223886
                 }
-            },
-            "hideStages": {
-                "act19side_s01": {
-                    "missions": [
-                        {
-                            "value": 1,
-                            "target": 1
-                        },
-                        {
-                            "value": 1,
-                            "target": 1
-                        }
-                    ],
-                    "unlock": 1
-                },
-                "act19side_s02": {
-                    "missions": [
-                        {
-                            "value": 1,
-                            "target": 1
-                        },
-                        {
-                            "value": 1,
-                            "target": 1
-                        }
-                    ],
-                    "unlock": 1
-                }
             }
         },
-        "activity": {
-            "TYPE_ACT9D0": {
-                "act22side": {
-                    "isOpen": true,
-                    "coin": 0,
-                    "favorList": []
-                }
-            }
-        },
+        "activity": {},
         "status": {
             "nickName": "Doctorate",
             "nickNumber": "1111",
@@ -244,229 +208,7 @@
         },
         "equipment": {},
         "skin": {},
-        "mission": {
-            "missions": {
-                "ACTIVITY": {
-                    "22sideActivity_1": {
-                        "state": 3,
-                        "progress": [
-                            {
-                                "target": 1,
-                                "value": 1
-                            }
-                        ]
-                    },
-                    "22sideActivity_2": {
-                        "state": 3,
-                        "progress": [
-                            {
-                                "target": 1,
-                                "value": 1
-                            }
-                        ]
-                    },
-                    "22sideActivity_3": {
-                        "state": 3,
-                        "progress": [
-                            {
-                                "target": 1,
-                                "value": 1
-                            }
-                        ]
-                    },
-                    "22sideActivity_4": {
-                        "state": 3,
-                        "progress": [
-                            {
-                                "target": 1,
-                                "value": 1
-                            }
-                        ]
-                    },
-                    "22sideActivity_5": {
-                        "state": 3,
-                        "progress": [
-                            {
-                                "target": 1,
-                                "value": 1
-                            }
-                        ]
-                    },
-                    "22sideActivity_6": {
-                        "state": 3,
-                        "progress": [
-                            {
-                                "target": 1,
-                                "value": 1
-                            }
-                        ]
-                    },
-                    "22sideActivity_7": {
-                        "state": 3,
-                        "progress": [
-                            {
-                                "target": 1,
-                                "value": 1
-                            }
-                        ]
-                    },
-                    "22sideActivity_8": {
-                        "state": 3,
-                        "progress": [
-                            {
-                                "target": 1,
-                                "value": 1
-                            }
-                        ]
-                    },
-                    "22sideActivity_9": {
-                        "state": 3,
-                        "progress": [
-                            {
-                                "target": 1,
-                                "value": 1
-                            }
-                        ]
-                    },
-                    "22sideActivity_10": {
-                        "state": 3,
-                        "progress": [
-                            {
-                                "target": 1,
-                                "value": 1
-                            }
-                        ]
-                    },
-                    "22sideActivity_11": {
-                        "state": 3,
-                        "progress": [
-                            {
-                                "target": 1,
-                                "value": 1
-                            }
-                        ]
-                    },
-                    "22sideActivity_12": {
-                        "state": 3,
-                        "progress": [
-                            {
-                                "target": 1,
-                                "value": 1
-                            }
-                        ]
-                    },
-                    "22sideActivity_13": {
-                        "state": 3,
-                        "progress": [
-                            {
-                                "target": 1,
-                                "value": 1
-                            }
-                        ]
-                    },
-                    "22sideActivity_14": {
-                        "state": 3,
-                        "progress": [
-                            {
-                                "target": 1,
-                                "value": 1
-                            }
-                        ]
-                    },
-                    "22sideActivity_15": {
-                        "state": 3,
-                        "progress": [
-                            {
-                                "target": 1,
-                                "value": 1
-                            }
-                        ]
-                    },
-                    "22sideActivity_16": {
-                        "state": 3,
-                        "progress": [
-                            {
-                                "target": 1,
-                                "value": 1
-                            }
-                        ]
-                    },
-                    "22sideActivity_17": {
-                        "state": 3,
-                        "progress": [
-                            {
-                                "target": 1,
-                                "value": 1
-                            }
-                        ]
-                    },
-                    "22sideActivity_18": {
-                        "state": 3,
-                        "progress": [
-                            {
-                                "target": 1,
-                                "value": 1
-                            }
-                        ]
-                    },
-                    "22sideActivity_19": {
-                        "state": 3,
-                        "progress": [
-                            {
-                                "target": 1,
-                                "value": 1
-                            }
-                        ]
-                    },
-                    "22sideActivity_20": {
-                        "state": 3,
-                        "progress": [
-                       
-                            {
-                                "target": 1,
-                                "value": 1
-                            }
-                        ]
-                    },
-                    "22sideActivity_21": {
-                        "state": 3,
-                        "progress": [
-                            {
-                                "target": 1,
-                                "value": 1
-                            }
-                        ]
-                    },
-                    "22sideActivity_22": {
-                        "state": 3,
-                        "progress": [
-                            {
-                                "target": 1,
-                                "value": 1
-                            }
-                        ]
-                    },
-                    "22sideActivity_23": {
-                        "state": 3,
-                        "progress": [
-                            {
-                                "target": 1,
-                                "value": 1
-                            }
-                        ]
-                    },
-                    "22sideActivity_24": {
-                        "state": 3,
-                        "progress": [
-                            {
-                                "target": 1,
-                                "value": 1
-                            }
-                        ]
-                    }
-                }
-            }
-        },
+        "mission": {},
         "dexNav": {
             "character": {},
             "formula": {},
@@ -3942,20 +3684,20 @@
         "ticket": {},
         "car": {
             "battleCar": {
-                "ROOF": "durcar_gear_b_1_2",
-                "HEADSTOCK": "durcar_gear_a_2_2",
-                "TRUNK_01": "durcar_gear_c_3_3",
-                "TRUNK_02": "durcar_gear_c_3_3",
-                "CAR_OS_01": "durcar_soft_6_sp",
-                "CAR_OS_02": "durcar_soft_5_sp"
+                "ROOF": null,
+                "HEADSTOCK": null,
+                "TRUNK_01": null,
+                "TRUNK_02": null,
+                "CAR_OS_01": null,
+                "CAR_OS_02": null
             },
             "exhibitionCar": {
-                "ROOF": "durcar_gear_b_1_2",
-                "HEADSTOCK": "durcar_gear_a_3_3",
-                "TRUNK_01": "durcar_gear_c_3_3",
-                "TRUNK_02": "durcar_gear_c_3_3",
-                "CAR_OS_01": "durcar_soft_5_sp",
-                "CAR_OS_02": "durcar_soft_7_sp"
+                "ROOF": null,
+                "HEADSTOCK": null,
+                "TRUNK_01": null,
+                "TRUNK_02": null,
+                "CAR_OS_01": null,
+                "CAR_OS_02": null
             },
             "accessories": {}
         }
