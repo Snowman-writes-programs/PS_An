@@ -108,6 +108,7 @@ app.add_url_rule('/car/confirmBattleCar', methods=['POST'], view_func=quest.conf
 app.add_url_rule('/retro/typeAct20side/competitionStart', methods=['POST'], view_func=quest.typeAct20side_competitionStart)
 app.add_url_rule('/retro/typeAct20side/competitionFinish', methods=['POST'], view_func=quest.typeAct20side_competitionFinish)
 
+app.add_url_rule('/rlv2/giveUpGame', methods=['POST'], view_func=rlv2.rlv2GiveUpGame)
 app.add_url_rule('/rlv2/createGame', methods=['POST'], view_func=rlv2.rlv2CreateGame)
 app.add_url_rule('/rlv2/chooseInitialRelic', methods=['POST'], view_func=rlv2.rlv2ChooseInitialRelic)
 app.add_url_rule('/rlv2/selectChoice', methods=['POST'], view_func=rlv2.rlv2SelectChoice)
