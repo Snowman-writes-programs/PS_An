@@ -1836,7 +1836,13 @@
                         },
                         "mission": {}
                     },
-                    "record": {}
+                    "record": {
+                        "last": 1695000000,
+                        "modeCnt": {},
+                        "endingCnt": {},
+                        "stageCnt": {},
+                        "bandCnt": {}
+                    }
                 },
                 "rogue_2": {
                     "bank": {
@@ -1852,62 +1858,245 @@
                         },
                         "totalPut": 999
                     },
-                    "bp": {},
+                    "bp": {
+                        "point": 61000,
+                        "reward": {
+                            "bp_level_1": 1,
+                            "bp_level_2": 1,
+                            "bp_level_3": 1,
+                            "bp_level_4": 1,
+                            "bp_level_5": 1,
+                            "bp_level_6": 1,
+                            "bp_level_7": 1,
+                            "bp_level_8": 1,
+                            "bp_level_9": 1,
+                            "bp_level_10": 1,
+                            "bp_level_11": 1,
+                            "bp_level_12": 1,
+                            "bp_level_13": 1,
+                            "bp_level_14": 1,
+                            "bp_level_15": 1,
+                            "bp_level_16": 1,
+                            "bp_level_17": 1,
+                            "bp_level_18": 1,
+                            "bp_level_19": 1,
+                            "bp_level_20": 1,
+                            "bp_level_21": 1,
+                            "bp_level_22": 1,
+                            "bp_level_23": 1,
+                            "bp_level_24": 1,
+                            "bp_level_25": 1,
+                            "bp_level_26": 1,
+                            "bp_level_27": 1,
+                            "bp_level_28": 1,
+                            "bp_level_29": 1,
+                            "bp_level_30": 1,
+                            "bp_level_31": 1,
+                            "bp_level_32": 1,
+                            "bp_level_33": 1,
+                            "bp_level_34": 1,
+                            "bp_level_35": 1,
+                            "bp_level_36": 1,
+                            "bp_level_37": 1,
+                            "bp_level_38": 1,
+                            "bp_level_39": 1,
+                            "bp_level_40": 1,
+                            "bp_level_41": 1,
+                            "bp_level_42": 1,
+                            "bp_level_43": 1,
+                            "bp_level_44": 1,
+                            "bp_level_45": 1,
+                            "bp_level_46": 1,
+                            "bp_level_47": 1,
+                            "bp_level_48": 1,
+                            "bp_level_49": 1,
+                            "bp_level_50": 1,
+                            "bp_level_51": 1,
+                            "bp_level_52": 1,
+                            "bp_level_53": 1,
+                            "bp_level_54": 1,
+                            "bp_level_55": 1,
+                            "bp_level_56": 1,
+                            "bp_level_57": 1,
+                            "bp_level_58": 1,
+                            "bp_level_59": 1,
+                            "bp_level_60": 1,
+                            "bp_level_61": 1,
+                            "bp_level_62": 1,
+                            "bp_level_63": 1,
+                            "bp_level_64": 1,
+                            "bp_level_65": 1,
+                            "bp_level_66": 1,
+                            "bp_level_67": 1,
+                            "bp_level_68": 1,
+                            "bp_level_69": 1,
+                            "bp_level_70": 1,
+                            "bp_level_71": 1,
+                            "bp_level_72": 1,
+                            "bp_level_73": 1,
+                            "bp_level_74": 1,
+                            "bp_level_75": 1,
+                            "bp_level_76": 1,
+                            "bp_level_77": 1,
+                            "bp_level_78": 1,
+                            "bp_level_79": 1,
+                            "bp_level_80": 1,
+                            "bp_level_81": 1,
+                            "bp_level_82": 1,
+                            "bp_level_83": 1,
+                            "bp_level_84": 1,
+                            "bp_level_85": 1,
+                            "bp_level_86": 1,
+                            "bp_level_87": 1,
+                            "bp_level_88": 1,
+                            "bp_level_89": 1,
+                            "bp_level_90": 1,
+                            "bp_level_91": 1,
+                            "bp_level_92": 1,
+                            "bp_level_93": 1,
+                            "bp_level_94": 1,
+                            "bp_level_95": 1,
+                            "bp_level_96": 1,
+                            "bp_level_97": 1,
+                            "bp_level_98": 1,
+                            "bp_level_99": 1,
+                            "bp_level_100": 1,
+                            "bp_level_101": 1,
+                            "bp_level_102": 1,
+                            "bp_level_103": 1,
+                            "bp_level_104": 1,
+                            "bp_level_105": 1,
+                            "bp_level_106": 1,
+                            "bp_level_107": 1,
+                            "bp_level_108": 1,
+                            "bp_level_109": 1,
+                            "bp_level_110": 1,
+                            "bp_level_111": 1,
+                            "bp_level_112": 1,
+                            "bp_level_113": 1,
+                            "bp_level_114": 1,
+                            "bp_level_115": 1,
+                            "bp_level_116": 1,
+                            "bp_level_117": 1,
+                            "bp_level_118": 1,
+                            "bp_level_119": 1,
+                            "bp_level_120": 1,
+                            "bp_level_121": 1,
+                            "bp_level_122": 1,
+                            "bp_level_123": 1,
+                            "bp_level_124": 1,
+                            "bp_level_125": 1,
+                            "bp_level_126": 1,
+                            "bp_level_127": 1,
+                            "bp_level_128": 1,
+                            "bp_level_129": 1,
+                            "bp_level_130": 1,
+                            "bp_level_131": 1,
+                            "bp_level_132": 1,
+                            "bp_level_133": 1,
+                            "bp_level_134": 1,
+                            "bp_level_135": 1,
+                            "bp_level_136": 1,
+                            "bp_level_137": 1,
+                            "bp_level_138": 1,
+                            "bp_level_139": 1,
+                            "bp_level_140": 1,
+                            "bp_level_141": 1,
+                            "bp_level_142": 1,
+                            "bp_level_143": 1,
+                            "bp_level_144": 1,
+                            "bp_level_145": 1,
+                            "bp_level_146": 1,
+                            "bp_level_147": 1,
+                            "bp_level_148": 1,
+                            "bp_level_149": 1,
+                            "bp_level_150": 1,
+                            "bp_level_151": 1,
+                            "bp_level_152": 1,
+                            "bp_level_153": 1,
+                            "bp_level_154": 1,
+                            "bp_level_155": 1,
+                            "bp_level_156": 1,
+                            "bp_level_157": 1,
+                            "bp_level_158": 1,
+                            "bp_level_159": 1,
+                            "bp_level_160": 1,
+                            "bp_level_161": 1,
+                            "bp_level_162": 1,
+                            "bp_level_163": 1,
+                            "bp_level_164": 1,
+                            "bp_level_165": 1,
+                            "bp_level_166": 1,
+                            "bp_level_167": 1,
+                            "bp_level_168": 1,
+                            "bp_level_169": 1,
+                            "bp_level_170": 1
+                        }
+                    },
                     "buff": {
-                        "pointOwned": 89,
-                        "pointCost": 89,
+                        "pointOwned": 112,
+                        "pointCost": 112,
                         "unlocked": {
                             "rogue_2_outbuff_1": 1,
                             "rogue_2_outbuff_2": 1,
-                            "rogue_2_outbuff_20": 1,
+                            "rogue_2_outbuff_3": 1,
+                            "rogue_2_outbuff_4": 1,
+                            "rogue_2_outbuff_5": 1,
+                            "rogue_2_outbuff_6": 1,
+                            "rogue_2_outbuff_7": 1,
+                            "rogue_2_outbuff_8": 1,
+                            "rogue_2_outbuff_9": 1,
+                            "rogue_2_outbuff_10": 1,
+                            "rogue_2_outbuff_11": 1,
+                            "rogue_2_outbuff_12": 1,
+                            "rogue_2_outbuff_13": 1,
+                            "rogue_2_outbuff_14": 1,
+                            "rogue_2_outbuff_15": 1,
+                            "rogue_2_outbuff_16": 1,
                             "rogue_2_outbuff_17": 1,
                             "rogue_2_outbuff_18": 1,
-                            "rogue_2_outbuff_21": 1,
-                            "rogue_2_outbuff_23": 1,
                             "rogue_2_outbuff_19": 1,
+                            "rogue_2_outbuff_20": 1,
+                            "rogue_2_outbuff_21": 1,
                             "rogue_2_outbuff_22": 1,
+                            "rogue_2_outbuff_23": 1,
                             "rogue_2_outbuff_24": 1,
                             "rogue_2_outbuff_25": 1,
                             "rogue_2_outbuff_26": 1,
                             "rogue_2_outbuff_27": 1,
-                            "rogue_2_outbuff_3": 1,
                             "rogue_2_outbuff_28": 1,
                             "rogue_2_outbuff_29": 1,
-                            "rogue_2_outbuff_4": 1,
-                            "rogue_2_outbuff_39": 1,
-                            "rogue_2_outbuff_40": 1,
-                            "rogue_2_outbuff_5": 1,
-                            "rogue_2_outbuff_6": 1,
-                            "rogue_2_outbuff_7": 1,
                             "rogue_2_outbuff_30": 1,
                             "rogue_2_outbuff_31": 1,
                             "rogue_2_outbuff_32": 1,
                             "rogue_2_outbuff_33": 1,
                             "rogue_2_outbuff_34": 1,
+                            "rogue_2_outbuff_35": 1,
                             "rogue_2_outbuff_36": 1,
                             "rogue_2_outbuff_37": 1,
                             "rogue_2_outbuff_38": 1,
-                            "rogue_2_outbuff_8": 1,
-                            "rogue_2_outbuff_10": 1,
-                            "rogue_2_outbuff_9": 1,
-                            "rogue_2_outbuff_11": 1,
-                            "rogue_2_outbuff_13": 1,
-                            "rogue_2_outbuff_14": 1,
-                            "rogue_2_outbuff_12": 1,
-                            "rogue_2_outbuff_15": 1,
+                            "rogue_2_outbuff_39": 1,
+                            "rogue_2_outbuff_40": 1,
                             "rogue_2_outbuff_41": 1,
                             "rogue_2_outbuff_42": 1,
                             "rogue_2_outbuff_43": 1,
+                            "rogue_2_outbuff_44": 1,
+                            "rogue_2_outbuff_45": 1,
+                            "rogue_2_outbuff_46": 1,
                             "rogue_2_outbuff_47": 1,
                             "rogue_2_outbuff_48": 1,
                             "rogue_2_outbuff_49": 1,
-                            "rogue_2_outbuff_44": 1,
-                            "rogue_2_outbuff_45": 1,
-                            "rogue_2_outbuff_35": 1,
-                            "rogue_2_outbuff_16": 1,
-                            "rogue_2_outbuff_46": 1
+                            "rogue_2_outbuff_50": 1,
+                            "rogue_2_outbuff_51": 1,
+                            "rogue_2_outbuff_52": 1,
+                            "rogue_2_outbuff_53": 1,
+                            "rogue_2_outbuff_54": 1,
+                            "rogue_2_outbuff_55": 1,
+                            "rogue_2_outbuff_56": 1,
+                            "rogue_2_outbuff_57": 1,
+                            "rogue_2_outbuff_58": 1
                         },
-                        "score": 17800
+                        "score": 0
                     },
                     "collect": {
                         "relic": {
@@ -2149,10 +2338,7 @@
                             },
                             "rogue_2_relic_grace_63": {
                                 "state": 2,
-                                "progress": [
-                                    0,
-                                    1
-                                ]
+                                "progress": null
                             },
                             "rogue_2_relic_grace_64": {
                                 "state": 2,
@@ -2174,11 +2360,43 @@
                                 "state": 2,
                                 "progress": null
                             },
+                            "rogue_2_relic_grace_69": {
+                                "state": 2,
+                                "progress": null
+                            },
+                            "rogue_2_relic_grace_70": {
+                                "state": 2,
+                                "progress": null
+                            },
+                            "rogue_2_relic_grace_71": {
+                                "state": 2,
+                                "progress": null
+                            },
+                            "rogue_2_relic_grace_72": {
+                                "state": 2,
+                                "progress": null
+                            },
+                            "rogue_2_relic_grace_73": {
+                                "state": 2,
+                                "progress": null
+                            },
+                            "rogue_2_relic_grace_74": {
+                                "state": 2,
+                                "progress": null
+                            },
+                            "rogue_2_relic_grace_75": {
+                                "state": 2,
+                                "progress": null
+                            },
                             "rogue_2_relic_grace_76": {
                                 "state": 2,
                                 "progress": null
                             },
                             "rogue_2_relic_grace_77": {
+                                "state": 2,
+                                "progress": null
+                            },
+                            "rogue_2_relic_grace_78": {
                                 "state": 2,
                                 "progress": null
                             },
@@ -2216,10 +2434,19 @@
                             },
                             "rogue_2_relic_grace_87": {
                                 "state": 2,
-                                "progress": [
-                                    0,
-                                    1
-                                ]
+                                "progress": null
+                            },
+                            "rogue_2_relic_grace_88": {
+                                "state": 2,
+                                "progress": null
+                            },
+                            "rogue_2_relic_grace_89": {
+                                "state": 2,
+                                "progress": null
+                            },
+                            "rogue_2_relic_grace_90": {
+                                "state": 2,
+                                "progress": null
                             },
                             "rogue_2_relic_curse_1": {
                                 "state": 2,
@@ -2233,6 +2460,10 @@
                                 "state": 2,
                                 "progress": null
                             },
+                            "rogue_2_relic_curse_4": {
+                                "state": 2,
+                                "progress": null
+                            },
                             "rogue_2_relic_curse_5": {
                                 "state": 2,
                                 "progress": null
@@ -2243,17 +2474,19 @@
                             },
                             "rogue_2_relic_curse_7": {
                                 "state": 2,
-                                "progress": [
-                                    0,
-                                    1
-                                ]
+                                "progress": null
                             },
                             "rogue_2_relic_curse_8": {
                                 "state": 2,
-                                "progress": [
-                                    0,
-                                    1
-                                ]
+                                "progress": null
+                            },
+                            "rogue_2_relic_curse_9": {
+                                "state": 2,
+                                "progress": null
+                            },
+                            "rogue_2_relic_curse_10": {
+                                "state": 2,
+                                "progress": null
                             },
                             "rogue_2_relic_fight_1": {
                                 "state": 2,
@@ -2261,10 +2494,7 @@
                             },
                             "rogue_2_relic_fight_2": {
                                 "state": 2,
-                                "progress": [
-                                    0,
-                                    1
-                                ]
+                                "progress": null
                             },
                             "rogue_2_relic_fight_3": {
                                 "state": 2,
@@ -2276,10 +2506,7 @@
                             },
                             "rogue_2_relic_fight_5": {
                                 "state": 2,
-                                "progress": [
-                                    0,
-                                    1
-                                ]
+                                "progress": null
                             },
                             "rogue_2_relic_fight_6": {
                                 "state": 2,
@@ -2287,10 +2514,7 @@
                             },
                             "rogue_2_relic_fight_7": {
                                 "state": 2,
-                                "progress": [
-                                    0,
-                                    1
-                                ]
+                                "progress": null
                             },
                             "rogue_2_relic_fight_8": {
                                 "state": 2,
@@ -2306,10 +2530,7 @@
                             },
                             "rogue_2_relic_fight_11": {
                                 "state": 2,
-                                "progress": [
-                                    0,
-                                    1
-                                ]
+                                "progress": null
                             },
                             "rogue_2_relic_fight_12": {
                                 "state": 2,
@@ -2321,10 +2542,7 @@
                             },
                             "rogue_2_relic_fight_14": {
                                 "state": 2,
-                                "progress": [
-                                    0,
-                                    1
-                                ]
+                                "progress": null
                             },
                             "rogue_2_relic_fight_15": {
                                 "state": 2,
@@ -2336,10 +2554,7 @@
                             },
                             "rogue_2_relic_fight_17": {
                                 "state": 2,
-                                "progress": [
-                                    0,
-                                    1
-                                ]
+                                "progress": null
                             },
                             "rogue_2_relic_fight_18": {
                                 "state": 2,
@@ -2363,10 +2578,7 @@
                             },
                             "rogue_2_relic_fight_23": {
                                 "state": 2,
-                                "progress": [
-                                    0,
-                                    1
-                                ]
+                                "progress": null
                             },
                             "rogue_2_relic_fight_24": {
                                 "state": 2,
@@ -2378,10 +2590,7 @@
                             },
                             "rogue_2_relic_fight_26": {
                                 "state": 2,
-                                "progress": [
-                                    0,
-                                    1
-                                ]
+                                "progress": null
                             },
                             "rogue_2_relic_fight_27": {
                                 "state": 2,
@@ -2577,10 +2786,7 @@
                             },
                             "rogue_2_relic_fight_75": {
                                 "state": 2,
-                                "progress": [
-                                    5,
-                                    6
-                                ]
+                                "progress": null
                             },
                             "rogue_2_relic_fight_76": {
                                 "state": 2,
@@ -2588,10 +2794,7 @@
                             },
                             "rogue_2_relic_fight_77": {
                                 "state": 2,
-                                "progress": [
-                                    1,
-                                    2
-                                ]
+                                "progress": null
                             },
                             "rogue_2_relic_fight_78": {
                                 "state": 2,
@@ -2599,17 +2802,11 @@
                             },
                             "rogue_2_relic_fight_79": {
                                 "state": 2,
-                                "progress": [
-                                    1,
-                                    4
-                                ]
+                                "progress": null
                             },
                             "rogue_2_relic_fight_80": {
                                 "state": 2,
-                                "progress": [
-                                    1,
-                                    6
-                                ]
+                                "progress": null
                             },
                             "rogue_2_relic_fight_81": {
                                 "state": 2,
@@ -2653,10 +2850,7 @@
                             },
                             "rogue_2_relic_fight_91": {
                                 "state": 2,
-                                "progress": [
-                                    0,
-                                    1
-                                ]
+                                "progress": null
                             },
                             "rogue_2_relic_fight_92": {
                                 "state": 2,
@@ -2724,10 +2918,7 @@
                             },
                             "rogue_2_relic_fight_108": {
                                 "state": 2,
-                                "progress": [
-                                    0,
-                                    1
-                                ]
+                                "progress": null
                             },
                             "rogue_2_relic_fight_109": {
                                 "state": 2,
@@ -2763,10 +2954,7 @@
                             },
                             "rogue_2_relic_fight_117": {
                                 "state": 2,
-                                "progress": [
-                                    0,
-                                    1
-                                ]
+                                "progress": null
                             },
                             "rogue_2_relic_fight_118": {
                                 "state": 2,
@@ -2782,10 +2970,7 @@
                             },
                             "rogue_2_relic_fight_121": {
                                 "state": 2,
-                                "progress": [
-                                    0,
-                                    1
-                                ]
+                                "progress": null
                             },
                             "rogue_2_relic_fight_122": {
                                 "state": 2,
@@ -2823,6 +3008,10 @@
                                 "state": 2,
                                 "progress": null
                             },
+                            "rogue_2_relic_fight_131": {
+                                "state": 2,
+                                "progress": null
+                            },
                             "rogue_2_relic_fight_132": {
                                 "state": 2,
                                 "progress": null
@@ -2853,16 +3042,21 @@
                             },
                             "rogue_2_relic_fight_139": {
                                 "state": 2,
-                                "progress": [
-                                    0,
-                                    1
-                                ]
+                                "progress": null
                             },
                             "rogue_2_relic_fight_140": {
                                 "state": 2,
                                 "progress": null
                             },
                             "rogue_2_relic_fight_141": {
+                                "state": 2,
+                                "progress": null
+                            },
+                            "rogue_2_relic_fight_142": {
+                                "state": 2,
+                                "progress": null
+                            },
+                            "rogue_2_relic_fight_143": {
                                 "state": 2,
                                 "progress": null
                             },
@@ -2876,17 +3070,11 @@
                             },
                             "rogue_2_relic_fight_146": {
                                 "state": 2,
-                                "progress": [
-                                    0,
-                                    1
-                                ]
+                                "progress": null
                             },
                             "rogue_2_relic_fight_147": {
                                 "state": 2,
-                                "progress": [
-                                    0,
-                                    1
-                                ]
+                                "progress": null
                             },
                             "rogue_2_relic_fight_148": {
                                 "state": 2,
@@ -2896,11 +3084,39 @@
                                 "state": 2,
                                 "progress": null
                             },
+                            "rogue_2_relic_fight_150": {
+                                "state": 2,
+                                "progress": null
+                            },
                             "rogue_2_relic_fight_151": {
                                 "state": 2,
                                 "progress": null
                             },
                             "rogue_2_relic_fight_152": {
+                                "state": 2,
+                                "progress": null
+                            },
+                            "rogue_2_relic_fight_153": {
+                                "state": 2,
+                                "progress": null
+                            },
+                            "rogue_2_relic_fight_154": {
+                                "state": 2,
+                                "progress": null
+                            },
+                            "rogue_2_relic_fight_155": {
+                                "state": 2,
+                                "progress": null
+                            },
+                            "rogue_2_relic_fight_156": {
+                                "state": 2,
+                                "progress": null
+                            },
+                            "rogue_2_relic_fight_157": {
+                                "state": 2,
+                                "progress": null
+                            },
+                            "rogue_2_relic_fight_158": {
                                 "state": 2,
                                 "progress": null
                             }
@@ -2943,9 +3159,13 @@
                             "music_rogue_2_8": 1,
                             "music_rogue_2_9": 1,
                             "music_rogue_2_10": 1,
-                            "music_rogue_2_11": 1
+                            "music_rogue_2_11": 1,
+                            "music_rogue_2_12": 1,
+                            "music_rogue_2_13": 1
                         },
                         "pic": {
+                            "pic_rogue_2_KV1": 1,
+                            "pic_rogue_2_KV2": 1,
                             "pic_rogue_2_1": 1,
                             "pic_rogue_2_3": 1,
                             "pic_rogue_2_4": 1,
@@ -2995,13 +3215,20 @@
                             "pic_rogue_2_49": 1,
                             "pic_rogue_2_50": 1,
                             "pic_rogue_2_51": 1,
-                            "pic_rogue_2_53": 1
+                            "pic_rogue_2_53": 1,
+                            "pic_rogue_2_55": 1,
+                            "pic_rogue_2_56": 1,
+                            "pic_rogue_2_57": 1
                         },
                         "chat": {
                             "month_chat_rogue_2_1": 5,
                             "month_chat_rogue_2_2": 5,
                             "month_chat_rogue_2_3": 5,
-                            "month_chat_rogue_2_4": 5
+                            "month_chat_rogue_2_4": 5,
+                            "month_chat_rogue_2_5": 5,
+                            "month_chat_rogue_2_6": 5,
+                            "month_chat_rogue_2_7": 5,
+                            "month_chat_rogue_2_8": 5
                         },
                         "band": {
                             "rogue_2_band_1": {
@@ -3042,10 +3269,7 @@
                             },
                             "rogue_2_band_10": {
                                 "state": 1,
-                                "progress": [
-                                    0,
-                                    1
-                                ]
+                                "progress": null
                             },
                             "rogue_2_band_11": {
                                 "state": 1,
@@ -3053,17 +3277,15 @@
                             },
                             "rogue_2_band_12": {
                                 "state": 1,
-                                "progress": [
-                                    0,
-                                    1
-                                ]
+                                "progress": null
                             },
                             "rogue_2_band_13": {
                                 "state": 1,
-                                "progress": [
-                                    0,
-                                    1
-                                ]
+                                "progress": null
+                            },
+                            "rogue_2_band_14": {
+                                "state": 1,
+                                "progress": null
                             },
                             "rogue_2_band_15": {
                                 "state": 1,
@@ -3071,17 +3293,15 @@
                             },
                             "rogue_2_band_16": {
                                 "state": 1,
-                                "progress": [
-                                    0,
-                                    1
-                                ]
+                                "progress": null
                             },
                             "rogue_2_band_17": {
                                 "state": 1,
-                                "progress": [
-                                    0,
-                                    1
-                                ]
+                                "progress": null
+                            },
+                            "rogue_2_band_18": {
+                                "state": 1,
+                                "progress": null
                             },
                             "rogue_2_band_19": {
                                 "state": 1,
@@ -3089,17 +3309,15 @@
                             },
                             "rogue_2_band_20": {
                                 "state": 1,
-                                "progress": [
-                                    0,
-                                    1
-                                ]
+                                "progress": null
                             },
                             "rogue_2_band_21": {
                                 "state": 1,
-                                "progress": [
-                                    0,
-                                    1
-                                ]
+                                "progress": null
+                            },
+                            "rogue_2_band_22": {
+                                "state": 1,
+                                "progress": null
                             }
                         },
                         "buff": {
@@ -3163,22 +3381,6 @@
                                 "state": 2,
                                 "progress": null
                             },
-                            "rogue_2_mutation_1": {
-                                "state": 2,
-                                "progress": null
-                            },
-                            "rogue_2_mutation_2": {
-                                "state": 2,
-                                "progress": null
-                            },
-                            "rogue_2_mutation_3": {
-                                "state": 2,
-                                "progress": null
-                            },
-                            "rogue_2_mutation_4": {
-                                "state": 2,
-                                "progress": null
-                            },
                             "rogue_2_virtue_8": {
                                 "state": 2,
                                 "progress": null
@@ -3204,6 +3406,22 @@
                                 "progress": null
                             },
                             "rogue_2_virtue_14": {
+                                "state": 2,
+                                "progress": null
+                            },
+                            "rogue_2_mutation_1": {
+                                "state": 2,
+                                "progress": null
+                            },
+                            "rogue_2_mutation_2": {
+                                "state": 2,
+                                "progress": null
+                            },
+                            "rogue_2_mutation_3": {
+                                "state": 2,
+                                "progress": null
+                            },
+                            "rogue_2_mutation_4": {
                                 "state": 2,
                                 "progress": null
                             },
@@ -3243,10 +3461,7 @@
                             },
                             "endbook_rogue_2_2_2": {
                                 "state": 1,
-                                "progress": [
-                                    1,
-                                    3
-                                ]
+                                "progress": null
                             },
                             "endbook_rogue_2_2_3": {
                                 "state": 1,
@@ -3254,24 +3469,27 @@
                             },
                             "endbook_rogue_2_3_1": {
                                 "state": 1,
-                                "progress": [
-                                    0,
-                                    1
-                                ]
+                                "progress": null
                             },
                             "endbook_rogue_2_3_2": {
                                 "state": 1,
-                                "progress": [
-                                    0,
-                                    3
-                                ]
+                                "progress": null
                             },
                             "endbook_rogue_2_3_3": {
                                 "state": 1,
-                                "progress": [
-                                    0,
-                                    1
-                                ]
+                                "progress": null
+                            },
+                            "endbook_rogue_2_4_1": {
+                                "state": 1,
+                                "progress": null
+                            },
+                            "endbook_rogue_2_4_2": {
+                                "state": 1,
+                                "progress": null
+                            },
+                            "endbook_rogue_2_4_3": {
+                                "state": 1,
+                                "progress": null
                             }
                         },
                         "mode": {
@@ -3285,26 +3503,17 @@
                             },
                             "MONTH_TEAM": {
                                 "state": 1,
-                                "progress": [
-                                    0,
-                                    1
-                                ]
+                                "progress": null
                             },
                             "CHALLENGE": {
                                 "state": 1,
-                                "progress": [
-                                    0,
-                                    1
-                                ]
+                                "progress": null
                             }
                         },
                         "recruitSet": {
                             "recruit_group_random": {
                                 "state": 1,
-                                "progress": [
-                                    0,
-                                    1
-                                ]
+                                "progress": null
                             },
                             "recruit_group_1": {
                                 "state": 1,
@@ -3373,137 +3582,99 @@
                                 },
                                 "1": {
                                     "state": 2,
-                                    "progress": [
-                                        0,
-                                        1
-                                    ]
+                                    "progress": null
                                 },
                                 "2": {
                                     "state": 2,
-                                    "progress": [
-                                        0,
-                                        1
-                                    ]
+                                    "progress": null
                                 },
                                 "3": {
                                     "state": 2,
-                                    "progress": [
-                                        0,
-                                        1
-                                    ]
+                                    "progress": null
                                 },
                                 "4": {
                                     "state": 2,
-                                    "progress": [
-                                        0,
-                                        1
-                                    ]
+                                    "progress": null
                                 },
                                 "5": {
                                     "state": 2,
-                                    "progress": [
-                                        0,
-                                        1
-                                    ]
+                                    "progress": null
                                 },
                                 "6": {
                                     "state": 2,
-                                    "progress": [
-                                        0,
-                                        1
-                                    ]
+                                    "progress": null
                                 },
                                 "7": {
                                     "state": 2,
-                                    "progress": [
-                                        0,
-                                        1
-                                    ]
+                                    "progress": null
                                 },
                                 "8": {
                                     "state": 2,
-                                    "progress": [
-                                        0,
-                                        1
-                                    ]
+                                    "progress": null
                                 },
                                 "9": {
                                     "state": 2,
-                                    "progress": [
-                                        0,
-                                        1
-                                    ]
+                                    "progress": null
                                 },
                                 "10": {
                                     "state": 2,
-                                    "progress": [
-                                        0,
-                                        1
-                                    ]
+                                    "progress": null
                                 },
                                 "11": {
                                     "state": 2,
-                                    "progress": [
-                                        0,
-                                        1
-                                    ]
+                                    "progress": null
                                 },
                                 "12": {
                                     "state": 2,
-                                    "progress": [
-                                        0,
-                                        1
-                                    ]
+                                    "progress": null
                                 },
                                 "13": {
                                     "state": 2,
-                                    "progress": [
-                                        0,
-                                        1
-                                    ]
+                                    "progress": null
                                 },
                                 "14": {
                                     "state": 2,
-                                    "progress": [
-                                        0,
-                                        1
-                                    ]
+                                    "progress": null
                                 },
                                 "15": {
                                     "state": 2,
-                                    "progress": [
-                                        0,
-                                        1
-                                    ]
+                                    "progress": null
                                 }
                             },
                             "MONTH_TEAM": {
                                 "0": {
                                     "state": 2,
-                                    "progress": [
-                                        0,
-                                        1
-                                    ]
+                                    "progress": null
                                 }
                             },
                             "CHALLENGE": {
                                 "0": {
                                     "state": 2,
-                                    "progress": [
-                                        0,
-                                        1
-                                    ]
+                                    "progress": null
                                 }
                             }
                         }
                     },
                     "mission": {
-                        "updataId": "",
+                        "updateId": "",
                         "refresh": 0,
                         "list": []
                     },
                     "challenge": {
-                        "reward": {},
+                        "reward": {
+                            "rogue_2_challenge_01": 1,
+                            "rogue_2_challenge_02": 1,
+                            "rogue_2_challenge_03": 1,
+                            "rogue_2_challenge_04": 1,
+                            "rogue_2_challenge_05": 1,
+                            "rogue_2_challenge_06": 1,
+                            "rogue_2_challenge_07": 1,
+                            "rogue_2_challenge_08": 1,
+                            "rogue_2_challenge_09": 1,
+                            "rogue_2_challenge_10": 1,
+                            "rogue_2_challenge_11": 1,
+                            "rogue_2_challenge_12": 1
+                        },
                         "grade": {
                             "rogue_2_challenge_01": 2,
                             "rogue_2_challenge_02": 2,
@@ -3521,18 +3692,36 @@
                     },
                     "monthTeam": {
                         "valid": [
-                            "month_team_4"
+                            "month_team_1",
+                            "month_team_2",
+                            "month_team_3",
+                            "month_team_4",
+                            "month_team_5",
+                            "month_team_6",
+                            "month_team_7",
+                            "month_team_8"
                         ],
                         "reward": {
                             "month_team_1": 1,
                             "month_team_2": 1,
-                            "month_team_3": 1
-                        }
+                            "month_team_3": 1,
+                            "month_team_4": 1,
+                            "month_team_5": 1,
+                            "month_team_6": 1,
+                            "month_team_7": 1,
+                            "month_team_8": 1
+                        },
+                        "mission": {}
                     },
-                    "record": {}
+                    "record": {
+                        "last": 1695000000,
+                        "modeCnt": {},
+                        "endingCnt": {},
+                        "stageCnt": {},
+                        "bandCnt": {}
+                    }
                 }
-            },
-            "pinned": null
+            }
         },
         "deepSea": {
             "places": {},
