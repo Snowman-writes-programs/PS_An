@@ -1,10 +1,5 @@
 {
-    "chosenCrisis": "cc4",
-    "chosenRisks": [
-        "enemy_bigbomdrock_3",
-        "enemy_mdgint_amod_3",
-        "enemy_atk_3",
-        "char_atk_3"
-    ],
-    "totalRisks": 12
+    "chosenCrisis": "cc12",
+    "chosenRisks": [],
+    "totalRisks": 0
 }
