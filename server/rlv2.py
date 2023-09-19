@@ -22,6 +22,9 @@ def rlv2CreateGame():
     elif theme == "rogue_2":
         band = "rogue_2_band_1"
         ending = "ro2_ending_1"
+    elif theme == "rogue_3":
+        band = "rogue_3_band_1"
+        ending = "ro3_ending_1"
 
     rlv2 = {
         "player": {
@@ -208,6 +211,8 @@ def addTicket(rlv2, ticket_id):
         ticket = "rogue_1_recruit_ticket_all"
     elif theme == "rogue_2":
         ticket = "rogue_2_recruit_ticket_all"
+    elif theme == "rogue_3":
+        ticket = "rogue_3_recruit_ticket_all"
     rlv2["inventory"]["recruit"][ticket_id] = {
         "index": ticket_id,
         "id": ticket,
@@ -381,6 +386,8 @@ def getMap(theme):
     if theme == "rogue_1":
         shop = 8
     elif theme == "rogue_2":
+        shop = 4096
+    elif theme == "rogue_3":
         shop = 4096
     map = {}
     zone = 1
@@ -616,6 +623,9 @@ def getGoods(theme):
     elif theme == "rogue_2":
         ticket = "rogue_2_recruit_ticket_all"
         price_id = "rogue_2_gold"
+    elif theme == "rogue_3":
+        ticket = "rogue_3_recruit_ticket_all"
+        price_id = "rogue_3_gold"
     goods = [
         {
             "index": "0",
