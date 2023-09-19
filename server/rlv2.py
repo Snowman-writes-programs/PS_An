@@ -1,7 +1,7 @@
 from flask import request
 
 from constants import RLV2_JSON_PATH, USER_JSON_PATH, RL_TABLE_URL
-from utils import read_json, write_json
+from utils import read_json, write_json, decrypt_battle_data
 from core.function.update import updateData
 
 
@@ -160,7 +160,7 @@ def rlv2CreateGame():
 def rlv2ChooseInitialRelic():
     rlv2 = read_json(RLV2_JSON_PATH)
     band = rlv2["player"]["pending"][0]["content"]["initRelic"]["items"]["0"]["id"]
-    rlv2["player"]["pending"] = rlv2["player"]["pending"][1:]
+    rlv2["player"]["pending"].pop(0)
     rlv2["inventory"]["relic"]["r_0"] = {
         "index": "r_0",
         "id": band,
@@ -223,7 +223,7 @@ def addTicket(rlv2, ticket_id):
 
 def rlv2ChooseInitialRecruitSet():
     rlv2 = read_json(RLV2_JSON_PATH)
-    rlv2["player"]["pending"] = rlv2["player"]["pending"][1:]
+    rlv2["player"]["pending"].pop(0)
     for i in range(3):
         ticket_id = f"t_{i+1}"
         addTicket(rlv2, ticket_id)
@@ -452,6 +452,12 @@ def getMap(theme):
             nodes_next = [node["pos"] for node in nodes]
             for node in nodes_list[i-1]:
                 node["next"] = nodes_next
+        nodes_list[0][0]["next"].append(
+            {
+                "x": x,
+                "y": 0
+            }
+        )
         for nodes in nodes_list:
             for node in nodes:
                 zone_map["nodes"][node["index"]] = node
@@ -532,31 +538,41 @@ def rlv2MoveAndBattleStart():
 
 
 def rlv2BattleFinish():
+    request_data = request.get_json()
+    battle_data = decrypt_battle_data(request_data["data"], 1672502400)
+
     rlv2 = read_json(RLV2_JSON_PATH)
-    rlv2["player"]["pending"].pop(0)
-    pending_index = getNextPendingIndex(rlv2)
-    rlv2["player"]["pending"].insert(
-        0,
-        {
-            "index": pending_index,
-            "type": "BATTLE_REWARD",
-            "content": {
-                "battleReward": {
-                    "earn": {
-                        "damage": 0,
-                        "hp": 0,
-                        "shield": 0,
-                        "exp": 0,
-                        "populationMax": 0,
-                        "squadCapacity": 0,
-                        "maxHpUp": 0
-                    },
-                    "rewards": [],
-                    "show": "1"
+    if battle_data["completeState"] != 1:
+        rlv2["player"]["pending"].pop(0)
+        pending_index = getNextPendingIndex(rlv2)
+        rlv2["player"]["pending"].insert(
+            0,
+            {
+                "index": pending_index,
+                "type": "BATTLE_REWARD",
+                "content": {
+                    "battleReward": {
+                        "earn": {
+                            "damage": 0,
+                            "hp": 0,
+                            "shield": 0,
+                            "exp": 0,
+                            "populationMax": 0,
+                            "squadCapacity": 0,
+                            "maxHpUp": 0
+                        },
+                        "rewards": [],
+                        "show": "1"
+                    }
                 }
             }
-        }
-    )
+        )
+    else:
+        rlv2["player"]["state"] = "WAIT_MOVE"
+        rlv2["player"]["pending"] = []
+        rlv2["player"]["cursor"]["position"]["x"] -= 1
+        rlv2["player"]["cursor"]["position"]["y"] = 0
+        rlv2["player"]["trace"].pop()
     write_json(rlv2, RLV2_JSON_PATH)
 
     data = {
@@ -615,6 +631,20 @@ def getGoods(theme):
     i = 1
     rlv2_table = updateData(RL_TABLE_URL)
     for j in rlv2_table["details"][theme]["archiveComp"]["relic"]["relic"]:
+        goods.append(
+            {
+                "index": str(i),
+                "itemId": j,
+                "count": 1,
+                "priceId": price_id,
+                "priceCount": 0,
+                "origCost": 0,
+                "displayPriceChg": False,
+                "_retainDiscount": 1
+            }
+        )
+        i += 1
+    for j in rlv2_table["details"][theme]["archiveComp"]["trap"]["trap"]:
         goods.append(
             {
                 "index": str(i),
@@ -713,10 +743,17 @@ def rlv2BuyGoods():
         ticket_id = getNextTicketIndex(rlv2)
         addTicket(rlv2, ticket_id)
         activateTicket(rlv2, ticket_id)
-    elif item_id.find("_relic_"):
+    elif item_id.find("_relic_") != -1:
         relic_id = getNextRelicIndex(rlv2)
         rlv2["inventory"]["relic"][relic_id] = {
             "index": relic_id,
+            "id": item_id,
+            "count": 1,
+            "ts": 1695000000
+        }
+    elif item_id.find("_active_tool_") != -1:
+        rlv2["inventory"]["trap"] = {
+            "index": item_id,
             "id": item_id,
             "count": 1,
             "ts": 1695000000
