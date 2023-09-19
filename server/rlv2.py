@@ -375,77 +375,85 @@ def rlv2CloseRecruitTicket():
     return data
 
 
-def getZoneMap(theme, zone):
+def getMap(theme):
     rlv2_table = updateData(RL_TABLE_URL)
     stages = list(rlv2_table["details"][theme]["stages"].keys())
-    zone_map = {
-        "id": f"zone_{zone}",
-        "index": zone,
-        "nodes": {},
-        "variation": []
-    }
-    nodes_list = [
-        [
-            {
-                "index": "0",
-                "pos": {
-                    "x": 0,
-                    "y": 0
-                },
-                "next": [],
-                "type": 8
-            }
+    map = {}
+    zone = 1
+    j = 0
+    while j < len(stages):
+        zone_map = {
+            "id": f"zone_{zone}",
+            "index": zone,
+            "nodes": {},
+            "variation": []
+        }
+        nodes_list = [
+            [
+                {
+                    "index": "0",
+                    "pos": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "next": [],
+                    "type": 8
+                }
+            ]
         ]
-    ]
-    x_max = 9
-    y_max = 3
-    x = 0
-    y = y_max+1
-    for stage in stages:
-        if y > y_max:
-            if x+1 == x_max:
-                break
-            nodes_list.append([])
-            x += 1
-            y = 0
-        nodes_list[-1].append(
-            {
-                "index": f"{x}0{y}",
-                "pos": {
-                    "x": x,
-                    "y": y
-                },
-                "next": [],
-                "type": 1,
-                "stage": stage
-            }
+        x_max = 9
+        y_max = 3
+        x = 0
+        y = y_max+1
+        while j < len(stages):
+            stage = stages[j]
+            if y > y_max:
+                if x+1 == x_max:
+                    break
+                nodes_list.append([])
+                x += 1
+                y = 0
+            nodes_list[-1].append(
+                {
+                    "index": f"{x}0{y}",
+                    "pos": {
+                        "x": x,
+                        "y": y
+                    },
+                    "next": [],
+                    "type": 1,
+                    "stage": stage
+                }
+            )
+            y += 1
+            j += 1
+        x += 1
+        nodes_list.append(
+            [
+                {
+                    "index": f"{x}00",
+                    "pos": {
+                        "x": x,
+                        "y": 0
+                    },
+                    "next": [],
+                    "type": 8,
+                    "zone_end": True
+                }
+            ]
         )
-        y += 1
-    x += 1
-    nodes_list.append(
-        [
-            {
-                "index": f"{x}00",
-                "pos": {
-                    "x": x,
-                    "y": 0
-                },
-                "next": [],
-                "type": 8,
-                "zone_end": True
-            }
-        ]
-    )
-    for i, nodes in enumerate(nodes_list):
-        if i == 0:
-            continue
-        nodes_next = [node["pos"] for node in nodes]
-        for node in nodes_list[i-1]:
-            node["next"] = nodes_next
-    for nodes in nodes_list:
-        for node in nodes:
-            zone_map["nodes"][node["index"]] = node
-    return zone_map
+        for i, nodes in enumerate(nodes_list):
+            if i == 0:
+                continue
+            nodes_next = [node["pos"] for node in nodes]
+            for node in nodes_list[i-1]:
+                node["next"] = nodes_next
+        for nodes in nodes_list:
+            for node in nodes:
+                zone_map["nodes"][node["index"]] = node
+        map[str(zone)] = zone_map
+        zone += 1
+    return map
 
 
 def rlv2FinishEvent():
@@ -454,8 +462,7 @@ def rlv2FinishEvent():
     rlv2["player"]["cursor"]["zone"] += 1
     rlv2["player"]["pending"] = []
     theme = rlv2["game"]["theme"]
-    zone = rlv2["player"]["cursor"]["zone"]
-    rlv2["map"]["zones"][str(zone)] = getZoneMap(theme, zone)
+    rlv2["map"]["zones"] = getMap(theme)
     write_json(rlv2, RLV2_JSON_PATH)
 
     data = {
@@ -730,6 +737,9 @@ def rlv2LeaveShop():
     rlv2 = read_json(RLV2_JSON_PATH)
     rlv2["player"]["state"] = "WAIT_MOVE"
     rlv2["player"]["pending"] = []
+    if rlv2["player"]["cursor"]["position"]["x"] > 0:
+        rlv2["player"]["cursor"]["zone"] += 1
+        rlv2["player"]["cursor"]["position"] = None
     write_json(rlv2, RLV2_JSON_PATH)
 
     data = {
