@@ -36,7 +36,7 @@ def rlv2CreateGame():
                 },
                 "gold": 8,
                 "shield": 0,
-                "capacity": 6,
+                "capacity": 13,
                 "population": {
                     "cost": 0,
                     "max": 6
@@ -378,6 +378,10 @@ def rlv2CloseRecruitTicket():
 def getMap(theme):
     rlv2_table = updateData(RL_TABLE_URL)
     stages = list(rlv2_table["details"][theme]["stages"].keys())
+    if theme == "rogue_1":
+        shop = 8
+    elif theme == "rogue_2":
+        shop = 4096
     map = {}
     zone = 1
     j = 0
@@ -397,7 +401,7 @@ def getMap(theme):
                         "y": 0
                     },
                     "next": [],
-                    "type": 8
+                    "type": shop
                 }
             ]
         ]
@@ -437,7 +441,7 @@ def getMap(theme):
                         "y": 0
                     },
                     "next": [],
-                    "type": 8,
+                    "type": shop,
                     "zone_end": True
                 }
             ]
