@@ -118,6 +118,9 @@ app.add_url_rule('/rlv2/recruitChar', methods=['POST'], view_func=rlv2.rlv2Recru
 app.add_url_rule('/rlv2/closeRecruitTicket', methods=['POST'], view_func=rlv2.rlv2CloseRecruitTicket)
 app.add_url_rule('/rlv2/finishEvent', methods=['POST'], view_func=rlv2.rlv2FinishEvent)
 app.add_url_rule('/rlv2/moveAndBattleStart', methods=['POST'], view_func=rlv2.rlv2MoveAndBattleStart)
+app.add_url_rule('/rlv2/battleFinish', methods=['POST'], view_func=rlv2.rlv2BattleFinish)
+app.add_url_rule('/rlv2/finishBattleReward', methods=['POST'], view_func=rlv2.rlv2FinishBattleReward)
+
 
 app.add_url_rule('/shop/getSkinGoodList', methods=['POST'], view_func=shop.shopGetSkinGoodList)
 
