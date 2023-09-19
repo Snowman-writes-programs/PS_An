@@ -202,29 +202,34 @@ def rlv2SelectChoice():
     return data
 
 
-def rlv2ChooseInitialRecruitSet():
-    rlv2 = read_json(RLV2_JSON_PATH)
-
+def addTicket(rlv2, ticket_id):
     theme = rlv2["game"]["theme"]
     if theme == "rogue_1":
         ticket = "rogue_1_recruit_ticket_all"
     elif theme == "rogue_2":
         ticket = "rogue_2_recruit_ticket_all"
+    rlv2["inventory"]["recruit"][ticket_id] = {
+        "index": ticket_id,
+        "id": ticket,
+        "state": 0,
+        "list": [],
+        "result": None,
+        "ts": 1695000000,
+        "from": "initial",
+        "mustExtra": 0,
+        "needAssist": True
+    }
+
+
+def rlv2ChooseInitialRecruitSet():
+    rlv2 = read_json(RLV2_JSON_PATH)
     rlv2["player"]["pending"] = rlv2["player"]["pending"][1:]
     for i in range(3):
+        ticket_id = f"t_{i+1}"
+        addTicket(rlv2, ticket_id)
         rlv2["player"]["pending"][0]["content"]["initRecruit"]["tickets"].append(
-            f"t_{i+1}")
-        rlv2["inventory"]["recruit"][f"t_{i+1}"] = {
-            "index": f"t_{i+1}",
-            "id": ticket,
-            "state": 0,
-            "list": [],
-            "result": None,
-            "ts": 1695000000,
-            "from": "initial",
-            "mustExtra": 0,
-            "needAssist": True
-        }
+            ticket_id
+        )
 
     write_json(rlv2, RLV2_JSON_PATH)
 
@@ -252,11 +257,7 @@ def getNextPendingIndex(rlv2):
     return f"e_{i}"
 
 
-def rlv2ActiveRecruitTicket():
-    request_data = request.get_json()
-    ticket_id = request_data["id"]
-
-    rlv2 = read_json(RLV2_JSON_PATH)
+def activateTicket(rlv2, ticket_id):
     pending_index = getNextPendingIndex(rlv2)
     rlv2["player"]["pending"].insert(
         0, {
@@ -288,6 +289,14 @@ def rlv2ActiveRecruitTicket():
         )
     rlv2["inventory"]["recruit"][ticket_id]["state"] = 1
     rlv2["inventory"]["recruit"][ticket_id]["list"] = chars
+
+
+def rlv2ActiveRecruitTicket():
+    request_data = request.get_json()
+    ticket_id = request_data["id"]
+
+    rlv2 = read_json(RLV2_JSON_PATH)
+    activateTicket(rlv2, ticket_id)
     write_json(rlv2, RLV2_JSON_PATH)
 
     data = {
@@ -554,6 +563,170 @@ def rlv2BattleFinish():
 
 
 def rlv2FinishBattleReward():
+    rlv2 = read_json(RLV2_JSON_PATH)
+    rlv2["player"]["state"] = "WAIT_MOVE"
+    rlv2["player"]["pending"] = []
+    write_json(rlv2, RLV2_JSON_PATH)
+
+    data = {
+        "playerDataDelta": {
+            "modified": {
+                "rlv2": {
+                    "current": rlv2,
+                }
+            },
+            "deleted": {}
+        }
+    }
+
+    return data
+
+
+def getGoods(theme):
+    if theme == "rogue_1":
+        ticket = "rogue_1_recruit_ticket_all"
+        price_id = "rogue_1_gold"
+    elif theme == "rogue_2":
+        ticket = "rogue_2_recruit_ticket_all"
+        price_id = "rogue_2_gold"
+    goods = [
+        {
+            "index": "0",
+            "itemId": ticket,
+            "count": 1,
+            "priceId": price_id,
+            "priceCount": 0,
+            "origCost": 0,
+            "displayPriceChg": False,
+            "_retainDiscount": 1
+        }
+    ]
+    i = 1
+    rlv2_table = updateData(RL_TABLE_URL)
+    for j in rlv2_table["details"][theme]["archiveComp"]["relic"]["relic"]:
+        goods.append(
+            {
+                "index": str(i),
+                "itemId": j,
+                "count": 1,
+                "priceId": price_id,
+                "priceCount": 0,
+                "origCost": 0,
+                "displayPriceChg": False,
+                "_retainDiscount": 1
+            }
+        )
+        i += 1
+    return goods
+
+
+def rlv2MoveTo():
+    request_data = request.get_json()
+    x = request_data["to"]["x"]
+    y = request_data["to"]["y"]
+
+    rlv2 = read_json(RLV2_JSON_PATH)
+    rlv2["player"]["state"] = "PENDING"
+    rlv2["player"]["cursor"]["position"] = {
+        "x": x,
+        "y": y
+    }
+    theme = rlv2["game"]["theme"]
+    goods = getGoods(theme)
+    rlv2["player"]["trace"].append(rlv2["player"]["cursor"])
+    pending_index = getNextPendingIndex(rlv2)
+    rlv2["player"]["pending"].insert(
+        0,
+        {
+            "index": pending_index,
+            "type": "SHOP",
+            "content": {
+                "shop": {
+                    "bank": {
+                        "open": False,
+                        "canPut": False,
+                        "canWithdraw": False,
+                        "withdraw": 0,
+                        "cost": 1
+                    },
+                    "id": "just_a_shop",
+                    "goods": goods,
+                    "_done": False
+                }
+            }
+        }
+    )
+    write_json(rlv2, RLV2_JSON_PATH)
+
+    data = {
+        "playerDataDelta": {
+            "modified": {
+                "rlv2": {
+                    "current": rlv2,
+                }
+            },
+            "deleted": {}
+        }
+    }
+
+    return data
+
+
+def getNextTicketIndex(rlv2):
+    d = set()
+    for e in rlv2["inventory"]["recruit"]:
+        d.add(int(e[2:]))
+    i = 1
+    while i in d:
+        i += 1
+    return f"t_{i}"
+
+
+def getNextRelicIndex(rlv2):
+    d = set()
+    for e in rlv2["inventory"]["relic"]:
+        d.add(int(e[2:]))
+    i = 0
+    while i in d:
+        i += 1
+    return f"r_{i}"
+
+
+def rlv2BuyGoods():
+    request_data = request.get_json()
+    select = int(request_data["select"][0])
+
+    rlv2 = read_json(RLV2_JSON_PATH)
+    item_id = rlv2["player"]["pending"][0]["content"]["shop"]["goods"][select]["itemId"]
+    if item_id.find("_recruit_ticket_") != -1:
+        ticket_id = getNextTicketIndex(rlv2)
+        addTicket(rlv2, ticket_id)
+        activateTicket(rlv2, ticket_id)
+    elif item_id.find("_relic_"):
+        relic_id = getNextRelicIndex(rlv2)
+        rlv2["inventory"]["relic"][relic_id] = {
+            "index": relic_id,
+            "id": item_id,
+            "count": 1,
+            "ts": 1695000000
+        }
+    write_json(rlv2, RLV2_JSON_PATH)
+
+    data = {
+        "playerDataDelta": {
+            "modified": {
+                "rlv2": {
+                    "current": rlv2,
+                }
+            },
+            "deleted": {}
+        }
+    }
+
+    return data
+
+
+def rlv2LeaveShop():
     rlv2 = read_json(RLV2_JSON_PATH)
     rlv2["player"]["state"] = "WAIT_MOVE"
     rlv2["player"]["pending"] = []
