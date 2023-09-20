@@ -231,7 +231,7 @@ def rlv2ChooseInitialRecruitSet():
     rlv2 = read_json(RLV2_JSON_PATH)
     rlv2["player"]["pending"].pop(0)
     for i in range(3):
-        ticket_id = f"t_{i+1}"
+        ticket_id = f"t_{i}"
         addTicket(rlv2, ticket_id)
         rlv2["player"]["pending"][0]["content"]["initRecruit"]["tickets"].append(
             ticket_id
@@ -257,7 +257,7 @@ def getNextPendingIndex(rlv2):
     d = set()
     for e in rlv2["player"]["pending"]:
         d.add(int(e["index"][2:]))
-    i = 1
+    i = 0
     while i in d:
         i += 1
     return f"e_{i}"
@@ -569,6 +569,13 @@ def rlv2BattleFinish():
     rlv2 = read_json(RLV2_JSON_PATH)
     if battle_data["completeState"] != 1:
         rlv2["player"]["pending"].pop(0)
+        theme = rlv2["game"]["theme"]
+        if theme == "rogue_1":
+            ticket = "rogue_1_recruit_ticket_all"
+        elif theme == "rogue_2":
+            ticket = "rogue_2_recruit_ticket_all"
+        elif theme == "rogue_3":
+            ticket = "rogue_3_recruit_ticket_all"
         pending_index = getNextPendingIndex(rlv2)
         rlv2["player"]["pending"].insert(
             0,
@@ -586,7 +593,19 @@ def rlv2BattleFinish():
                             "squadCapacity": 0,
                             "maxHpUp": 0
                         },
-                        "rewards": [],
+                        "rewards": [
+                            {
+                                "index": 0,
+                                "items": [
+                                    {
+                                        "sub": 0,
+                                        "id": ticket,
+                                        "count": 1
+                                    }
+                                ],
+                                "done": 0
+                            }
+                        ],
                         "show": "1"
                     }
                 }
@@ -745,7 +764,7 @@ def getNextTicketIndex(rlv2):
     d = set()
     for e in rlv2["inventory"]["recruit"]:
         d.add(int(e[2:]))
-    i = 1
+    i = 0
     while i in d:
         i += 1
     return f"t_{i}"
@@ -809,6 +828,31 @@ def rlv2LeaveShop():
     if rlv2["player"]["cursor"]["position"]["x"] > 0:
         rlv2["player"]["cursor"]["zone"] += 1
         rlv2["player"]["cursor"]["position"] = None
+    write_json(rlv2, RLV2_JSON_PATH)
+
+    data = {
+        "playerDataDelta": {
+            "modified": {
+                "rlv2": {
+                    "current": rlv2,
+                }
+            },
+            "deleted": {}
+        }
+    }
+
+    return data
+
+
+def rlv2ChooseBattleReward():
+    request_data = request.get_json()
+    index = request_data["index"]
+
+    rlv2 = read_json(RLV2_JSON_PATH)
+    if index == 0:
+        ticket_id = getNextTicketIndex(rlv2)
+        addTicket(rlv2, ticket_id)
+        activateTicket(rlv2, ticket_id)
     write_json(rlv2, RLV2_JSON_PATH)
 
     data = {

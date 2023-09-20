@@ -123,6 +123,7 @@ app.add_url_rule('/rlv2/finishBattleReward', methods=['POST'], view_func=rlv2.rl
 app.add_url_rule('/rlv2/moveTo', methods=['POST'], view_func=rlv2.rlv2MoveTo)
 app.add_url_rule('/rlv2/buyGoods', methods=['POST'], view_func=rlv2.rlv2BuyGoods)
 app.add_url_rule('/rlv2/leaveShop', methods=['POST'], view_func=rlv2.rlv2LeaveShop)
+app.add_url_rule('/rlv2/chooseBattleReward', methods=['POST'], view_func=rlv2.rlv2ChooseBattleReward)
 
 app.add_url_rule('/shop/getSkinGoodList', methods=['POST'], view_func=shop.shopGetSkinGoodList)
 
