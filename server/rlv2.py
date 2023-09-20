@@ -73,7 +73,7 @@ def rlv2CreateGame():
                 "level": 1,
                 "maxLevel": 10,
                 "hp": {
-                    "current": 4,
+                    "current": 50,
                     "max": 0
                 },
                 "gold": 8,
@@ -182,8 +182,11 @@ def rlv2CreateGame():
         },
         "module": {}
     }
+    write_json(rlv2, RLV2_JSON_PATH)
+
+    # too large, do not send it every time
     config = read_json(CONFIG_PATH)
-    if config["rlv2Config"]["allChars"] == True:
+    if config["rlv2Config"]["allChars"]:
         if theme == "rogue_1":
             ticket = "rogue_1_recruit_ticket_all"
         elif theme == "rogue_2":
@@ -207,7 +210,6 @@ def rlv2CreateGame():
                 "needAssist": True
             }
             rlv2["troop"]["chars"][char_id] = char
-    write_json(rlv2, RLV2_JSON_PATH)
 
     data = {
         "playerDataDelta": {
@@ -293,7 +295,11 @@ def getNextTicketIndex(rlv2):
     d = set()
     for e in rlv2["inventory"]["recruit"]:
         d.add(int(e[2:]))
-    i = 0
+    config = read_json(CONFIG_PATH)
+    if not config["rlv2Config"]["allChars"]:
+        i = 0
+    else:
+        i = 10000-1
     while i in d:
         i += 1
     return f"t_{i}"
@@ -302,12 +308,15 @@ def getNextTicketIndex(rlv2):
 def rlv2ChooseInitialRecruitSet():
     rlv2 = read_json(RLV2_JSON_PATH)
     rlv2["player"]["pending"].pop(0)
-    for i in range(3):
-        ticket_id = getNextTicketIndex(rlv2)
-        addTicket(rlv2, ticket_id)
-        rlv2["player"]["pending"][0]["content"]["initRecruit"]["tickets"].append(
-            ticket_id
-        )
+
+    config = read_json(CONFIG_PATH)
+    if not config["rlv2Config"]["allChars"]:
+        for i in range(3):
+            ticket_id = getNextTicketIndex(rlv2)
+            addTicket(rlv2, ticket_id)
+            rlv2["player"]["pending"][0]["content"]["initRecruit"]["tickets"].append(
+                ticket_id
+            )
 
     write_json(rlv2, RLV2_JSON_PATH)
 
@@ -376,7 +385,11 @@ def rlv2ActiveRecruitTicket():
 
 
 def getNextCharId(rlv2):
-    i = 1
+    config = read_json(CONFIG_PATH)
+    if not config["rlv2Config"]["allChars"]:
+        i = 1
+    else:
+        i = 10000
     while str(i) in rlv2["troop"]["chars"]:
         i += 1
     return str(i)
@@ -536,8 +549,10 @@ def rlv2FinishEvent():
     rlv2["player"]["cursor"]["zone"] += 1
     rlv2["player"]["pending"] = []
     theme = rlv2["game"]["theme"]
-    rlv2["map"]["zones"] = getMap(theme)
     write_json(rlv2, RLV2_JSON_PATH)
+
+    # too large, do not send it every time
+    rlv2["map"]["zones"] = getMap(theme)
 
     data = {
         "playerDataDelta": {
@@ -553,6 +568,19 @@ def rlv2FinishEvent():
     return data
 
 
+def getBuffs(rlv2):
+    rlv2_table = updateData(RL_TABLE_URL)
+    theme = rlv2["game"]["theme"]
+    buffs = []
+
+    if rlv2["inventory"]["trap"] is not None:
+        item_id = rlv2["inventory"]["trap"]["id"]
+        if item_id in rlv2_table["details"][theme]["relics"]:
+            buffs += rlv2_table["details"][theme]["relics"][item_id]["buffs"]
+
+    return buffs
+
+
 def rlv2MoveAndBattleStart():
     request_data = request.get_json()
     x = request_data["to"]["x"]
@@ -566,6 +594,7 @@ def rlv2MoveAndBattleStart():
     }
     rlv2["player"]["trace"].append(rlv2["player"]["cursor"])
     pending_index = getNextPendingIndex(rlv2)
+    buffs = getBuffs(rlv2)
     rlv2["player"]["pending"].insert(
         0,
         {
@@ -580,7 +609,7 @@ def rlv2MoveAndBattleStart():
                     "boxInfo": {},
                     "tmpChar": [],
                     "sanity": 0,
-                    "unKeepBuff": []
+                    "unKeepBuff": buffs
                 }
             }
         }
