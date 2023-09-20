@@ -382,7 +382,7 @@ def rlv2CloseRecruitTicket():
 
 def getMap(theme):
     rlv2_table = updateData(RL_TABLE_URL)
-    stages = list(rlv2_table["details"][theme]["stages"].keys())
+    stages = [i for i in rlv2_table["details"][theme]["stages"]]
     if theme == "rogue_1":
         shop = 8
     elif theme == "rogue_2":
