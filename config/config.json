@@ -84,6 +84,9 @@
     "towerConfig": {
         "season": "tower_season_3"
     },
+    "rlv2Config": {
+        "allChars": true
+    },
     "userConfig": {
         "restorePreviousStates": {
             "is2": false,

@@ -1,6 +1,6 @@
 from flask import request
 
-from constants import RLV2_JSON_PATH, USER_JSON_PATH, RL_TABLE_URL
+from constants import RLV2_JSON_PATH, USER_JSON_PATH, RL_TABLE_URL, CONFIG_PATH
 from utils import read_json, write_json, decrypt_battle_data
 from core.function.update import updateData
 from copy import deepcopy
@@ -8,6 +8,44 @@ from copy import deepcopy
 
 def rlv2GiveUpGame():
     return {"result": "ok", "playerDataDelta": {"modified": {"rlv2": {"current": {"player": None, "record": None, "map": None, "troop": None, "inventory": None, "game": None, "buff": None, "module": None}}}, "deleted": {}}}
+
+
+def getChars():
+    user_data = read_json(USER_JSON_PATH)
+    chars = [
+        user_data["user"]["troop"]["chars"][i] for i in user_data["user"]["troop"]["chars"]
+    ]
+    for i in range(len(chars)):
+        char = chars[i]
+        if char["evolvePhase"] == 2:
+            char_alt = deepcopy(char)
+            char_alt["evolvePhase"] = 1
+            char_alt["level"] -= 10
+            if len(char["skills"]) == 3:
+                char_alt["defaultSkillIndex"] = 1
+                char_alt["skills"].pop()
+            for skill in char_alt["skills"]:
+                skill["specializeLevel"] = 0
+            char_alt["currentEquip"] = None
+            char_alt["equip"] = {}
+            chars.append(char_alt)
+    for i, char in enumerate(chars):
+        char.update(
+            {
+                "instId": str(i),
+                "type": "NORMAL",
+                "upgradeLimited": False,
+                "upgradePhase": 1,
+                "isUpgrade": False,
+                "isCure": False,
+                "population": 0,
+                "charBuff": [],
+                "troopInstId": "0"
+            }
+        )
+        if char["evolvePhase"] < 2:
+            char["upgradePhase"] = 0
+    return chars
 
 
 def rlv2CreateGame():
@@ -144,7 +182,31 @@ def rlv2CreateGame():
         },
         "module": {}
     }
-
+    config = read_json(CONFIG_PATH)
+    if config["rlv2Config"]["allChars"] == True:
+        if theme == "rogue_1":
+            ticket = "rogue_1_recruit_ticket_all"
+        elif theme == "rogue_2":
+            ticket = "rogue_2_recruit_ticket_all"
+        elif theme == "rogue_3":
+            ticket = "rogue_3_recruit_ticket_all"
+        chars = getChars()
+        for i, char in enumerate(chars):
+            ticket_id = f"t_{i}"
+            char_id = str(i+1)
+            char["instId"] = char_id
+            rlv2["inventory"]["recruit"][ticket_id] = {
+                "index": f"t_{i}",
+                "id": ticket,
+                "state": 2,
+                "list": [],
+                "result": char,
+                "ts": 1695000000,
+                "from": "initial",
+                "mustExtra": 0,
+                "needAssist": True
+            }
+            rlv2["troop"]["chars"][char_id] = char
     write_json(rlv2, RLV2_JSON_PATH)
 
     data = {
@@ -227,11 +289,21 @@ def addTicket(rlv2, ticket_id):
     }
 
 
+def getNextTicketIndex(rlv2):
+    d = set()
+    for e in rlv2["inventory"]["recruit"]:
+        d.add(int(e[2:]))
+    i = 0
+    while i in d:
+        i += 1
+    return f"t_{i}"
+
+
 def rlv2ChooseInitialRecruitSet():
     rlv2 = read_json(RLV2_JSON_PATH)
     rlv2["player"]["pending"].pop(0)
     for i in range(3):
-        ticket_id = f"t_{i}"
+        ticket_id = getNextTicketIndex(rlv2)
         addTicket(rlv2, ticket_id)
         rlv2["player"]["pending"][0]["content"]["initRecruit"]["tickets"].append(
             ticket_id
@@ -276,40 +348,7 @@ def activateTicket(rlv2, ticket_id):
             }
         }
     )
-    user_data = read_json(USER_JSON_PATH)
-    chars = [
-        user_data["user"]["troop"]["chars"][i] for i in user_data["user"]["troop"]["chars"]
-    ]
-    for i in range(len(chars)):
-        char = chars[i]
-        if char["evolvePhase"] == 2:
-            char_alt = deepcopy(char)
-            char_alt["evolvePhase"] = 1
-            char_alt["level"] -= 10
-            if len(char["skills"]) == 3:
-                char_alt["defaultSkillIndex"] = 1
-                char_alt["skills"].pop()
-            for skill in char_alt["skills"]:
-                skill["specializeLevel"] = 0
-            char_alt["currentEquip"] = None
-            char_alt["equip"] = {}
-            chars.append(char_alt)
-    for i, char in enumerate(chars):
-        char.update(
-            {
-                "instId": str(i),
-                "type": "NORMAL",
-                "upgradeLimited": False,
-                "upgradePhase": 1,
-                "isUpgrade": False,
-                "isCure": False,
-                "population": 0,
-                "charBuff": [],
-                "troopInstId": "0"
-            }
-        )
-        if char["evolvePhase"] < 2:
-            char["upgradePhase"] = 0
+    chars = getChars()
     rlv2["inventory"]["recruit"][ticket_id]["state"] = 1
     rlv2["inventory"]["recruit"][ticket_id]["list"] = chars
 
@@ -758,16 +797,6 @@ def rlv2MoveTo():
     }
 
     return data
-
-
-def getNextTicketIndex(rlv2):
-    d = set()
-    for e in rlv2["inventory"]["recruit"]:
-        d.add(int(e[2:]))
-    i = 0
-    while i in d:
-        i += 1
-    return f"t_{i}"
 
 
 def getNextRelicIndex(rlv2):
