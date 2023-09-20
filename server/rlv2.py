@@ -3,6 +3,7 @@ from flask import request
 from constants import RLV2_JSON_PATH, USER_JSON_PATH, RL_TABLE_URL
 from utils import read_json, write_json, decrypt_battle_data
 from core.function.update import updateData
+from copy import deepcopy
 
 
 def rlv2GiveUpGame():
@@ -275,9 +276,24 @@ def activateTicket(rlv2, ticket_id):
             }
         }
     )
-    chars = list(
-        read_json(USER_JSON_PATH)["user"]["troop"]["chars"].values()
-    )
+    user_data = read_json(USER_JSON_PATH)
+    chars = [
+        user_data["user"]["troop"]["chars"][i] for i in user_data["user"]["troop"]["chars"]
+    ]
+    for i in range(len(chars)):
+        char = chars[i]
+        if char["evolvePhase"] == 2:
+            char_alt = deepcopy(char)
+            char_alt["evolvePhase"] = 1
+            char_alt["level"] -= 10
+            if len(char["skills"]) == 3:
+                char_alt["defaultSkillIndex"] = 1
+                char_alt["skills"].pop()
+            for skill in char_alt["skills"]:
+                skill["specializeLevel"] = 0
+            char_alt["currentEquip"] = None
+            char_alt["equip"] = {}
+            chars.append(char_alt)
     for i, char in enumerate(chars):
         char.update(
             {
@@ -292,6 +308,8 @@ def activateTicket(rlv2, ticket_id):
                 "troopInstId": "0"
             }
         )
+        if char["evolvePhase"] < 2:
+            char["upgradePhase"] = 0
     rlv2["inventory"]["recruit"][ticket_id]["state"] = 1
     rlv2["inventory"]["recruit"][ticket_id]["list"] = chars
 
