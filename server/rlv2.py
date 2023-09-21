@@ -599,6 +599,13 @@ def rlv2MoveAndBattleStart():
     rlv2["player"]["trace"].append(rlv2["player"]["cursor"])
     pending_index = getNextPendingIndex(rlv2)
     buffs = getBuffs(rlv2)
+    theme = rlv2["game"]["theme"]
+    if theme == "rogue_1":
+        box_info = {}
+    elif theme == "rogue_2":
+        box_info = {"trap_068_badbox": 100}
+    elif theme == "rogue_3":
+        box_info = {"trap_110_smbbox": 100}
     rlv2["player"]["pending"].insert(
         0,
         {
@@ -610,7 +617,7 @@ def rlv2MoveAndBattleStart():
                     "chestCnt": 100,
                     "goldTrapCnt": 100,
                     "diceRoll": [],
-                    "boxInfo": {},
+                    "boxInfo": box_info,
                     "tmpChar": [],
                     "sanity": 0,
                     "unKeepBuff": buffs
