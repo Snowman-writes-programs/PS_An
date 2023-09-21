@@ -73,8 +73,8 @@ def rlv2CreateGame():
                 "level": 1,
                 "maxLevel": 10,
                 "hp": {
-                    "current": 50,
-                    "max": 0
+                    "current": 10000,
+                    "max": 10000
                 },
                 "gold": 8,
                 "shield": 0,
