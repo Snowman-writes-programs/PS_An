@@ -470,17 +470,15 @@ def getMap(theme):
             "variation": []
         }
         nodes_list = [
-            [
-                {
-                    "index": "0",
-                    "pos": {
-                        "x": 0,
-                        "y": 0
-                    },
-                    "next": [],
-                    "type": shop
-                }
-            ]
+            {
+                "index": "0",
+                "pos": {
+                    "x": 0,
+                    "y": 0
+                },
+                "next": [],
+                "type": shop
+            }
         ]
         x_max = 9
         y_max = 3
@@ -491,10 +489,9 @@ def getMap(theme):
             if y > y_max:
                 if x+1 == x_max:
                     break
-                nodes_list.append([])
                 x += 1
                 y = 0
-            nodes_list[-1].append(
+            nodes_list.append(
                 {
                     "index": f"{x}0{y}",
                     "pos": {
@@ -506,38 +503,45 @@ def getMap(theme):
                     "stage": stage
                 }
             )
+            nodes_list[0]["next"].append(
+                {
+                    "x": x,
+                    "y": y
+                }
+            )
             y += 1
             j += 1
         x += 1
-        nodes_list.append(
-            [
-                {
-                    "index": f"{x}00",
-                    "pos": {
-                        "x": x,
-                        "y": 0
-                    },
-                    "next": [],
-                    "type": shop,
-                    "zone_end": True
-                }
-            ]
-        )
-        for i, nodes in enumerate(nodes_list):
-            if i == 0:
-                continue
-            nodes_next = [node["pos"] for node in nodes]
-            for node in nodes_list[i-1]:
-                node["next"] = nodes_next
-        nodes_list[0][0]["next"].append(
+        nodes_list[0]["next"].append(
             {
                 "x": x,
                 "y": 0
             }
         )
-        for nodes in nodes_list:
-            for node in nodes:
-                zone_map["nodes"][node["index"]] = node
+        for i, node in enumerate(nodes_list):
+            if i == 0:
+                continue
+            node["next"] = [
+                {
+                    "x": x,
+                    "y": 0
+                }
+            ]
+        nodes_list.append(
+            {
+                "index": f"{x}00",
+                "pos": {
+                    "x": x,
+                    "y": 0
+                },
+                "next": [],
+                "type": shop,
+                "zone_end": True
+            }
+        )
+
+        for node in nodes_list:
+            zone_map["nodes"][node["index"]] = node
         map[str(zone)] = zone_map
         zone += 1
     return map
@@ -546,7 +550,7 @@ def getMap(theme):
 def rlv2FinishEvent():
     rlv2 = read_json(RLV2_JSON_PATH)
     rlv2["player"]["state"] = "WAIT_MOVE"
-    rlv2["player"]["cursor"]["zone"] += 1
+    rlv2["player"]["cursor"]["zone"] = 1
     rlv2["player"]["pending"] = []
     theme = rlv2["game"]["theme"]
     write_json(rlv2, RLV2_JSON_PATH)
@@ -682,7 +686,7 @@ def rlv2BattleFinish():
     else:
         rlv2["player"]["state"] = "WAIT_MOVE"
         rlv2["player"]["pending"] = []
-        rlv2["player"]["cursor"]["position"]["x"] -= 1
+        rlv2["player"]["cursor"]["position"]["x"] = 0
         rlv2["player"]["cursor"]["position"]["y"] = 0
         rlv2["player"]["trace"].pop()
     write_json(rlv2, RLV2_JSON_PATH)
@@ -705,6 +709,9 @@ def rlv2FinishBattleReward():
     rlv2 = read_json(RLV2_JSON_PATH)
     rlv2["player"]["state"] = "WAIT_MOVE"
     rlv2["player"]["pending"] = []
+    rlv2["player"]["cursor"]["position"]["x"] = 0
+    rlv2["player"]["cursor"]["position"]["y"] = 0
+    rlv2["player"]["trace"].pop()
     write_json(rlv2, RLV2_JSON_PATH)
 
     data = {
