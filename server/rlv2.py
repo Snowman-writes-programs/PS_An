@@ -491,6 +491,11 @@ def getMap(theme):
                     break
                 x += 1
                 y = 0
+            node_type = 1
+            if rlv2_table["details"][theme]["stages"][stage]["isElite"]:
+                node_type = 2
+            elif rlv2_table["details"][theme]["stages"][stage]["isBoss"]:
+                node_type = 4
             nodes_list.append(
                 {
                     "index": f"{x}0{y}",
@@ -499,7 +504,7 @@ def getMap(theme):
                         "y": y
                     },
                     "next": [],
-                    "type": 1,
+                    "type": node_type,
                     "stage": stage
                 }
             )
