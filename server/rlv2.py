@@ -607,8 +607,8 @@ def rlv2MoveAndBattleStart():
             "content": {
                 "battle": {
                     "state": 1,
-                    "chestCnt": 0,
-                    "goldTrapCnt": 0,
+                    "chestCnt": 100,
+                    "goldTrapCnt": 100,
                     "diceRoll": [],
                     "boxInfo": {},
                     "tmpChar": [],
