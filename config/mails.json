@@ -10,7 +10,7 @@
                 {
                     "id": "4003",
                     "type": "DIAMOND_SHD",
-                    "count": 12000
+                    "count": 999999
                 }
             ]
         },
@@ -27,22 +27,22 @@
                 {
                     "id": "4003",
                     "type": "DIAMOND_SHD",
-                    "count": 12000
+                    "count": 999999
                 },
                 {
                     "id": "2004",
                     "type": "CARD_EXP",
-                    "count": 20
+                    "count": 9999
                 },
                 {
                     "id": "7003",
                     "type": "TKT_GACHA",
-                    "count": 10
+                    "count": 999
                 },
                 {
                     "id": "7004",
                     "type": "TKT_GACHA_10",
-                    "count": 9
+                    "count": 999
                 }
             ]
         }
