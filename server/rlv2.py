@@ -4,6 +4,7 @@ from constants import RLV2_JSON_PATH, USER_JSON_PATH, RL_TABLE_URL, CONFIG_PATH
 from utils import read_json, write_json, decrypt_battle_data
 from core.function.update import updateData
 from copy import deepcopy
+import random
 
 
 def rlv2GiveUpGame():
@@ -56,13 +57,61 @@ def rlv2CreateGame():
     mode_grade = request_data["modeGrade"]
 
     if theme == "rogue_1":
-        band = "rogue_1_band_1"
+        bands = [
+            "rogue_1_band_1",
+            "rogue_1_band_2",
+            "rogue_1_band_3",
+            "rogue_1_band_4",
+            "rogue_1_band_5",
+            "rogue_1_band_6",
+            "rogue_1_band_7",
+            "rogue_1_band_8",
+            "rogue_1_band_9",
+            "rogue_1_band_10"
+        ]
         ending = "ro_ending_1"
     elif theme == "rogue_2":
-        band = "rogue_2_band_1"
+        bands = [
+            "rogue_2_band_1",
+            "rogue_2_band_2",
+            "rogue_2_band_3",
+            "rogue_2_band_4",
+            "rogue_2_band_5",
+            "rogue_2_band_6",
+            "rogue_2_band_7",
+            "rogue_2_band_8",
+            "rogue_2_band_9",
+            "rogue_2_band_10",
+            "rogue_2_band_11",
+            "rogue_2_band_12",
+            "rogue_2_band_13",
+            "rogue_2_band_14",
+            "rogue_2_band_15",
+            "rogue_2_band_16",
+            "rogue_2_band_17",
+            "rogue_2_band_18",
+            "rogue_2_band_19",
+            "rogue_2_band_20",
+            "rogue_2_band_21",
+            "rogue_2_band_22"
+        ]
         ending = "ro2_ending_1"
     elif theme == "rogue_3":
-        band = "rogue_3_band_1"
+        bands = [
+            "rogue_3_band_1",
+            "rogue_3_band_2",
+            "rogue_3_band_3",
+            "rogue_3_band_4",
+            "rogue_3_band_5",
+            "rogue_3_band_6",
+            "rogue_3_band_7",
+            "rogue_3_band_8",
+            "rogue_3_band_9",
+            "rogue_3_band_10",
+            "rogue_3_band_11",
+            "rogue_3_band_12",
+            "rogue_3_band_13"
+        ]
         ending = "ro3_ending_1"
 
     rlv2 = {
@@ -101,10 +150,10 @@ def rlv2CreateGame():
                                 3
                             ],
                             "items": {
-                                "0": {
+                                str(i): {
                                     "id": band,
                                     "count": 1
-                                }
+                                } for i, band in enumerate(bands)
                             }
                         }
                     }
@@ -226,8 +275,11 @@ def rlv2CreateGame():
 
 
 def rlv2ChooseInitialRelic():
+    request_data = request.get_json()
+    select = request_data["select"]
+
     rlv2 = read_json(RLV2_JSON_PATH)
-    band = rlv2["player"]["pending"][0]["content"]["initRelic"]["items"]["0"]["id"]
+    band = rlv2["player"]["pending"][0]["content"]["initRelic"]["items"][select]["id"]
     rlv2["player"]["pending"].pop(0)
     rlv2["inventory"]["relic"]["r_0"] = {
         "index": "r_0",
@@ -491,7 +543,7 @@ def getMap(theme):
                     break
                 x += 1
                 y = 0
-                node_type = 1
+            node_type = 1
             if rlv2_table["details"][theme]["stages"][stage]["isElite"]:
                 node_type = 2
             elif rlv2_table["details"][theme]["stages"][stage]["isBoss"]:
@@ -604,6 +656,21 @@ def rlv2MoveAndBattleStart():
     rlv2["player"]["trace"].append(rlv2["player"]["cursor"])
     pending_index = getNextPendingIndex(rlv2)
     buffs = getBuffs(rlv2)
+    theme = rlv2["game"]["theme"]
+    if theme == "rogue_1":
+        box_info = {}
+    elif theme == "rogue_2":
+        box_info = {
+            random.choice(
+                ["trap_065_normbox", "trap_066_rarebox", "trap_068_badbox"]
+            ): 100
+        }
+    elif theme == "rogue_3":
+        box_info = {
+            random.choice(
+                ["trap_108_smbox",  "trap_109_smrbox", "trap_110_smbbox"]
+            ): 100
+        }
     rlv2["player"]["pending"].insert(
         0,
         {
@@ -612,10 +679,10 @@ def rlv2MoveAndBattleStart():
             "content": {
                 "battle": {
                     "state": 1,
-                    "chestCnt": 0,
-                    "goldTrapCnt": 0,
+                    "chestCnt": 100,
+                    "goldTrapCnt": 100,
                     "diceRoll": [],
-                    "boxInfo": {},
+                    "boxInfo": box_info,
                     "tmpChar": [],
                     "sanity": 0,
                     "unKeepBuff": buffs
