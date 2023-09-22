@@ -4,6 +4,7 @@ from constants import RLV2_JSON_PATH, USER_JSON_PATH, RL_TABLE_URL, CONFIG_PATH
 from utils import read_json, write_json, decrypt_battle_data
 from core.function.update import updateData
 from copy import deepcopy
+import random
 
 
 def rlv2GiveUpGame():
@@ -608,9 +609,17 @@ def rlv2MoveAndBattleStart():
     if theme == "rogue_1":
         box_info = {}
     elif theme == "rogue_2":
-        box_info = {"trap_068_badbox": 100}
+        box_info = {
+            random.choice(
+                ["trap_065_normbox", "trap_066_rarebox", "trap_068_badbox"]
+            ): 100
+        }
     elif theme == "rogue_3":
-        box_info = {"trap_110_smbbox": 100}
+        box_info = {
+            random.choice(
+                ["trap_108_smbox",  "trap_109_smrbox", "trap_110_smbbox"]
+            ): 100
+        }
     rlv2["player"]["pending"].insert(
         0,
         {
