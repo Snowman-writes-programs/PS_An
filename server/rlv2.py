@@ -57,13 +57,61 @@ def rlv2CreateGame():
     mode_grade = request_data["modeGrade"]
 
     if theme == "rogue_1":
-        band = "rogue_1_band_1"
+        bands = [
+            "rogue_1_band_1",
+            "rogue_1_band_2",
+            "rogue_1_band_3",
+            "rogue_1_band_4",
+            "rogue_1_band_5",
+            "rogue_1_band_6",
+            "rogue_1_band_7",
+            "rogue_1_band_8",
+            "rogue_1_band_9",
+            "rogue_1_band_10"
+        ]
         ending = "ro_ending_1"
     elif theme == "rogue_2":
-        band = "rogue_2_band_1"
+        bands = [
+            "rogue_2_band_1",
+            "rogue_2_band_2",
+            "rogue_2_band_3",
+            "rogue_2_band_4",
+            "rogue_2_band_5",
+            "rogue_2_band_6",
+            "rogue_2_band_7",
+            "rogue_2_band_8",
+            "rogue_2_band_9",
+            "rogue_2_band_10",
+            "rogue_2_band_11",
+            "rogue_2_band_12",
+            "rogue_2_band_13",
+            "rogue_2_band_14",
+            "rogue_2_band_15",
+            "rogue_2_band_16",
+            "rogue_2_band_17",
+            "rogue_2_band_18",
+            "rogue_2_band_19",
+            "rogue_2_band_20",
+            "rogue_2_band_21",
+            "rogue_2_band_22"
+        ]
         ending = "ro2_ending_1"
     elif theme == "rogue_3":
-        band = "rogue_3_band_1"
+        bands = [
+            "rogue_3_band_1",
+            "rogue_3_band_2",
+            "rogue_3_band_3",
+            "rogue_3_band_4",
+            "rogue_3_band_5",
+            "rogue_3_band_6",
+            "rogue_3_band_7",
+            "rogue_3_band_8",
+            "rogue_3_band_9",
+            "rogue_3_band_10",
+            "rogue_3_band_11",
+            "rogue_3_band_12",
+            "rogue_3_band_13"
+        ]
         ending = "ro3_ending_1"
 
     rlv2 = {
@@ -102,10 +150,10 @@ def rlv2CreateGame():
                                 3
                             ],
                             "items": {
-                                "0": {
+                                str(i): {
                                     "id": band,
                                     "count": 1
-                                }
+                                } for i, band in enumerate(bands)
                             }
                         }
                     }
@@ -227,8 +275,11 @@ def rlv2CreateGame():
 
 
 def rlv2ChooseInitialRelic():
+    request_data = request.get_json()
+    select = request_data["select"]
+
     rlv2 = read_json(RLV2_JSON_PATH)
-    band = rlv2["player"]["pending"][0]["content"]["initRelic"]["items"]["0"]["id"]
+    band = rlv2["player"]["pending"][0]["content"]["initRelic"]["items"][select]["id"]
     rlv2["player"]["pending"].pop(0)
     rlv2["inventory"]["relic"]["r_0"] = {
         "index": "r_0",
