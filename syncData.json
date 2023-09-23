@@ -6162,6 +6162,73 @@
                                 "ro3_ending_2": 1,
                                 "ro3_ending_3": 1
                             }
+                        },
+                        "bandGrade": {
+                            "rogue_3_band_1": {
+                                "ro3_ending_1": 15,
+                                "ro3_ending_2": 15,
+                                "ro3_ending_3": 15
+                            },
+                            "rogue_3_band_2": {
+                                "ro3_ending_1": 15,
+                                "ro3_ending_2": 15,
+                                "ro3_ending_3": 15
+                            },
+                            "rogue_3_band_3": {
+                                "ro3_ending_1": 15,
+                                "ro3_ending_2": 15,
+                                "ro3_ending_3": 15
+                            },
+                            "rogue_3_band_4": {
+                                "ro3_ending_1": 15,
+                                "ro3_ending_2": 15,
+                                "ro3_ending_3": 15
+                            },
+                            "rogue_3_band_5": {
+                                "ro3_ending_1": 15,
+                                "ro3_ending_2": 15,
+                                "ro3_ending_3": 15
+                            },
+                            "rogue_3_band_6": {
+                                "ro3_ending_1": 15,
+                                "ro3_ending_2": 15,
+                                "ro3_ending_3": 15
+                            },
+                            "rogue_3_band_7": {
+                                "ro3_ending_1": 15,
+                                "ro3_ending_2": 15,
+                                "ro3_ending_3": 15
+                            },
+                            "rogue_3_band_8": {
+                                "ro3_ending_1": 15,
+                                "ro3_ending_2": 15,
+                                "ro3_ending_3": 15
+                            },
+                            "rogue_3_band_9": {
+                                "ro3_ending_1": 15,
+                                "ro3_ending_2": 15,
+                                "ro3_ending_3": 15
+                            },
+                            "rogue_3_band_10": {
+                                "ro3_ending_1": 15,
+                                "ro3_ending_2": 15,
+                                "ro3_ending_3": 15
+                            },
+                            "rogue_3_band_11": {
+                                "ro3_ending_1": 15,
+                                "ro3_ending_2": 15,
+                                "ro3_ending_3": 15
+                            },
+                            "rogue_3_band_12": {
+                                "ro3_ending_1": 15,
+                                "ro3_ending_2": 15,
+                                "ro3_ending_3": 15
+                            },
+                            "rogue_3_band_13": {
+                                "ro3_ending_1": 15,
+                                "ro3_ending_2": 15,
+                                "ro3_ending_3": 15
+                            }
                         }
                     }
                 }

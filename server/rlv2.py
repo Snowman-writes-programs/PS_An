@@ -222,7 +222,7 @@ def rlv2CreateGame():
             },
             "start": 1695000000,
             "modeGrade": mode_grade,
-            "equivalentGrade": 0
+            "equivalentGrade": mode_grade
         },
         "buff": {
             "tmpHP": 0,
@@ -629,7 +629,14 @@ def rlv2FinishEvent():
     return data
 
 
-def getBuffs(rlv2):
+def getZone(stage_id):
+    try:
+        return int(stage_id.split('_')[-2])
+    except Exception:
+        return -1
+
+
+def getBuffs(rlv2, stage_id):
     rlv2_table = updateData(RL_TABLE_URL)
     theme = rlv2["game"]["theme"]
     buffs = []
@@ -638,12 +645,328 @@ def getBuffs(rlv2):
         item_id = rlv2["inventory"]["trap"]["id"]
         if item_id in rlv2_table["details"][theme]["relics"]:
             buffs += rlv2_table["details"][theme]["relics"][item_id]["buffs"]
-
+    mode_grade = rlv2["game"]["modeGrade"]
+    if theme == "rogue_1":
+        theme_buffs = []
+    elif theme == "rogue_2":
+        theme_buffs = [
+            # 0
+            ([], []),
+            # 1
+            (
+                [
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "rogue_2_ep_damage_scale"
+                            },
+                            {
+                                "key": "ep_damage_scale",
+                                "value": 1.15
+                            }
+                        ]
+                    },
+                ], []
+            ),
+            # 2
+            ([], []),
+            # 3
+            (
+                [
+                    {
+                        "key": "enemy_attribute_add",
+                        "blackboard": [
+                            {
+                                "key": "magic_resistance",
+                                "value": 10
+                            }
+                        ]
+                    },
+                ], []
+            ),
+            # 4
+            ([], []),
+            # 5
+            (
+                [
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_atk_down"
+                            },
+                            {
+                                "key": "atk",
+                                "value": 1.15
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "BOSS"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_def_down"
+                            },
+                            {
+                                "key": "def",
+                                "value": 1.15
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "BOSS"
+                            }
+                        ]
+                    },
+                ], []
+            ),
+            # 6
+            ([], []),
+            # 7
+            (
+                [
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_move_speed_down"
+                            },
+                            {
+                                "key": "move_speed",
+                                "value": 1.15
+                            }
+                        ]
+                    },
+                ], []
+            ),
+            # 8
+            (
+                [
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "rogue_2_ep_damage_scale"
+                            },
+                            {
+                                "key": "ep_damage_scale",
+                                "value": 1.3
+                            }
+                        ]
+                    },
+                ], [1]
+            ),
+            # 9
+            (
+                [
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_attack_speed_down"
+                            },
+                            {
+                                "key": "attack_speed",
+                                "value": 15
+                            }
+                        ]
+                    },
+                ], []
+            ),
+            # 10
+            ([], []),
+            # 11
+            (
+                [
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_max_hp_down"
+                            },
+                            {
+                                "key": "max_hp",
+                                "value": 1.2
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "ELITE|BOSS"
+                            }
+                        ]
+                    },
+                ], []
+            ),
+            # 12
+            (
+                [
+                    {
+                        "key": "enemy_attribute_add",
+                        "blackboard": [
+                            {
+                                "key": "magic_resistance",
+                                "value": 20
+                            }
+                        ]
+                    },
+                ], [3]
+            ),
+            # 13
+            (
+                [
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "rogue_2_ep_damage_scale"
+                            },
+                            {
+                                "key": "ep_damage_scale",
+                                "value": 1.45
+                            }
+                        ]
+                    },
+                ], [8]
+            ),
+            # 14
+            (
+                [
+                    {
+                        "key": "level_char_limit_add",
+                        "blackboard": [
+                            {
+                                "key": "value",
+                                "value": -1
+                            }
+                        ]
+                    },
+                ], []
+            ),
+            # 15
+            (
+                [
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_atk_down"
+                            },
+                            {
+                                "key": "atk",
+                                "value": 1.2
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "ELITE|BOSS"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_def_down"
+                            },
+                            {
+                                "key": "def",
+                                "value": 1.2
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "ELITE|BOSS"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_max_hp_down"
+                            },
+                            {
+                                "key": "max_hp",
+                                "value": 1.2
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "ELITE|BOSS"
+                            }
+                        ]
+                    },
+                ], []
+            ),
+        ]
+    elif theme == "rogue_3":
+        theme_buffs = []
+    for i in range(len(theme_buffs)):
+        if mode_grade < i:
+            break
+        for j in theme_buffs[i][1]:
+            theme_buffs[j] = ([], [])
+    for i in range(len(theme_buffs)):
+        if mode_grade < i:
+            break
+        buffs += theme_buffs[i][0]
+    zone = getZone(stage_id)
+    if theme == "rogue_1":
+        pass
+    elif theme == "rogue_2":
+        if zone == -1:
+            zone = 6
+        if mode_grade > 0:
+            value = 1+0.01*mode_grade
+            for i in range(zone):
+                buffs += [
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_atk_down"
+                            },
+                            {
+                                "key": "atk",
+                                "value": value
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_max_hp_down"
+                            },
+                            {
+                                "key": "max_hp",
+                                "value": value
+                            }
+                        ]
+                    }
+                ]
+    elif theme == "rogue_3":
+        if zone == -1:
+            zone = 6
     return buffs
 
 
 def rlv2MoveAndBattleStart():
     request_data = request.get_json()
+    stage_id = request_data["stageId"]
     x = request_data["to"]["x"]
     y = request_data["to"]["y"]
 
@@ -655,7 +978,7 @@ def rlv2MoveAndBattleStart():
     }
     rlv2["player"]["trace"].append(rlv2["player"]["cursor"])
     pending_index = getNextPendingIndex(rlv2)
-    buffs = getBuffs(rlv2)
+    buffs = getBuffs(rlv2, stage_id)
     theme = rlv2["game"]["theme"]
     if theme == "rogue_1":
         box_info = {}
