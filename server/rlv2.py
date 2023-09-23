@@ -630,10 +630,12 @@ def rlv2FinishEvent():
 
 
 def getZone(stage_id):
-    try:
-        return int(stage_id.split('_')[-2])
-    except Exception:
-        return -1
+    if stage_id.find("_n_") != -1 or stage_id.find("_b_") != -1 or stage_id.find("_e_") != -1:
+        try:
+            return int(stage_id.split('_')[2])
+        except Exception:
+            pass
+    return -1
 
 
 def getBuffs(rlv2, stage_id):
@@ -911,7 +913,810 @@ def getBuffs(rlv2, stage_id):
             ),
         ]
     elif theme == "rogue_3":
-        theme_buffs = []
+        theme_buffs = [
+            # 0
+            ([], []),
+            # 1
+            ([], []),
+            # 2
+            ([], []),
+            # 3
+            ([], []),
+            # 4
+            (
+                [
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_atk_down"
+                            },
+                            {
+                                "key": "atk",
+                                "value": 1.1
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "ELITE"
+                            }
+                        ]
+                    },
+                ], []
+            ),
+            # 5
+            (
+                [
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_atk_down"
+                            },
+                            {
+                                "key": "atk",
+                                "value": 1.05
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "NORMAL"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_max_hp_down"
+                            },
+                            {
+                                "key": "max_hp",
+                                "value": 1.05
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "NORMAL"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_atk_down"
+                            },
+                            {
+                                "key": "atk",
+                                "value": 1.15
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "ELITE"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_max_hp_down"
+                            },
+                            {
+                                "key": "max_hp",
+                                "value": 1.05
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "ELITE"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_atk_down"
+                            },
+                            {
+                                "key": "atk",
+                                "value": 1.05
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "BOSS"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_max_hp_down"
+                            },
+                            {
+                                "key": "max_hp",
+                                "value": 1.05
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "BOSS"
+                            }
+                        ]
+                    },
+                ], [4]
+            ),
+            # 6
+            ([], []),
+            # 7
+            (
+                [
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_def_down"
+                            },
+                            {
+                                "key": "def",
+                                "value": 1.1
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "NORMAL"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_def_down"
+                            },
+                            {
+                                "key": "def",
+                                "value": 1.1
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "ELITE"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_def_down"
+                            },
+                            {
+                                "key": "def",
+                                "value": 1.1
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "BOSS"
+                            }
+                        ]
+                    },
+                ], []
+            ),
+            # 8
+            (
+                [
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_damage_resistance[inf]"
+                            },
+                            {
+                                "key": "damage_resistance",
+                                "value": 0.05
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "NORMAL"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_damage_resistance[inf]"
+                            },
+                            {
+                                "key": "damage_resistance",
+                                "value": 0.05
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "ELITE"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_damage_resistance[inf]"
+                            },
+                            {
+                                "key": "damage_resistance",
+                                "value": 0.05
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "BOSS"
+                            }
+                        ]
+                    },
+                ], []
+            ),
+            # 9
+            (
+                [
+                    {
+                        "key": "level_char_limit_add",
+                        "blackboard": [
+                            {
+                                "key": "value",
+                                "value": -1
+                            }
+                        ]
+                    },
+                ], []
+            ),
+            # 10
+            (
+                [
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_atk_down"
+                            },
+                            {
+                                "key": "atk",
+                                "value": 1.15
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "NORMAL"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_max_hp_down"
+                            },
+                            {
+                                "key": "max_hp",
+                                "value": 1.05
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "NORMAL"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_atk_down"
+                            },
+                            {
+                                "key": "atk",
+                                "value": 1.25
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "ELITE"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_max_hp_down"
+                            },
+                            {
+                                "key": "max_hp",
+                                "value": 1.05
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "ELITE"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_atk_down"
+                            },
+                            {
+                                "key": "atk",
+                                "value": 1.15
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "BOSS"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_max_hp_down"
+                            },
+                            {
+                                "key": "max_hp",
+                                "value": 1.05
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "BOSS"
+                            }
+                        ]
+                    },
+                ], [5]
+            ),
+            # 11
+            (
+                [
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_damage_resistance[inf]"
+                            },
+                            {
+                                "key": "damage_resistance",
+                                "value": 0.05
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "NORMAL"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_damage_resistance[inf]"
+                            },
+                            {
+                                "key": "damage_resistance",
+                                "value": 0.05
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "ELITE"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_damage_resistance[inf]"
+                            },
+                            {
+                                "key": "damage_resistance",
+                                "value": 0.1
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "BOSS"
+                            }
+                        ]
+                    },
+                ], [8]
+            ),
+            # 12
+            ([], []),
+            # 13
+            (
+                [
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_damage_resistance[inf]"
+                            },
+                            {
+                                "key": "damage_resistance",
+                                "value": 0.05
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "NORMAL"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_damage_resistance[inf]"
+                            },
+                            {
+                                "key": "damage_resistance",
+                                "value": 0.1
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "ELITE"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_damage_resistance[inf]"
+                            },
+                            {
+                                "key": "damage_resistance",
+                                "value": 0.15
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "BOSS"
+                            }
+                        ]
+                    },
+                ], [11]
+            ),
+            # 14
+            (
+                [
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_atk_down"
+                            },
+                            {
+                                "key": "atk",
+                                "value": 1.15
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "NORMAL"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_def_down"
+                            },
+                            {
+                                "key": "def",
+                                "value": 1.15
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "NORMAL"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_max_hp_down"
+                            },
+                            {
+                                "key": "max_hp",
+                                "value": 1.1
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "NORMAL"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_atk_down"
+                            },
+                            {
+                                "key": "atk",
+                                "value": 1.25
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "ELITE"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_def_down"
+                            },
+                            {
+                                "key": "def",
+                                "value": 1.15
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "ELITE"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_max_hp_down"
+                            },
+                            {
+                                "key": "max_hp",
+                                "value": 1.1
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "ELITE"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_atk_down"
+                            },
+                            {
+                                "key": "atk",
+                                "value": 1.15
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "BOSS"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_def_down"
+                            },
+                            {
+                                "key": "def",
+                                "value": 1.15
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "BOSS"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_max_hp_down"
+                            },
+                            {
+                                "key": "max_hp",
+                                "value": 1.1
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "BOSS"
+                            }
+                        ]
+                    },
+                ], [7, 10]
+            ),
+            # 15
+            (
+                [
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_atk_down"
+                            },
+                            {
+                                "key": "atk",
+                                "value": 1.25
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "NORMAL"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_def_down"
+                            },
+                            {
+                                "key": "def",
+                                "value": 1.25
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "NORMAL"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_max_hp_down"
+                            },
+                            {
+                                "key": "max_hp",
+                                "value": 1.2
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "NORMAL"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_atk_down"
+                            },
+                            {
+                                "key": "atk",
+                                "value": 1.35
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "ELITE"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_def_down"
+                            },
+                            {
+                                "key": "def",
+                                "value": 1.25
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "ELITE"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_max_hp_down"
+                            },
+                            {
+                                "key": "max_hp",
+                                "value": 1.2
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "ELITE"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_atk_down"
+                            },
+                            {
+                                "key": "atk",
+                                "value": 1.25
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "BOSS"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_def_down"
+                            },
+                            {
+                                "key": "def",
+                                "value": 1.25
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "BOSS"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_max_hp_down"
+                            },
+                            {
+                                "key": "max_hp",
+                                "value": 1.2
+                            },
+                            {
+                                "key": "selector.enemy_level_type",
+                                "valueStr": "BOSS"
+                            }
+                        ]
+                    },
+                ], [14]
+            ),
+        ]
     for i in range(len(theme_buffs)):
         if mode_grade < i:
             break
@@ -961,6 +1766,37 @@ def getBuffs(rlv2, stage_id):
     elif theme == "rogue_3":
         if zone == -1:
             zone = 6
+        if mode_grade > 4:
+            value = 1+0.16*(mode_grade-4)/(15-4)
+            for i in range(zone):
+                buffs += [
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_atk_down"
+                            },
+                            {
+                                "key": "atk",
+                                "value": value
+                            }
+                        ]
+                    },
+                    {
+                        "key": "global_buff_normal",
+                        "blackboard": [
+                            {
+                                "key": "key",
+                                "valueStr": "enemy_max_hp_down"
+                            },
+                            {
+                                "key": "max_hp",
+                                "value": value
+                            }
+                        ]
+                    }
+                ]
     return buffs
 
 
