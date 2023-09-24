@@ -630,7 +630,7 @@ def rlv2FinishEvent():
 
 
 def getZone(stage_id):
-    if stage_id.find("_n_") != -1 or stage_id.find("_b_") != -1 or stage_id.find("_e_") != -1:
+    if stage_id.find("_n_") != -1 or stage_id.find("_e_") != -1:
         try:
             return int(stage_id.split('_')[2])
         except Exception:
