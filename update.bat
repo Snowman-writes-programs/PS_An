@@ -1,1 +1,4 @@
-git checkout
+@echo off
+@title Update
+
+git pull

@@ -125,7 +125,7 @@ def rlv2CreateGame():
                     "current": 999,
                     "max": 999
                 },
-                "gold": 999,
+                "gold": 450,
                 "shield": 0,
                 "capacity": 13,
                 "population": {
