@@ -56,6 +56,7 @@ def accountSyncData():
     ts = round(time())
     cnt = 0
     cntInstId = 1
+    maxInstId = 1
     tempSkinTable = {}
     myCharList = {}
     charGroup = {}
@@ -112,7 +113,8 @@ def accountSyncData():
                 evolvePhase = maxEvolvePhase
             else:
                 evolvePhase = edit_json["evolvePhase"]
-
+        cntInstId = int(operatorKeys[cnt].split('_')[1])
+        maxInstId = max(maxInstId, cntInstId)
         myCharList[int(cntInstId)] = {
             "instId": int(cntInstId),
             "charId": operatorKeys[cnt],
@@ -263,7 +265,7 @@ def accountSyncData():
         })
 
         cnt += 1
-        cntInstId += 1
+    cntInstId = maxInstId+1
 
     dupe_characters = edit_json["duplicateUnits"]
     for dupeChar in dupe_characters:
