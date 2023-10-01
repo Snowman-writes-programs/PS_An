@@ -257,9 +257,9 @@
                 "currentEquip": "uniequip_002_amgoat"
             },
             {
-                "charId": "char_377_gdglow",
+                "charId": "char_134_ifrit",
                 "skillIndex": 2,
-                "currentEquip": null
+                "currentEquip": "uniequip_002_ifrit"
             }
         ]
     }
