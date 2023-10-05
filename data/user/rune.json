@@ -2,14 +2,15 @@
     "chosenCrisis": "cc12",
     "chosenRisks": [
         "global_lifepoint_1",
-        "enemy_def_1",
         "char_respawntime_1",
-        "global_costrecovery_2",
-        "global_pcharnum_2",
-        "char_exclude_casterspecial_2",
+        "char_hp_1",
+        "global_squadnum_2",
+        "char_exclude_guardsupporter_2",
         "enemy_atk_3",
         "enemy_reid_4",
-        "enemy_newrevg_3"
+        "enemy_soticn_1",
+        "enemy_sotidm_2",
+        "enemy_newrevg_2"
     ],
     "totalRisks": 18
 }

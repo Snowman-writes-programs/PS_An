@@ -89,8 +89,8 @@
     },
     "userConfig": {
         "restorePreviousStates": {
-            "is2": false,
-            "squadsAndFavs": false
+            "is2": true,
+            "squadsAndFavs": true
         },
         "secretary": "char_249_mlyss",
         "secretarySkinId": "char_249_mlyss#2",
