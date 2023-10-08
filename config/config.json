@@ -79,7 +79,7 @@
         }
     },
     "crisisConfig": {
-        "selectedCrisis": "cc0"
+        "selectedCrisis": "cc1"
     },
     "towerConfig": {
         "season": "tower_season_3"

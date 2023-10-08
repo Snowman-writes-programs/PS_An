@@ -1,16 +1,17 @@
 {
-    "chosenCrisis": "cc0",
+    "chosenCrisis": "cc1",
     "chosenRisks": [
-        "enemy_bslime_1",
-        "enemy_atk_2",
-        "enemy_hp_3",
-        "char_hp_1",
-        "global_costrecovery_2",
+        "enemy_crowns_2",
+        "enemy_ghost_3",
+        "char_def_3",
+        "global_costrecovery_1",
         "global_squadnum_2",
-        "global_forbidloc_3",
-        "char_exclude_sniperhealer_2",
+        "global_forbidloc_1",
+        "char_exclude_supporter_1",
         "global_lifepoint_1",
-        "enemy_def_1"
+        "enemy_def_1",
+        "enemy_atk_2",
+        "char_debuff_1"
     ],
     "totalRisks": 18
 }
