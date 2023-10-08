@@ -33,6 +33,7 @@ app.add_url_rule('/account/yostar_auth_submit', methods=['POST'], view_func=acco
 app.add_url_rule('/assetbundle/official/Android/assets/<string:assetsHash>/<string:fileName>', methods=['GET'], view_func=asset.assetbundle.getFile)
 
 app.add_url_rule('/background/setBackground', methods=['POST'], view_func=background.backgroundSetBackground)
+app.add_url_rule('/homeTheme/change', methods=['POST'], view_func=background.homeThemeChange)
 
 app.add_url_rule('/building/sync', methods=['POST'], view_func=building.buildingSync)
 

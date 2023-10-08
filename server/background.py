@@ -18,3 +18,18 @@ def backgroundSetBackground():
     }
     return data
 
+
+def homeThemeChange():
+    request_data = request.get_json()
+
+    data = {
+        "playerDataDelta": {
+            "deleted": {},
+            "modified": {
+                "homeTheme": {
+                    "selected": request_data["themeId"]
+                }
+            }
+        }
+    }
+    return data

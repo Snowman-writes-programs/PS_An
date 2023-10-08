@@ -398,6 +398,13 @@ def accountSyncData():
         })
     player_data["user"]["background"]["bgs"] = bgs
 
+    themes = {}
+    for theme in display_meta_table["homeBackgroundData"]["themeList"]:
+        themes[theme["id"]] = {
+            "unlock": 1695000000
+        }
+    player_data["user"]["homeTheme"]["themes"] = themes
+
     # Update charms
     for charm in charm_table["charmList"]:
         player_data["user"]["charm"]["charms"].update({charm["id"]: 1})
@@ -524,10 +531,12 @@ def accountSyncData():
     secretary = config["userConfig"]["secretary"]
     secretarySkinId = config["userConfig"]["secretarySkinId"]
     background = config["userConfig"]["background"]
+    theme = config["userConfig"]["theme"]
 
     player_data["user"]["status"]["secretary"] = secretary
     player_data["user"]["status"]["secretarySkinId"] = secretarySkinId
     player_data["user"]["background"]["selected"] = background
+    player_data["user"]["homeTheme"]["selected"] = theme
 
     season = config["towerConfig"]["season"]
 
