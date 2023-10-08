@@ -233,6 +233,10 @@
             "bgs": {}
         },
         "medal": {},
+        "homeTheme": {
+            "selected": "tm_rhodes_day",
+            "themes": {}
+        },
         "rlv2": {
             "current": {
                 "player": {
