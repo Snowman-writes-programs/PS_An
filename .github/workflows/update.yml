@@ -3,7 +3,7 @@ on:
     - cron: '53 20,8 * * *'
   push:
     branches:
-      - auto
+      - main
 
 
 jobs:
@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: auto
+          ref: main
       - uses: actions/setup-python@v4
         with:
           python-version: '3.10'
