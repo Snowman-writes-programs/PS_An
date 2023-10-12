@@ -9,7 +9,7 @@
                 "current": 999,
                 "max": 999
             },
-            "gold": 999,
+            "gold": 450,
             "shield": 0,
             "capacity": 13,
             "population": {
@@ -21,8 +21,8 @@
         "cursor": {
             "zone": 1,
             "position": {
-                "x": 1,
-                "y": 0
+                "x": 8,
+                "y": 3
             }
         },
         "trace": [
@@ -36,8 +36,8 @@
             {
                 "zone": 1,
                 "position": {
-                    "x": 1,
-                    "y": 0
+                    "x": 8,
+                    "y": 3
                 }
             }
         ],
@@ -102,6 +102,18 @@
             },
             "r_1": {
                 "index": "r_1",
+                "id": "rogue_3_relic_legacy_90",
+                "count": 1,
+                "ts": 1695000000
+            },
+            "r_2": {
+                "index": "r_2",
+                "id": "rogue_3_relic_legacy_81",
+                "count": 1,
+                "ts": 1695000000
+            },
+            "r_3": {
+                "index": "r_3",
                 "id": "rogue_3_relic_legacy_158",
                 "count": 1,
                 "ts": 1695000000
@@ -119,8 +131,8 @@
             "support": false
         },
         "start": 1695000000,
-        "modeGrade": 1,
-        "equivalentGrade": 1
+        "modeGrade": 15,
+        "equivalentGrade": 15
     },
     "buff": {
         "tmpHP": 0,

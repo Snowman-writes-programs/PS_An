@@ -1,4 +1,3 @@
-@echo off
-@title Update
+python3 update_config.py
+python3 update_game.py
 
-git pull
