@@ -1,6 +1,6 @@
 # OpenDoctoratePy
 
-It's a pity that DoctoratePy is no longer maintained. Therefore, this repo aims to continue the support of this project for newer versions of the game.
+~~It's a pity that DoctoratePy is no longer maintained. Therefore, this repo aims to continue the support of this project for newer versions of the game.~~
 
 Python server implementation of a certain anime tower defense game. This repo is for the CN TapTap Version.
 
@@ -81,5 +81,5 @@ Note: Characters stats and skill masteries are based on the above parameters.
 ```
 
 ## TODO
-- [ ] Add more info about mods
+- [v] Add more info about mods
 - [ ] Add a UI for easy editing
