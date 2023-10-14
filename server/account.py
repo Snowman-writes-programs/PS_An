@@ -14,6 +14,7 @@ from utils import read_json, write_json
 from core.function.update import updateData
 import uuid
 
+
 def accountLogin():
     try:
         uid = uuid.UUID(request.headers.get("Uid"))
