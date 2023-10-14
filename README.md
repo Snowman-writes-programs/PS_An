@@ -33,10 +33,10 @@ Discord: [https://discord.com/invite/SmuB88RR5W](https://discord.com/invite/SmuB
 
 1. Enable root permission and adb connection in LDPlayer9's settings.
 2. Start LDPlayer9.
-3. Run `setup_requirements.bat`, and success can be indicated from `"Press enter to exit..."`.
-4. Run `start_local_server.bat`, and the window should stay open if no error occurs.
-5. Run `start_frida-server.bat`, and the window should stay open if no error occurs.
-6. Run `start_frida-hook.bat`. It should automatically open up the game. The window should stay open if no error occurs.
+2.1. Run `setup_requirements.bat`, and success can be indicated from `"Press enter to exit..."`. May be skipped if you have installed Frida on your emulator.
+3. Run `start_local_server.bat`, and the window should stay open if no error occurs.
+4. Run `start_frida-server.bat`, and the window should stay open if no error occurs.
+5. Run `start_frida-hook.bat`. It should automatically open up the game. The window should stay open if no error occurs.
 
 ## Changing contengency contract season
 Change the value of key `selectedCrisis` in `config\config.json` to whatever you want. The avaiable seasons are under `data\crisis`.
@@ -79,7 +79,3 @@ Note: Characters stats and skill masteries are based on the above parameters.
     "skillIndex": 2
 }
 ```
-
-## TODO
-- [v] Add more info about mods
-- [ ] Add a UI for easy editing
