@@ -25,10 +25,10 @@ TOWERDATA_PATH = "data/tower/towerData.json"
 
 config = read_json(CONFIG_PATH)
 mode = config["server"]["mode"]
-if mode == "global":
-    BASE_URL = "https://raw.githubusercontent.com/Kengxxiao/ArknightsGameData/master/en_US/gamedata"
-elif mode == "cn":
+if mode == "cn":
     BASE_URL = "https://raw.githubusercontent.com/Kengxxiao/ArknightsGameData/master/zh_CN/gamedata"
+else:
+    BASE_URL = "https://raw.githubusercontent.com/Kengxxiao/ArknightsGameData/master/en_US/gamedata"
 
 # TABLE Urls
 ACTIVITY_TABLE_URL = BASE_URL + "/excel/activity_table.json"
