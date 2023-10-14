@@ -1,10 +1,9 @@
+name: Update
+
 on:
   schedule:
     - cron: '53 20,8 * * *'
-  push:
-    branches:
-      - main
-
+  workflow_dispatch:
 
 jobs:
   update:
