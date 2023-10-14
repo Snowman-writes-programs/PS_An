@@ -4,13 +4,13 @@
 
 Python server implementation of a certain anime tower defense game. This repo is for the CN TapTap Version.
 
-Discord: [https://discord.com/invite/SmuB88RR5W](https://discord.com/invite/SmuB88RR5W)
+[Discord Server](https://discord.com/invite/SmuB88RR5W)
 
 ## Currently tested emulator to be working
 
-1. MuMu Player X (aka MuMu Player 12) (**recommended**)
+1. MuMu Player X (aka MuMu Player 12) (***RECOMMENDED.***)
 
-2. LDPlayer9 (usable, but **NOT** recommended)
+2. LDPlayer9 (*Usable, but ***NOT*** recommended.*)
 
 ## How To
 
