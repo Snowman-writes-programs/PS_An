@@ -10,7 +10,6 @@ import time
 
 
 def userCheckIn():
-
     data = request.data
     data = {
         "result": 0,
@@ -24,31 +23,30 @@ def userCheckIn():
 
 
 def userChangeSecretary():
-
     data = request.data
     request_data = request.get_json()
     charInstId = request_data["charInstId"]
     skinId = request_data["skinId"]
     data = {
-        "playerDataDelta":{
-            "modified":{
-                "status":{
+        "playerDataDelta": {
+            "modified": {
+                "status": {
                     "secretary": "",
                     "secretarySkinId": "",
                 }
             },
-            "deleted":{}
+            "deleted": {}
         }
     }
 
     if charInstId and skinId:
-        data["playerDataDelta"]["modified"]["status"]["secretary"] = skinId.split("@")[0] if "@" in skinId else skinId.split("#")[0]
+        data["playerDataDelta"]["modified"]["status"]["secretary"] = skinId.split("@")[0] if "@" in skinId else \
+            skinId.split("#")[0]
         data["playerDataDelta"]["modified"]["status"]["secretarySkinId"] = skinId
         return data
 
 
 def userLogin():
-
     data = request.data
     data = {
         "accessToken": "1",
@@ -69,7 +67,6 @@ def userLogin():
 
 
 def userOAuth2V1Grant():
-    
     data = request.data
     data = {
         "data": {
@@ -84,18 +81,16 @@ def userOAuth2V1Grant():
 
 
 def userV1NeedCloudAuth():
-
     data = request.data
     data = {
         "msg": "OK",
         "status": 0
     }
-    
+
     return data
 
 
 def userV1getToken():
-
     data = request.data
     data = {
         "channelUid": "1",
@@ -114,7 +109,6 @@ def userV1getToken():
 
 
 def userAuth():
-
     data = request.data
     data = {
         "isAuthenticate": True,
@@ -129,7 +123,6 @@ def userAuth():
 
 
 def userChangeAvatar():
-
     data = request.data
     avatar = request.get_json()
 
@@ -152,21 +145,18 @@ def userChangeAvatar():
 
 
 def appGetSettings():
-
     data = request.data
     data = requests.get("https://passport.arknights.global/app/getSettings").json()
     return data
 
 
 def appGetCode():
-
     data = request.data
     data = requests.get("https://passport.arknights.global/app/getCode").json()
     return data
 
 
 def userYostarCreatelogin():
-
     data = request.data
     data = {
         "isNew": 0,
@@ -179,8 +169,8 @@ def userYostarCreatelogin():
 
     return data
 
-def userAgreement():
 
+def userAgreement():
     data = request.data
     data = {
         "data": [
@@ -190,6 +180,7 @@ def userAgreement():
     }
 
     return data
+
 
 def auth_v1_token_by_phone_password():
     return {
@@ -230,53 +221,52 @@ def oauth2_v2_grant():
 
 def app_v1_config():
     return {
-    "status": 0,
-    "msg": "OK",
-    "data": {
-        "antiAddiction": {
-            "minorPeriodEnd": 21,
-            "minorPeriodStart": 20
-        },
-        "payment": [
-            {
-                "key": "alipay",
-                "recommend": True
+        "status": 0,
+        "msg": "OK",
+        "data": {
+            "antiAddiction": {
+                "minorPeriodEnd": 21,
+                "minorPeriodStart": 20
             },
-            {
-                "key": "wechat",
-                "recommend": False
+            "payment": [
+                {
+                    "key": "alipay",
+                    "recommend": True
+                },
+                {
+                    "key": "wechat",
+                    "recommend": False
+                },
+                {
+                    "key": "pcredit",
+                    "recommend": False
+                }
+            ],
+            "customerServiceUrl": "https://chat.hypergryph.com/chat/h5/v2/index.html",
+            "cancelDeactivateUrl": "https://user.hypergryph.com/cancellation",
+            "agreementUrl": {
+                "game": "https://user.hypergryph.com/protocol/plain/ak/index",
+                "unbind": "https://user.hypergryph.com/protocol/plain/ak/cancellation",
+                "account": "https://user.hypergryph.com/protocol/plain/index",
+                "privacy": "https://user.hypergryph.com/protocol/plain/privacy",
+                "register": "https://user.hypergryph.com/protocol/plain/registration",
+                "updateOverview": "https://user.hypergryph.com/protocol/plain/overview_of_changes",
+                "childrenPrivacy": "https://user.hypergryph.com/protocol/plain/children_privacy"
             },
-            {
-                "key": "pcredit",
-                "recommend": False
+            "app": {
+                "enablePayment": True,
+                "enableAutoLogin": False,
+                "enableAuthenticate": True,
+                "enableAntiAddiction": True,
+                "wechatAppId": "",
+                "alipayAppId": "",
+                "oneLoginAppId": "",
+                "enablePaidApp": False,
+                "appName": "明日方舟",
+                "appAmount": 600
             }
-        ],
-        "customerServiceUrl": "https://chat.hypergryph.com/chat/h5/v2/index.html",
-        "cancelDeactivateUrl": "https://user.hypergryph.com/cancellation",
-        "agreementUrl": {
-            "game": "https://user.hypergryph.com/protocol/plain/ak/index",
-            "unbind": "https://user.hypergryph.com/protocol/plain/ak/cancellation",
-            "account": "https://user.hypergryph.com/protocol/plain/index",
-            "privacy": "https://user.hypergryph.com/protocol/plain/privacy",
-            "register": "https://user.hypergryph.com/protocol/plain/registration",
-            "updateOverview": "https://user.hypergryph.com/protocol/plain/overview_of_changes",
-            "childrenPrivacy": "https://user.hypergryph.com/protocol/plain/children_privacy"
-        },
-        "app": {
-            "enablePayment": True,
-            "enableAutoLogin": False,
-            "enableAuthenticate": True,
-            "enableAntiAddiction": True,
-            "wechatAppId": "",
-            "alipayAppId": "",
-            "oneLoginAppId": "",
-            "enablePaidApp": False,
-            "appName": "明日方舟",
-            "appAmount": 600
         }
     }
-}
-
 
 
 def general_v1_server_time():
