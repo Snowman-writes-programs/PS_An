@@ -159,6 +159,7 @@ def accountSyncData():
                 myCharList[int(cntInstId)]["skills"][index]["specializeLevel"] = edit_json["skillsSpecializeLevel"]
 
         # Add equips
+        
         if myCharList[int(cntInstId)]["charId"] in equip_keys:
 
             for equip in equip_table["charEquip"][myCharList[int(cntInstId)]["charId"]]:

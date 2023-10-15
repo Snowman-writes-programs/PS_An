@@ -34783,12 +34783,7 @@
         {
           "charId": "char_362_saga",
           "equipId": "uniequip_003_saga"
-        }
-      ]
-    },
-    {
-      "timeStamp": 1696737600,
-      "trackList": [
+        },
         {
           "charId": "char_4039_horn",
           "equipId": "uniequip_001_horn"
@@ -34812,7 +34807,12 @@
         {
           "charId": "char_431_ashlok",
           "equipId": "uniequip_002_ashlok"
-        },
+        }
+      ]
+    },
+    {
+      "timeStamp": 1696737600,
+      "trackList": [
         {
           "charId": "char_4110_delphn",
           "equipId": "uniequip_001_delphn"
