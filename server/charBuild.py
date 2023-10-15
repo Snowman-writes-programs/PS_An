@@ -7,7 +7,6 @@ from utils import read_json, write_json
 
 
 def charBuildBatchSetCharVoiceLan():
-
     data = request.data
     data = {
         "result": {},
@@ -20,11 +19,10 @@ def charBuildBatchSetCharVoiceLan():
 
 
 def charBuildaddonStoryUnlock():
-    
     data = request.data
     request_data = request.get_json()
 
-    ts = {"fts": int(time.time()), "rts": int(time.time())} # TODO
+    ts = {"fts": int(time.time()), "rts": int(time.time())}  # TODO
 
     data = {
         "playerDataDelta": {
@@ -52,7 +50,6 @@ def charBuildaddonStoryUnlock():
 
 
 def charBuildSetCharVoiceLan():
-
     data = request.data
     request_data = request.get_json()
 
@@ -70,7 +67,6 @@ def charBuildSetCharVoiceLan():
 
     saved_data = read_json(USER_JSON_PATH)
     for character in request_data["charList"]:
-
         saved_data["user"]["troop"]["chars"][str(character)]["voiceLan"] = request_data["voiceLan"]
         data["playerDataDelta"]["modified"]["troop"]["chars"].update({
             str(character): {
@@ -84,19 +80,18 @@ def charBuildSetCharVoiceLan():
 
 
 def charBuildSetDefaultSkill():
-
     data = request.data
     request_data = request.get_json()
     charInstId = request_data["charInstId"]
     defaultSkillIndex = request_data["defaultSkillIndex"]
     data = {
-        "playerDataDelta":{
-            "modified":{
-                "troop":{
-                   "chars":{}
+        "playerDataDelta": {
+            "modified": {
+                "troop": {
+                    "chars": {}
                 }
             },
-            "deleted":{}
+            "deleted": {}
         }
     }
 
@@ -115,19 +110,18 @@ def charBuildSetDefaultSkill():
 
 
 def charBuildChangeCharSkin():
-    
     data = request.data
     request_data = request.get_json()
     charInstId = request_data["charInstId"]
     skinId = request_data["skinId"]
     data = {
-        "playerDataDelta":{
-            "modified":{
-                "troop":{
-                    "chars":{}
+        "playerDataDelta": {
+            "modified": {
+                "troop": {
+                    "chars": {}
                 }
             },
-            "deleted":{}
+            "deleted": {}
         }
     }
 
@@ -145,19 +139,18 @@ def charBuildChangeCharSkin():
 
 
 def charBuildSetEquipment():
-
     data = request.data
     request_data = request.get_json()
     charInstId = request_data["charInstId"]
     equipId = request_data["equipId"]
     data = {
-        "playerDataDelta":{
-            "modified":{
-                "troop":{
-                    "chars":{}
+        "playerDataDelta": {
+            "modified": {
+                "troop": {
+                    "chars": {}
                 }
             },
-            "deleted":{}
+            "deleted": {}
         }
     }
 
@@ -179,22 +172,21 @@ def charBuildSetEquipment():
 
 
 def charBuildChangeCharTemplate():
-
     data = request.data
     request_data = request.get_json()
 
     data = {
-        "playerDataDelta":{
-            "modified":{
-                "troop":{
-                    "chars":{
+        "playerDataDelta": {
+            "modified": {
+                "troop": {
+                    "chars": {
                         str(request_data["charInstId"]): {
                             "currentTmpl": request_data["templateId"]
                         }
                     }
                 }
             },
-            "deleted":{}
+            "deleted": {}
         }
     }
 
@@ -203,4 +195,3 @@ def charBuildChangeCharTemplate():
     write_json(saved_data, USER_JSON_PATH)
 
     return data
-
