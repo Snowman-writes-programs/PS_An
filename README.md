@@ -1,4 +1,4 @@
-# OpenDoctoratePy
+# OpenDoctoratePy [TEMPORARY DEPRECATION]
 
 ~~It's a pity that DoctoratePy is no longer maintained. Therefore, this repo aims to continue the support of this project for newer versions of the game.~~
 
