@@ -31,7 +31,6 @@ def accountLogin():
 
     return data
 
-
 def accountSyncData():
 
     data = request.data

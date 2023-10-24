@@ -1,4 +1,4 @@
-# OpenDoctoratePy [TEMPORARY DEPRECATION]
+# OpenDoctoratePy
 
 ~~It's a pity that DoctoratePy is no longer maintained. Therefore, this repo aims to continue the support of this project for newer versions of the game.~~
 
@@ -12,11 +12,11 @@ Python server implementation of a certain anime tower defense game. This repo is
 
 2. LDPlayer9 (*Usable, but ***NOT*** recommended.*)
 
-## How To
+## Usage
 
 ### [MuMu Player X (aka MuMu Player 12)](https://a11.gdl.netease.com/MuMuInstaller_12.0.0.6_12beta-gw-offline_all_1666787400.exe)
 
-1. Enable root permission in MuMu Player's settings (adb connection should be enabled by default, therefore no need to enable it manually).
+1. Enable root permission in MuMu Player's settings (ADB connection should be enabled by default, therefore no need to enable it manually).
 2. Start MuMu Player X (aka MuMu Player 12).
 3. Run `setup_requirements.bat`, and success can be indicated from `"Press enter to exit..."`. May be skipped if you have installed Frida on your emulator.
 4. Run `start_local_server.bat`, and the window should stay open if no error occurs.
@@ -35,7 +35,7 @@ Python server implementation of a certain anime tower defense game. This repo is
 ## Changing contengency contract season
 Change the value of key `selectedCrisis` in `config\config.json` to whatever you want. The avaiable seasons are under `data\crisis`.
 
-## Customizing indivual operators level, potentials, skill ranks and others
+## Customizing indivual operators level, potentials, skill levels and others
 Customize each operator indivually by adding new info in `customUnitInfo` key in `config\config.json`. You can find <operator_key_name> from [here](https://raw.githubusercontent.com/Kengxxiao/ArknightsGameData/master/zh_CN/gamedata/excel/character_table.json). By default, all characters will have max level, max potentials, max mastery.
 
 - `favorPoint` - Trust points (25570 is 200% Trust) [link to exact point to %](https://gamepress.gg/arknights/core-gameplay/arknights-guide-operator-trust)
