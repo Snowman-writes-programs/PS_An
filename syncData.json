@@ -56,8 +56,8 @@
             }
         },
         "activity": {
-            "TYPE_ACT17SIDE": {
-                "act17side": {
+            "TYPE_ACT29SIDE": {
+                "act29side": {
                     "isOpen": true,
                     "coin": 1000,
                     "favorList": []

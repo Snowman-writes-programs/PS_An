@@ -421,6 +421,40 @@ def accountSyncData():
                 }
             })
 
+    # Event
+
+    player_data["user"]["activity"] = {
+        "TYPE_ACT29SIDE": {
+                "act29side": {
+                    "isOpen": true,
+                    "coin": 1000,
+                    "favorList": []
+                }
+            }
+    }
+
+    missions_data = {
+        "ACTIVITY": {
+
+        }
+    }
+
+    for mission in activity_table['missionData']:
+        if mission['id'].startswith('29sideActivity'):
+            missions_data['ACTIVITY'].update({
+                mission['id']: {
+                    'stage': 2,
+                    'progress': [
+                        {
+                            'target': 1,
+                            'value': 1
+                        }
+                    ]
+                }
+            })
+
+    player_data['user']['mission']['missions'] = missions_data
+
     # Update Stultifera Navis
     activity_data = activity_table["activity"]["TYPE_ACT17SIDE"]["act17side"]
     for place in activity_data["placeDataMap"]:
@@ -486,6 +520,8 @@ def accountSyncData():
     # if config["userConfig"]["restorePreviousStates"]["is2"]:
     #     is2_data = read_json(RLV2_JSON_PATH)
     #     player_data["user"]["rlv2"] = is2_data
+
+    
 
     # Enable battle replays
     if replay_data["currentCharConfig"] in list(replay_data["saved"].keys()):
