@@ -56,7 +56,13 @@
             }
         },
         "activity": {
-            
+            "TYPE_ACT17SIDE": {
+                "act17side": {
+                    "isOpen": true,
+                    "coin": 1000,
+                    "favorList": []
+                }
+            }
         },
         "status": {
             "nickName": "Twelve",
