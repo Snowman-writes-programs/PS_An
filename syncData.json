@@ -55,10 +55,12 @@
                 }
             }
         },
-        "activity": {},
+        "activity": {
+            
+        },
         "status": {
-            "nickName": "Sasha",
-            "nickNumber": "1111",
+            "nickName": "Twelve",
+            "nickNumber": "2904",
             "level": 999,
             "exp": 0,
             "socialPoint": 6,
@@ -75,10 +77,10 @@
             "flags": {},
             "ap": 999,
             "maxAp": 999,
-            "androidDiamond": 0,
+            "androidDiamond": 999999,
             "iosDiamond": 999,
-            "diamondShard": 0,
-            "gold": 0,
+            "diamondShard": 999999,
+            "gold": 999999,
             "practiceTicket": 999,
             "lastRefreshTs": 0,
             "lastApAddTime": 0,
