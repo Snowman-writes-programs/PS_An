@@ -7,7 +7,7 @@
         "mode": "cn"
     },
     "assets": {
-        "autoUpdate": false,
+        "autoUpdate": true,
         "downloadLocally": true,
         "enableMods": false
     },
@@ -107,9 +107,9 @@
         "customUnitInfo": {},
         "duplicateUnits": [],
         "assistUnit": {
-            "charId": "char_350_surtr",
-            "skinId": "char_350_surtr@summer#9",
-            "skillIndex": 2
+            "charId": "char_479_sleach",
+            "skinId": "char_479_sleach@epoque#14",
+            "skillIndex": 0
         }
     }
 }

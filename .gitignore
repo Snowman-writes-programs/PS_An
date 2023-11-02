@@ -1,6 +1,5 @@
 /_.static.js
 # User files
-
 TestLevel/
 
 data/user/user.json
@@ -186,4 +185,4 @@ cython_debug/
 # Visual Studio
 .vs/
 
-data/user/*
+data/user/

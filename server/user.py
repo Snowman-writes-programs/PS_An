@@ -58,9 +58,9 @@ def userLogin():
         "needAuthenticate": False,
         "result": 0,
         "token": "abcd",
-        "yostar_username": "Doctorate@doctorate.com",
-        "yostar_uid": "1",
-        "uid": "1"
+        "yostar_username": "copjing@gmail.com",
+        "yostar_uid": "72537754",
+        "uid": "72537754"
     }
 
     return data
@@ -71,7 +71,7 @@ def userOAuth2V1Grant():
     data = {
         "data": {
             "code": "abcd",
-            "uid": "1"
+            "uid": "72537754"
         },
         "msg": "OK",
         "status": 0
@@ -93,7 +93,7 @@ def userV1NeedCloudAuth():
 def userV1getToken():
     data = request.data
     data = {
-        "channelUid": "1",
+        "channelUid": "72537754",
         "error": "",
         "extension": json.dumps({
             "isMinor": False,
@@ -102,7 +102,7 @@ def userV1getToken():
         "isGuest": 0,
         "result": 0,
         "token": "abcd",
-        "uid": "1"
+        "uid": "72537754"
     }
 
     return data
@@ -116,7 +116,7 @@ def userAuth():
         "isLatestUserAgreement": True,
         "isMinor": False,
         "needAuthenticate": False,
-        "uid": "1"
+        "uid": "72537754"
     }
 
     return data
@@ -162,9 +162,9 @@ def userYostarCreatelogin():
         "isNew": 0,
         "result": 0,
         "token": "1",
-        "uid": "1",
-        "yostar_uid": "1",
-        "yostar_username": "Doctorate@doctorate.com"
+        "uid": "72537754",
+        "yostar_uid": "72537754",
+        "yostar_username": "copjing@gmail.com"
     }
 
     return data
@@ -187,7 +187,7 @@ def auth_v1_token_by_phone_password():
         "status": 0,
         "msg": "OK",
         "data": {
-            "token": "doctorate"
+            "token": "sasha"
         }
     }
 
@@ -198,10 +198,10 @@ def info_v1_basic():
         "msg": "OK",
         "data": {
             "hgId": "1",
-            "phone": "doctorate",
-            "email": "doctorate",
-            "identityNum": "doctorate",
-            "identityName": "doctorate",
+            "phone": "sasha",
+            "email": "sasha",
+            "identityNum": "sasha",
+            "identityName": "sasha",
             "isMinor": False,
             "isLatestUserAgreement": True
         }
@@ -213,8 +213,8 @@ def oauth2_v2_grant():
         "status": 0,
         "msg": "OK",
         "data": {
-            "code": "doctorate",
-            "uid": "1"
+            "code": "sasha",
+            "uid": "72537754"
         }
     }
 

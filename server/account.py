@@ -31,6 +31,7 @@ def accountLogin():
 
     return data
 
+
 def accountSyncData():
 
     data = request.data
@@ -576,9 +577,9 @@ def accountYostarAuthSubmit():
     data = request.data
     data = {
         "result": 0,
-        "yostar_account": "Doctorate@doctorate.com",
+        "yostar_account": "copjing@gmail.com",
         "yostar_token": "a",
-        "yostar_uid": "1"
+        "yostar_uid": "72537754"
     }
 
     return data
