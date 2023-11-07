@@ -1,6 +1,6 @@
 @echo off
 
-@title Doctorate - Local Server
+@title OpenDoctoratePy - Local Server
 
 call env\scripts\activate.bat
 

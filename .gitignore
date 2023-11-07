@@ -2,15 +2,7 @@
 # User files
 TestLevel/
 
-data/user/user.json
-data/crisis/test.json
-data/crisis/cccustom.json
-
-fridahookglobal.py
-test.py
-mitmproxy-cn1.py
-integrated_strategy.
-start_doctorate.bat
+data/user/
 
 mods/*
 !mods/.placeholder

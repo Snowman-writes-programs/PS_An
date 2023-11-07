@@ -1,5 +1,5 @@
 @echo off
-@title Doctorate - Frida Hook
+@title OpenDoctoratePy - Frida Hook
 
 cls
 call env\scripts\activate.bat

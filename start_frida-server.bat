@@ -1,5 +1,6 @@
 @echo off
-@title Doctorate - Frida Server
+
+@title OpenDoctoratePy - Frida Server
 
 call env\scripts\activate.bat
 python3 startfrida.py
