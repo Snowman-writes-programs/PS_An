@@ -19,10 +19,10 @@
             "conPerfectBattle": 0
         },
         "cursor": {
-            "zone": 1,
+            "zone": 5,
             "position": {
-                "x": 8,
-                "y": 3
+                "x": 2,
+                "y": 0
             }
         },
         "trace": [
@@ -36,40 +36,2697 @@
             {
                 "zone": 1,
                 "position": {
-                    "x": 8,
-                    "y": 3
+                    "x": 9,
+                    "y": 0
+                }
+            },
+            {
+                "zone": 2,
+                "position": {
+                    "x": 0,
+                    "y": 0
+                }
+            },
+            {
+                "zone": 2,
+                "position": {
+                    "x": 9,
+                    "y": 0
+                }
+            },
+            {
+                "zone": 3,
+                "position": {
+                    "x": 0,
+                    "y": 0
+                }
+            },
+            {
+                "zone": 3,
+                "position": {
+                    "x": 9,
+                    "y": 0
+                }
+            },
+            {
+                "zone": 4,
+                "position": {
+                    "x": 0,
+                    "y": 0
+                }
+            },
+            {
+                "zone": 4,
+                "position": {
+                    "x": 2,
+                    "y": 0
+                }
+            },
+            {
+                "zone": 5,
+                "position": {
+                    "x": 2,
+                    "y": 0
                 }
             }
         ],
         "pending": [
             {
                 "index": "e_0",
-                "type": "BATTLE_REWARD",
+                "type": "SHOP",
                 "content": {
-                    "battleReward": {
-                        "earn": {
-                            "damage": 0,
-                            "hp": 0,
-                            "shield": 0,
-                            "exp": 0,
-                            "populationMax": 0,
-                            "squadCapacity": 0,
-                            "maxHpUp": 0
+                    "shop": {
+                        "bank": {
+                            "open": false,
+                            "canPut": false,
+                            "canWithdraw": false,
+                            "withdraw": 0,
+                            "cost": 1
                         },
-                        "rewards": [
+                        "id": "just_a_shop",
+                        "goods": [
                             {
-                                "index": 0,
-                                "items": [
-                                    {
-                                        "sub": 0,
-                                        "id": "rogue_3_recruit_ticket_all",
-                                        "count": 1
-                                    }
-                                ],
-                                "done": 0
+                                "index": "0",
+                                "itemId": "rogue_2_recruit_ticket_all",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "1",
+                                "itemId": "rogue_2_relic_grace_1",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "2",
+                                "itemId": "rogue_2_relic_grace_2",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "3",
+                                "itemId": "rogue_2_relic_grace_3",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "4",
+                                "itemId": "rogue_2_relic_grace_4",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "5",
+                                "itemId": "rogue_2_relic_grace_5",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "6",
+                                "itemId": "rogue_2_relic_grace_6",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "7",
+                                "itemId": "rogue_2_relic_grace_11",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "8",
+                                "itemId": "rogue_2_relic_grace_12",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "9",
+                                "itemId": "rogue_2_relic_grace_13",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "10",
+                                "itemId": "rogue_2_relic_grace_14",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "11",
+                                "itemId": "rogue_2_relic_grace_15",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "12",
+                                "itemId": "rogue_2_relic_grace_16",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "13",
+                                "itemId": "rogue_2_relic_grace_17",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "14",
+                                "itemId": "rogue_2_relic_grace_18",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "15",
+                                "itemId": "rogue_2_relic_grace_19",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "16",
+                                "itemId": "rogue_2_relic_grace_20",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "17",
+                                "itemId": "rogue_2_relic_grace_21",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "18",
+                                "itemId": "rogue_2_relic_grace_22",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "19",
+                                "itemId": "rogue_2_relic_grace_23",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "20",
+                                "itemId": "rogue_2_relic_grace_24",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "21",
+                                "itemId": "rogue_2_relic_grace_25",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "22",
+                                "itemId": "rogue_2_relic_grace_26",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "23",
+                                "itemId": "rogue_2_relic_grace_27",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "24",
+                                "itemId": "rogue_2_relic_grace_28",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "25",
+                                "itemId": "rogue_2_relic_grace_29",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "26",
+                                "itemId": "rogue_2_relic_grace_30",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "27",
+                                "itemId": "rogue_2_relic_grace_31",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "28",
+                                "itemId": "rogue_2_relic_grace_32",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "29",
+                                "itemId": "rogue_2_relic_grace_33",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "30",
+                                "itemId": "rogue_2_relic_grace_66",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "31",
+                                "itemId": "rogue_2_relic_grace_67",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "32",
+                                "itemId": "rogue_2_relic_grace_68",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "33",
+                                "itemId": "rogue_2_relic_grace_37",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "34",
+                                "itemId": "rogue_2_relic_grace_38",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "35",
+                                "itemId": "rogue_2_relic_grace_39",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "36",
+                                "itemId": "rogue_2_relic_grace_40",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "37",
+                                "itemId": "rogue_2_relic_grace_41",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "38",
+                                "itemId": "rogue_2_relic_grace_42",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "39",
+                                "itemId": "rogue_2_relic_grace_43",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "40",
+                                "itemId": "rogue_2_relic_grace_44",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "41",
+                                "itemId": "rogue_2_relic_fight_1",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "42",
+                                "itemId": "rogue_2_relic_grace_52",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "43",
+                                "itemId": "rogue_2_relic_fight_2",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "44",
+                                "itemId": "rogue_2_relic_fight_3",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "45",
+                                "itemId": "rogue_2_relic_fight_4",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "46",
+                                "itemId": "rogue_2_relic_fight_5",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "47",
+                                "itemId": "rogue_2_relic_fight_6",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "48",
+                                "itemId": "rogue_2_relic_fight_7",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "49",
+                                "itemId": "rogue_2_relic_fight_8",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "50",
+                                "itemId": "rogue_2_relic_fight_9",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "51",
+                                "itemId": "rogue_2_relic_fight_10",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "52",
+                                "itemId": "rogue_2_relic_fight_11",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "53",
+                                "itemId": "rogue_2_relic_fight_12",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "54",
+                                "itemId": "rogue_2_relic_fight_13",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "55",
+                                "itemId": "rogue_2_relic_fight_14",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "56",
+                                "itemId": "rogue_2_relic_fight_15",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "57",
+                                "itemId": "rogue_2_relic_fight_16",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "58",
+                                "itemId": "rogue_2_relic_fight_17",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "59",
+                                "itemId": "rogue_2_relic_fight_18",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "60",
+                                "itemId": "rogue_2_relic_fight_19",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "61",
+                                "itemId": "rogue_2_relic_fight_20",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "62",
+                                "itemId": "rogue_2_relic_fight_21",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "63",
+                                "itemId": "rogue_2_relic_fight_22",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "64",
+                                "itemId": "rogue_2_relic_fight_23",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "65",
+                                "itemId": "rogue_2_relic_fight_24",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "66",
+                                "itemId": "rogue_2_relic_fight_25",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "67",
+                                "itemId": "rogue_2_relic_fight_26",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "68",
+                                "itemId": "rogue_2_relic_fight_27",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "69",
+                                "itemId": "rogue_2_relic_fight_28",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "70",
+                                "itemId": "rogue_2_relic_fight_29",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "71",
+                                "itemId": "rogue_2_relic_fight_30",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "72",
+                                "itemId": "rogue_2_relic_fight_31",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "73",
+                                "itemId": "rogue_2_relic_fight_32",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "74",
+                                "itemId": "rogue_2_relic_fight_33",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "75",
+                                "itemId": "rogue_2_relic_fight_34",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "76",
+                                "itemId": "rogue_2_relic_fight_35",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "77",
+                                "itemId": "rogue_2_relic_fight_36",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "78",
+                                "itemId": "rogue_2_relic_fight_37",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "79",
+                                "itemId": "rogue_2_relic_fight_38",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "80",
+                                "itemId": "rogue_2_relic_fight_39",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "81",
+                                "itemId": "rogue_2_relic_fight_43",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "82",
+                                "itemId": "rogue_2_relic_fight_44",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "83",
+                                "itemId": "rogue_2_relic_fight_45",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "84",
+                                "itemId": "rogue_2_relic_fight_46",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "85",
+                                "itemId": "rogue_2_relic_fight_87",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "86",
+                                "itemId": "rogue_2_relic_fight_88",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "87",
+                                "itemId": "rogue_2_relic_fight_89",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "88",
+                                "itemId": "rogue_2_relic_fight_90",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "89",
+                                "itemId": "rogue_2_relic_fight_91",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "90",
+                                "itemId": "rogue_2_relic_fight_92",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "91",
+                                "itemId": "rogue_2_relic_fight_93",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "92",
+                                "itemId": "rogue_2_relic_fight_94",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "93",
+                                "itemId": "rogue_2_relic_fight_95",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "94",
+                                "itemId": "rogue_2_relic_fight_96",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "95",
+                                "itemId": "rogue_2_relic_fight_97",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "96",
+                                "itemId": "rogue_2_relic_fight_98",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "97",
+                                "itemId": "rogue_2_relic_fight_99",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "98",
+                                "itemId": "rogue_2_relic_fight_100",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "99",
+                                "itemId": "rogue_2_relic_fight_101",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "100",
+                                "itemId": "rogue_2_relic_fight_102",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "101",
+                                "itemId": "rogue_2_relic_fight_103",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "102",
+                                "itemId": "rogue_2_relic_fight_104",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "103",
+                                "itemId": "rogue_2_relic_fight_105",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "104",
+                                "itemId": "rogue_2_relic_fight_106",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "105",
+                                "itemId": "rogue_2_relic_fight_107",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "106",
+                                "itemId": "rogue_2_relic_fight_109",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "107",
+                                "itemId": "rogue_2_relic_fight_110",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "108",
+                                "itemId": "rogue_2_relic_fight_111",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "109",
+                                "itemId": "rogue_2_relic_fight_112",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "110",
+                                "itemId": "rogue_2_relic_fight_115",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "111",
+                                "itemId": "rogue_2_relic_fight_116",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "112",
+                                "itemId": "rogue_2_relic_fight_118",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "113",
+                                "itemId": "rogue_2_relic_fight_120",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "114",
+                                "itemId": "rogue_2_relic_fight_122",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "115",
+                                "itemId": "rogue_2_relic_fight_124",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "116",
+                                "itemId": "rogue_2_relic_fight_127",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "117",
+                                "itemId": "rogue_2_relic_fight_128",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "118",
+                                "itemId": "rogue_2_relic_fight_129",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "119",
+                                "itemId": "rogue_2_relic_fight_132",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "120",
+                                "itemId": "rogue_2_relic_fight_136",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "121",
+                                "itemId": "rogue_2_relic_fight_137",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "122",
+                                "itemId": "rogue_2_relic_fight_138",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "123",
+                                "itemId": "rogue_2_relic_fight_139",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "124",
+                                "itemId": "rogue_2_relic_fight_140",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "125",
+                                "itemId": "rogue_2_relic_fight_141",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "126",
+                                "itemId": "rogue_2_relic_fight_144",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "127",
+                                "itemId": "rogue_2_relic_fight_145",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "128",
+                                "itemId": "rogue_2_relic_fight_146",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "129",
+                                "itemId": "rogue_2_relic_fight_148",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "130",
+                                "itemId": "rogue_2_relic_fight_149",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "131",
+                                "itemId": "rogue_2_relic_fight_151",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "132",
+                                "itemId": "rogue_2_relic_fight_152",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "133",
+                                "itemId": "rogue_2_relic_fight_47",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "134",
+                                "itemId": "rogue_2_relic_fight_48",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "135",
+                                "itemId": "rogue_2_relic_fight_49",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "136",
+                                "itemId": "rogue_2_relic_fight_50",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "137",
+                                "itemId": "rogue_2_relic_fight_51",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "138",
+                                "itemId": "rogue_2_relic_fight_52",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "139",
+                                "itemId": "rogue_2_relic_fight_53",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "140",
+                                "itemId": "rogue_2_relic_fight_54",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "141",
+                                "itemId": "rogue_2_relic_fight_55",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "142",
+                                "itemId": "rogue_2_relic_fight_56",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "143",
+                                "itemId": "rogue_2_relic_fight_57",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "144",
+                                "itemId": "rogue_2_relic_fight_58",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "145",
+                                "itemId": "rogue_2_relic_fight_59",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "146",
+                                "itemId": "rogue_2_relic_fight_133",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "147",
+                                "itemId": "rogue_2_relic_fight_60",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "148",
+                                "itemId": "rogue_2_relic_fight_61",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "149",
+                                "itemId": "rogue_2_relic_fight_62",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "150",
+                                "itemId": "rogue_2_relic_fight_63",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "151",
+                                "itemId": "rogue_2_relic_fight_64",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "152",
+                                "itemId": "rogue_2_relic_fight_65",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "153",
+                                "itemId": "rogue_2_relic_fight_66",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "154",
+                                "itemId": "rogue_2_relic_fight_67",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "155",
+                                "itemId": "rogue_2_relic_fight_68",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "156",
+                                "itemId": "rogue_2_relic_fight_69",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "157",
+                                "itemId": "rogue_2_relic_fight_70",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "158",
+                                "itemId": "rogue_2_relic_fight_71",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "159",
+                                "itemId": "rogue_2_relic_fight_72",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "160",
+                                "itemId": "rogue_2_relic_fight_73",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "161",
+                                "itemId": "rogue_2_relic_fight_74",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "162",
+                                "itemId": "rogue_2_relic_fight_75",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "163",
+                                "itemId": "rogue_2_relic_fight_76",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "164",
+                                "itemId": "rogue_2_relic_fight_77",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "165",
+                                "itemId": "rogue_2_relic_fight_78",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "166",
+                                "itemId": "rogue_2_relic_fight_79",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "167",
+                                "itemId": "rogue_2_relic_fight_80",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "168",
+                                "itemId": "rogue_2_relic_fight_81",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "169",
+                                "itemId": "rogue_2_relic_fight_82",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "170",
+                                "itemId": "rogue_2_relic_fight_83",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "171",
+                                "itemId": "rogue_2_relic_fight_84",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "172",
+                                "itemId": "rogue_2_relic_fight_85",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "173",
+                                "itemId": "rogue_2_relic_fight_86",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "174",
+                                "itemId": "rogue_2_relic_fight_130",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "175",
+                                "itemId": "rogue_2_relic_fight_134",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "176",
+                                "itemId": "rogue_2_relic_fight_135",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "177",
+                                "itemId": "rogue_2_relic_grace_34",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "178",
+                                "itemId": "rogue_2_relic_grace_35",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "179",
+                                "itemId": "rogue_2_relic_grace_36",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "180",
+                                "itemId": "rogue_2_relic_grace_7",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "181",
+                                "itemId": "rogue_2_relic_grace_8",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "182",
+                                "itemId": "rogue_2_relic_grace_9",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "183",
+                                "itemId": "rogue_2_relic_grace_10",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "184",
+                                "itemId": "rogue_2_relic_grace_45",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "185",
+                                "itemId": "rogue_2_relic_grace_46",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "186",
+                                "itemId": "rogue_2_relic_grace_47",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "187",
+                                "itemId": "rogue_2_relic_grace_48",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "188",
+                                "itemId": "rogue_2_relic_grace_49",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "189",
+                                "itemId": "rogue_2_relic_grace_50",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "190",
+                                "itemId": "rogue_2_relic_grace_51",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "191",
+                                "itemId": "rogue_2_relic_grace_53",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "192",
+                                "itemId": "rogue_2_relic_grace_54",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "193",
+                                "itemId": "rogue_2_relic_grace_57",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "194",
+                                "itemId": "rogue_2_relic_grace_59",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "195",
+                                "itemId": "rogue_2_relic_grace_60",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "196",
+                                "itemId": "rogue_2_relic_grace_61",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "197",
+                                "itemId": "rogue_2_relic_grace_62",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "198",
+                                "itemId": "rogue_2_relic_grace_63",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "199",
+                                "itemId": "rogue_2_relic_grace_64",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "200",
+                                "itemId": "rogue_2_relic_grace_65",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "201",
+                                "itemId": "rogue_2_relic_grace_76",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "202",
+                                "itemId": "rogue_2_relic_grace_77",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "203",
+                                "itemId": "rogue_2_relic_grace_79",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "204",
+                                "itemId": "rogue_2_relic_grace_80",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "205",
+                                "itemId": "rogue_2_relic_grace_81",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "206",
+                                "itemId": "rogue_2_relic_grace_82",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "207",
+                                "itemId": "rogue_2_relic_fight_113",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "208",
+                                "itemId": "rogue_2_relic_fight_114",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "209",
+                                "itemId": "rogue_2_active_tool_1",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "210",
+                                "itemId": "rogue_2_active_tool_2",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "211",
+                                "itemId": "rogue_2_active_tool_3",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "212",
+                                "itemId": "rogue_2_active_tool_4",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "213",
+                                "itemId": "rogue_2_active_tool_5",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "214",
+                                "itemId": "rogue_2_active_tool_6",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "215",
+                                "itemId": "rogue_2_relic_curse_1",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "216",
+                                "itemId": "rogue_2_relic_curse_2",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "217",
+                                "itemId": "rogue_2_relic_curse_3",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "218",
+                                "itemId": "rogue_2_relic_curse_5",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "219",
+                                "itemId": "rogue_2_relic_curse_6",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "220",
+                                "itemId": "rogue_2_relic_curse_7",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "221",
+                                "itemId": "rogue_2_relic_curse_8",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "222",
+                                "itemId": "rogue_2_relic_grace_83",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "223",
+                                "itemId": "rogue_2_relic_grace_84",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "224",
+                                "itemId": "rogue_2_relic_grace_85",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "225",
+                                "itemId": "rogue_2_relic_grace_86",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "226",
+                                "itemId": "rogue_2_relic_grace_87",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "227",
+                                "itemId": "rogue_2_relic_fight_117",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "228",
+                                "itemId": "rogue_2_relic_fight_119",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "229",
+                                "itemId": "rogue_2_relic_fight_121",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "230",
+                                "itemId": "rogue_2_relic_fight_123",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "231",
+                                "itemId": "rogue_2_relic_fight_125",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "232",
+                                "itemId": "rogue_2_relic_fight_126",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "233",
+                                "itemId": "rogue_2_relic_fight_147",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "234",
+                                "itemId": "rogue_2_relic_fight_108",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "235",
+                                "itemId": "rogue_2_relic_fight_40",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "236",
+                                "itemId": "rogue_2_relic_fight_41",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "237",
+                                "itemId": "rogue_2_relic_fight_42",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "238",
+                                "itemId": "rogue_2_relic_grace_88",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "239",
+                                "itemId": "rogue_2_relic_grace_89",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "240",
+                                "itemId": "rogue_2_relic_grace_90",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "241",
+                                "itemId": "rogue_2_relic_curse_4",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "242",
+                                "itemId": "rogue_2_relic_curse_9",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "243",
+                                "itemId": "rogue_2_relic_curse_10",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "244",
+                                "itemId": "rogue_2_relic_grace_69",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "245",
+                                "itemId": "rogue_2_relic_grace_70",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "246",
+                                "itemId": "rogue_2_relic_grace_71",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "247",
+                                "itemId": "rogue_2_relic_grace_72",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "248",
+                                "itemId": "rogue_2_relic_grace_73",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "249",
+                                "itemId": "rogue_2_relic_grace_74",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "250",
+                                "itemId": "rogue_2_relic_grace_75",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "251",
+                                "itemId": "rogue_2_relic_grace_78",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "252",
+                                "itemId": "rogue_2_relic_fight_131",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "253",
+                                "itemId": "rogue_2_relic_fight_142",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "254",
+                                "itemId": "rogue_2_relic_fight_143",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "255",
+                                "itemId": "rogue_2_relic_fight_150",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "256",
+                                "itemId": "rogue_2_relic_fight_153",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "257",
+                                "itemId": "rogue_2_relic_fight_154",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "258",
+                                "itemId": "rogue_2_relic_fight_155",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "259",
+                                "itemId": "rogue_2_relic_fight_156",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "260",
+                                "itemId": "rogue_2_relic_fight_157",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
+                            },
+                            {
+                                "index": "261",
+                                "itemId": "rogue_2_relic_fight_158",
+                                "count": 1,
+                                "priceId": "rogue_2_gold",
+                                "priceCount": 0,
+                                "origCost": 0,
+                                "displayPriceChg": false,
+                                "_retainDiscount": 1
                             }
                         ],
-                        "show": "1"
+                        "_done": false
                     }
                 }
             }
@@ -77,7 +2734,7 @@
         "status": {
             "bankPut": 0
         },
-        "toEnding": "ro3_ending_1",
+        "toEnding": "ro2_ending_1",
         "chgEnding": false
     },
     "record": {
@@ -87,7 +2744,67 @@
         "zones": {}
     },
     "troop": {
-        "chars": {},
+        "chars": {
+            "10000": {
+                "instId": "10000",
+                "charId": "char_017_huang",
+                "favorPoint": 25570,
+                "potentialRank": 5,
+                "mainSkillLvl": 7,
+                "skin": "char_017_huang@as#1",
+                "level": 90,
+                "exp": 0,
+                "evolvePhase": 2,
+                "defaultSkillIndex": 2,
+                "gainTime": 1699334925,
+                "skills": [
+                    {
+                        "skillId": "skchr_huang_1",
+                        "unlock": 1,
+                        "state": 0,
+                        "specializeLevel": 3,
+                        "completeUpgradeTime": -1
+                    },
+                    {
+                        "skillId": "skchr_huang_2",
+                        "unlock": 1,
+                        "state": 0,
+                        "specializeLevel": 3,
+                        "completeUpgradeTime": -1
+                    },
+                    {
+                        "skillId": "skchr_huang_3",
+                        "unlock": 1,
+                        "state": 0,
+                        "specializeLevel": 3,
+                        "completeUpgradeTime": -1
+                    }
+                ],
+                "voiceLan": "JP",
+                "currentEquip": "uniequip_002_huang",
+                "equip": {
+                    "uniequip_001_huang": {
+                        "hide": 0,
+                        "locked": 0,
+                        "level": 1
+                    },
+                    "uniequip_002_huang": {
+                        "hide": 0,
+                        "locked": 0,
+                        "level": 3
+                    }
+                },
+                "starMark": 0,
+                "type": "NORMAL",
+                "upgradeLimited": false,
+                "upgradePhase": 1,
+                "isUpgrade": false,
+                "isCure": false,
+                "population": 0,
+                "charBuff": [],
+                "troopInstId": "0"
+            }
+        },
         "expedition": [],
         "expeditionReturn": null,
         "hasExpeditionReturn": false
@@ -96,37 +2813,191 @@
         "relic": {
             "r_0": {
                 "index": "r_0",
-                "id": "rogue_3_band_12",
+                "id": "rogue_2_band_18",
                 "count": 1,
                 "ts": 1695000000
             },
             "r_1": {
                 "index": "r_1",
-                "id": "rogue_3_relic_legacy_90",
+                "id": "rogue_2_relic_grace_63",
                 "count": 1,
                 "ts": 1695000000
             },
             "r_2": {
                 "index": "r_2",
-                "id": "rogue_3_relic_legacy_81",
+                "id": "rogue_2_relic_fight_27",
                 "count": 1,
                 "ts": 1695000000
             },
             "r_3": {
                 "index": "r_3",
-                "id": "rogue_3_relic_legacy_158",
+                "id": "rogue_2_relic_fight_15",
+                "count": 1,
+                "ts": 1695000000
+            },
+            "r_4": {
+                "index": "r_4",
+                "id": "rogue_2_relic_fight_18",
+                "count": 1,
+                "ts": 1695000000
+            },
+            "r_5": {
+                "index": "r_5",
+                "id": "rogue_2_relic_grace_47",
+                "count": 1,
+                "ts": 1695000000
+            },
+            "r_6": {
+                "index": "r_6",
+                "id": "rogue_2_relic_fight_113",
+                "count": 1,
+                "ts": 1695000000
+            },
+            "r_7": {
+                "index": "r_7",
+                "id": "rogue_2_relic_fight_114",
+                "count": 1,
+                "ts": 1695000000
+            },
+            "r_8": {
+                "index": "r_8",
+                "id": "rogue_2_relic_fight_37",
+                "count": 1,
+                "ts": 1695000000
+            },
+            "r_9": {
+                "index": "r_9",
+                "id": "rogue_2_relic_fight_24",
+                "count": 1,
+                "ts": 1695000000
+            },
+            "r_10": {
+                "index": "r_10",
+                "id": "rogue_2_relic_fight_92",
+                "count": 1,
+                "ts": 1695000000
+            },
+            "r_11": {
+                "index": "r_11",
+                "id": "rogue_2_relic_grace_70",
+                "count": 1,
+                "ts": 1695000000
+            },
+            "r_12": {
+                "index": "r_12",
+                "id": "rogue_2_relic_fight_9",
+                "count": 1,
+                "ts": 1695000000
+            },
+            "r_13": {
+                "index": "r_13",
+                "id": "rogue_2_relic_fight_101",
+                "count": 1,
+                "ts": 1695000000
+            },
+            "r_14": {
+                "index": "r_14",
+                "id": "rogue_2_relic_fight_31",
+                "count": 1,
+                "ts": 1695000000
+            },
+            "r_15": {
+                "index": "r_15",
+                "id": "rogue_2_relic_fight_100",
+                "count": 1,
+                "ts": 1695000000
+            },
+            "r_16": {
+                "index": "r_16",
+                "id": "rogue_2_relic_fight_132",
+                "count": 1,
+                "ts": 1695000000
+            },
+            "r_17": {
+                "index": "r_17",
+                "id": "rogue_2_relic_fight_42",
                 "count": 1,
                 "ts": 1695000000
             }
         },
-        "recruit": {},
+        "recruit": {
+            "t_9999": {
+                "index": "t_9999",
+                "id": "rogue_2_recruit_ticket_all",
+                "state": 2,
+                "list": [],
+                "result": {
+                    "instId": "10000",
+                    "charId": "char_017_huang",
+                    "favorPoint": 25570,
+                    "potentialRank": 5,
+                    "mainSkillLvl": 7,
+                    "skin": "char_017_huang@as#1",
+                    "level": 90,
+                    "exp": 0,
+                    "evolvePhase": 2,
+                    "defaultSkillIndex": 2,
+                    "gainTime": 1699334925,
+                    "skills": [
+                        {
+                            "skillId": "skchr_huang_1",
+                            "unlock": 1,
+                            "state": 0,
+                            "specializeLevel": 3,
+                            "completeUpgradeTime": -1
+                        },
+                        {
+                            "skillId": "skchr_huang_2",
+                            "unlock": 1,
+                            "state": 0,
+                            "specializeLevel": 3,
+                            "completeUpgradeTime": -1
+                        },
+                        {
+                            "skillId": "skchr_huang_3",
+                            "unlock": 1,
+                            "state": 0,
+                            "specializeLevel": 3,
+                            "completeUpgradeTime": -1
+                        }
+                    ],
+                    "voiceLan": "JP",
+                    "currentEquip": "uniequip_002_huang",
+                    "equip": {
+                        "uniequip_001_huang": {
+                            "hide": 0,
+                            "locked": 0,
+                            "level": 1
+                        },
+                        "uniequip_002_huang": {
+                            "hide": 0,
+                            "locked": 0,
+                            "level": 3
+                        }
+                    },
+                    "starMark": 0,
+                    "type": "NORMAL",
+                    "upgradeLimited": false,
+                    "upgradePhase": 1,
+                    "isUpgrade": false,
+                    "isCure": false,
+                    "population": 0,
+                    "charBuff": [],
+                    "troopInstId": "0"
+                },
+                "ts": 1695000000,
+                "from": "initial",
+                "mustExtra": 0,
+                "needAssist": true
+            }
+        },
         "trap": null,
         "consumable": {}
     },
     "game": {
         "mode": "NORMAL",
         "predefined": null,
-        "theme": "rogue_3",
+        "theme": "rogue_2",
         "outer": {
             "support": false
         },

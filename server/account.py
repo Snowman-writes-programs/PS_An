@@ -426,7 +426,7 @@ def accountSyncData():
     player_data["user"]["activity"] = {
         "TYPE_ACT29SIDE": {
                 "act29side": {
-                    "isOpen": true,
+                    "isOpen": True,
                     "coin": 1000,
                     "favorList": []
                 }

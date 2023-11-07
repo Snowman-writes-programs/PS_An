@@ -186,3 +186,5 @@ cython_debug/
 .vs/
 
 data/user/
+data/user/rlv2.json
+data/user/battleReplays.json

@@ -30,6 +30,9 @@ def main():
         device.resume(pid)
         session = device.attach(pid, realm="emulated")
 
+    else:
+        print("Unrecognized mode.")
+
     with open("_.js", encoding="utf-8") as f:
         s = f.read()
 
@@ -42,7 +45,7 @@ def main():
     script = session.create_script(s)
     script.on('message', on_message)
     script.load()
-    print("[!] Ctrl+D on UNIX, Ctrl+Z on Windows/cmd.exe to detach from instrumented program.\n\n")
+    print("[!] Ctrl + Z on Windows to detach from instrumented program.\n\n")
     sys.stdin.read()
     session.detach()
 
