@@ -3,4 +3,4 @@
 @title OpenDoctoratePy - Frida Server
 
 call env\scripts\activate.bat
-pypy startfrida.py
+python3 startfrida.py

@@ -22,4 +22,4 @@ IF '%errorlevel%' NEQ '0' (
 )
 
 cls
-pypy setup_requirements.py
+python3 setup_requirements.py
