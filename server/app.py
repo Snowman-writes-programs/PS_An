@@ -191,7 +191,7 @@ app.add_url_rule(
 
 
 def writeLog(data):
-    print(f'[{datetime.now(datetime.UTC)}] {data}')
+    print(f'[{datetime.now(UTC)}] {data}')
 
 if __name__ == "__main__":
     writeLog('[SERVER] Server started at http://' + host + ":" + str(port))
