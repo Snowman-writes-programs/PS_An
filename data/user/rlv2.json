@@ -1,6 +1,6 @@
 {
     "player": {
-        "state": "PENDING",
+        "state": "WAIT_MOVE",
         "property": {
             "exp": 0,
             "level": 10,
@@ -19,10 +19,10 @@
             "conPerfectBattle": 0
         },
         "cursor": {
-            "zone": 2,
+            "zone": 1,
             "position": {
-                "x": 5,
-                "y": 1
+                "x": 0,
+                "y": 0
             }
         },
         "trace": [
@@ -32,66 +32,13 @@
                     "x": 0,
                     "y": 0
                 }
-            },
-            {
-                "zone": 1,
-                "position": {
-                    "x": 9,
-                    "y": 0
-                }
-            },
-            {
-                "zone": 2,
-                "position": {
-                    "x": 0,
-                    "y": 0
-                }
-            },
-            {
-                "zone": 2,
-                "position": {
-                    "x": 5,
-                    "y": 1
-                }
             }
         ],
-        "pending": [
-            {
-                "index": "e_0",
-                "type": "BATTLE_REWARD",
-                "content": {
-                    "battleReward": {
-                        "earn": {
-                            "damage": 0,
-                            "hp": 0,
-                            "shield": 0,
-                            "exp": 0,
-                            "populationMax": 0,
-                            "squadCapacity": 0,
-                            "maxHpUp": 0
-                        },
-                        "rewards": [
-                            {
-                                "index": 0,
-                                "items": [
-                                    {
-                                        "sub": 0,
-                                        "id": "rogue_2_recruit_ticket_all",
-                                        "count": 1
-                                    }
-                                ],
-                                "done": 0
-                            }
-                        ],
-                        "show": "1"
-                    }
-                }
-            }
-        ],
+        "pending": [],
         "status": {
             "bankPut": 0
         },
-        "toEnding": "ro2_ending_1",
+        "toEnding": "ro3_ending_1",
         "chgEnding": false
     },
     "record": {
@@ -110,31 +57,31 @@
         "relic": {
             "r_0": {
                 "index": "r_0",
-                "id": "rogue_2_band_2",
+                "id": "rogue_3_band_9",
                 "count": 1,
                 "ts": 1695000000
             },
             "r_1": {
                 "index": "r_1",
-                "id": "rogue_2_relic_grace_63",
+                "id": "rogue_3_relic_legacy_90",
                 "count": 1,
                 "ts": 1695000000
             },
             "r_2": {
                 "index": "r_2",
-                "id": "rogue_2_relic_fight_27",
+                "id": "rogue_3_relic_legacy_87",
                 "count": 1,
                 "ts": 1695000000
             },
             "r_3": {
                 "index": "r_3",
-                "id": "rogue_2_relic_fight_114",
+                "id": "rogue_3_relic_legacy_72",
                 "count": 1,
                 "ts": 1695000000
             },
             "r_4": {
                 "index": "r_4",
-                "id": "rogue_2_relic_fight_113",
+                "id": "rogue_3_relic_legacy_158",
                 "count": 1,
                 "ts": 1695000000
             }
@@ -146,7 +93,7 @@
     "game": {
         "mode": "NORMAL",
         "predefined": null,
-        "theme": "rogue_2",
+        "theme": "rogue_3",
         "outer": {
             "support": false
         },
