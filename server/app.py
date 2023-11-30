@@ -1,6 +1,6 @@
 import re
 import logging
-import datetime
+from datetime import datetime
 
 from flask import Flask
 
@@ -37,6 +37,13 @@ app.add_url_rule('/homeTheme/change', methods=['POST'], view_func=background.hom
 
 app.add_url_rule('/building/sync', methods=['POST'], view_func=building.buildingSync)
 
+app.add_url_rule('/building/getRecentVisitors', methods=['POST'], view_func=building.building_getRecentVisitors)
+app.add_url_rule('/building/getInfoShareVisitorsNum', methods=['POST'], view_func=building.building_getInfoShareVisitorsNum)
+app.add_url_rule('/building/changeDiySolution', methods=['POST'], view_func=building.building_changeDiySolution)
+app.add_url_rule('/building/assignChar', methods=['POST'], view_func=building.building_assignChar)
+app.add_url_rule('/building/setBuildingAssist', methods=['POST'], view_func=building.building_setBuildingAssist)
+app.add_url_rule('/building/getAssistReport', methods=['POST'], view_func=building.building_getAssistReport)
+
 app.add_url_rule('/campaignV2/battleStart', methods=['POST'], view_func=campaignV2.campaignV2BattleStart)
 app.add_url_rule('/campaignV2/battleFinish', methods=['POST'], view_func=campaignV2.campaignV2BattleFinish)
 app.add_url_rule('/campaignV2/battleSweep', methods=['POST'], view_func=campaignV2.campaignV2BattleSweep)
@@ -65,6 +72,10 @@ app.add_url_rule('/config/prod/official/remote_config', methods=['GET'], view_fu
 app.add_url_rule('/crisis/getInfo', methods=['POST'], view_func=crisis.crisisGetCrisisInfo)
 app.add_url_rule('/crisis/battleStart', methods=['POST'], view_func=crisis.crisisBattleStart)
 app.add_url_rule('/crisis/battleFinish', methods=['POST'], view_func=crisis.crisisBattleFinish)
+
+app.add_url_rule('/crisisV2/getInfo', methods=['POST'], view_func=crisis.crisisV2_getInfo)
+app.add_url_rule('/crisisV2/battleStart', methods=['POST'], view_func=crisis.crisisV2_battleStart)
+app.add_url_rule('/crisisV2/battleFinish', methods=['POST'], view_func=crisis.crisisV2_battleFinish)
 
 app.add_url_rule('/deepSea/branch', methods=['POST'], view_func=deepsea.deepSeaBranch)
 app.add_url_rule('/deepSea/event', methods=['POST'], view_func=deepsea.deepSeaEvent)
@@ -99,12 +110,20 @@ app.add_url_rule('/quest/changeSquadName', methods=['POST'], view_func=quest.que
 app.add_url_rule('/quest/squadFormation', methods=['POST'], view_func=quest.questSquadFormation)
 app.add_url_rule('/quest/getAssistList', methods=['POST'], view_func=quest.questGetAssistList)
 
+app.add_url_rule('/quest/battleContinue', methods=['POST'], view_func=quest.questBattleContinue)
+
 app.add_url_rule('/storyreview/markStoryAcceKnown', methods=['POST'], view_func=quest.markStoryAcceKnown)
+app.add_url_rule('/storyreview/readStory', methods=['POST'], view_func=quest.readStory)
 
 app.add_url_rule('/act25side/battleStart', methods=['POST'], view_func=quest.questBattleStart)
 app.add_url_rule('/act25side/battleFinish', methods=['POST'], view_func=quest.questBattleFinish)
 
 app.add_url_rule('/car/confirmBattleCar', methods=['POST'], view_func=quest.confirmBattleCar)
+
+app.add_url_rule('/activity/act24side/battleStart', methods=['POST'], view_func=quest.questBattleStart)
+app.add_url_rule('/activity/act24side/battleFinish', methods=['POST'], view_func=quest.questBattleFinish)
+
+app.add_url_rule('/activity/act24side/setTool', methods=['POST'], view_func=quest.setTool)
 
 app.add_url_rule('/retro/typeAct20side/competitionStart', methods=['POST'], view_func=quest.typeAct20side_competitionStart)
 app.add_url_rule('/retro/typeAct20side/competitionFinish', methods=['POST'], view_func=quest.typeAct20side_competitionFinish)
@@ -142,6 +161,13 @@ app.add_url_rule('/user/info/v1/need_cloud_auth', methods=['POST'], view_func=us
 app.add_url_rule('/user/yostar_createlogin', methods=['POST'], view_func=user.userYostarCreatelogin)
 app.add_url_rule('/u8/user/v1/getToken', methods=['POST'], view_func=user.userV1getToken)
 
+app.add_url_rule('/user/changeResume', methods=['POST'], view_func=user.user_changeResume)
+app.add_url_rule('/social/getSortListInfo', methods=['POST'], view_func=user.social_getSortListInfo)
+app.add_url_rule('/social/searchPlayer', methods=['POST'], view_func=user.social_searchPlayer)
+app.add_url_rule('/social/setAssistCharList', methods=['POST'], view_func=user.social_setAssistCharList)
+app.add_url_rule('/social/setCardShowMedal', methods=['POST'], view_func=user.social_setCardShowMedal)
+app.add_url_rule('/medal/setCustomData', methods=['POST'], view_func=user.medal_setCustomData)
+
 app.add_url_rule(
     '/user/auth/v1/token_by_phone_password',
     methods=['POST'], view_func=user.auth_v1_token_by_phone_password
@@ -165,7 +191,7 @@ app.add_url_rule(
 
 
 def writeLog(data):
-    print(f'[{datetime.datetime.now(datetime.UTC)}] {data}')
+    print(f'[{datetime.utcnow()}] {data}')
 
 if __name__ == "__main__":
     writeLog('[SERVER] Server started at http://' + host + ":" + str(port))

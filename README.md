@@ -1,33 +1,39 @@
 # OpenDoctoratePy
 
-~~It's a pity that DoctoratePy is no longer maintained. Therefore, this repo aims to continue the support of this project for newer versions of the game.~~
+It's a pity that DoctoratePy is no longer maintained. Therefore, this repo aims to continue the support of this project for newer versions of the game.
 
 Python server implementation of a certain anime tower defense game. This repo is for the CN TapTap Version.
 
-[Discord Server](https://discord.com/invite/SmuB88RR5W)
+Discord: [https://discord.com/invite/SmuB88RR5W](https://discord.com/invite/SmuB88RR5W)
 
 ## Currently tested emulator to be working
 
-1. MuMu Player X (aka MuMu Player 12) (***RECOMMENDED.***)
+1. MuMu Player X (aka MuMu Player 12) (**recommended**)
 
-2. LDPlayer9 (*Usable, but ***NOT*** recommended.*)
+2. LDPlayer9 (usable, but **NOT** recommended)
 
 ## How To
 
-### [MuMu Player X (aka MuMu Player 12)](https://a11.gdl.netease.com/MuMuInstaller_12.0.0.6_12beta-gw-offline_all_1666787400.exe)
+### MuMu Player X (aka MuMu Player 12)
+
+[https://www.mumuglobal.com/faq/system-requirement-mumu-player-x.html](https://www.mumuglobal.com/faq/system-requirement-mumu-player-x.html)
+
+[https://a11.gdl.netease.com/MuMuInstaller_12.0.0.6_12beta-gw-offline_all_1666787400.exe](https://a11.gdl.netease.com/MuMuInstaller_12.0.0.6_12beta-gw-offline_all_1666787400.exe)
 
 1. Enable root permission in MuMu Player's settings (adb connection should be enabled by default, therefore no need to enable it manually).
 2. Start MuMu Player X (aka MuMu Player 12).
-3. Run `setup_requirements.bat`, and success can be indicated from `"Press enter to exit..."`. May be skipped if you have installed Frida on your emulator.
+3. Run `setup_requirements.bat`, and success can be indicated from `"Press enter to exit..."`.
 4. Run `start_local_server.bat`, and the window should stay open if no error occurs.
 5. Run `start_frida-server.bat`, and the window should stay open if no error occurs.
 6. Run `start_frida-hook.bat`. It should automatically open up the game. The window should stay open if no error occurs.
 
-### [LDPlayer9](https://ldcdn.ldmnq.com/download/package/LDPlayer9.0.exe)
+### LDPlayer9
+
+[https://ldcdn.ldmnq.com/download/package/LDPlayer9.0.exe](https://ldcdn.ldmnq.com/download/package/LDPlayer9.0.exe)
 
 1. Enable root permission and adb connection in LDPlayer9's settings.
 2. Start LDPlayer9.
-3. Run `setup_requirements.bat`, and success can be indicated from `"Press enter to exit..."`. May be skipped if you have installed Frida on your emulator.
+3. Run `setup_requirements.bat`, and success can be indicated from `"Press enter to exit..."`.
 4. Run `start_local_server.bat`, and the window should stay open if no error occurs.
 5. Run `start_frida-server.bat`, and the window should stay open if no error occurs.
 6. Run `start_frida-hook.bat`. It should automatically open up the game. The window should stay open if no error occurs.
@@ -73,3 +79,7 @@ Note: Characters stats and skill masteries are based on the above parameters.
     "skillIndex": 2
 }
 ```
+
+## TODO
+- [ ] Add more info about mods
+- [ ] Add a UI for easy editing

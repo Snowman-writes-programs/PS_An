@@ -119,13 +119,13 @@ def rlv2CreateGame():
             "state": "INIT",
             "property": {
                 "exp": 0,
-                "level": 10,
+                "level": 1,
                 "maxLevel": 10,
                 "hp": {
-                    "current": 999,
-                    "max": 999
+                    "current": 10000,
+                    "max": 10000
                 },
-                "gold": 450,
+                "gold": 8,
                 "shield": 0,
                 "capacity": 13,
                 "population": {
@@ -211,7 +211,8 @@ def rlv2CreateGame():
             "relic": {},
             "recruit": {},
             "trap": None,
-            "consumable": {}
+            "consumable": {},
+            "exploreTool": {}
         },
         "game": {
             "mode": mode,
@@ -528,14 +529,28 @@ def getMap(theme):
                     "x": 0,
                     "y": 0
                 },
+                "next": [
+                    {
+                        "x": 1,
+                        "y": 0
+                    }
+                ],
+                "type": shop
+            },
+            {
+                "index": "100",
+                "pos": {
+                    "x": 1,
+                    "y": 0
+                },
                 "next": [],
                 "type": shop
             }
         ]
         x_max = 9
         y_max = 3
-        x = 0
-        y = y_max+1
+        x = 1
+        y = 1
         while j < len(stages):
             stage = stages[j]
             if y > y_max:
@@ -645,6 +660,10 @@ def getBuffs(rlv2, stage_id):
 
     if rlv2["inventory"]["trap"] is not None:
         item_id = rlv2["inventory"]["trap"]["id"]
+        if item_id in rlv2_table["details"][theme]["relics"]:
+            buffs += rlv2_table["details"][theme]["relics"][item_id]["buffs"]
+    for i in rlv2["inventory"]["exploreTool"]:
+        item_id = rlv2["inventory"]["exploreTool"][i]["id"]
         if item_id in rlv2_table["details"][theme]["relics"]:
             buffs += rlv2_table["details"][theme]["relics"][item_id]["buffs"]
     mode_grade = rlv2["game"]["modeGrade"]
@@ -1867,7 +1886,7 @@ def rlv2MoveAndBattleStart():
 
 def rlv2BattleFinish():
     request_data = request.get_json()
-    battle_data = decrypt_battle_data(request_data["data"], 1672502400)
+    battle_data = decrypt_battle_data(request_data["data"])
 
     rlv2 = read_json(RLV2_JSON_PATH)
     if battle_data["completeState"] != 1:
@@ -1997,6 +2016,21 @@ def getGoods(theme):
             }
         )
         i += 1
+    for j in rlv2_table["details"][theme]["difficultyUpgradeRelicGroups"]:
+        for k in rlv2_table["details"][theme]["difficultyUpgradeRelicGroups"][j]["relicData"]:
+            goods.append(
+                {
+                    "index": str(i),
+                    "itemId": k["relicId"],
+                    "count": 1,
+                    "priceId": price_id,
+                    "priceCount": 0,
+                    "origCost": 0,
+                    "displayPriceChg": False,
+                    "_retainDiscount": 1
+                }
+            )
+            i += 1
     for j in rlv2_table["details"][theme]["archiveComp"]["trap"]["trap"]:
         goods.append(
             {
@@ -2076,6 +2110,16 @@ def getNextRelicIndex(rlv2):
     return f"r_{i}"
 
 
+def getNextExploreToolIndex(rlv2):
+    d = set()
+    for e in rlv2["inventory"]["exploreTool"]:
+        d.add(int(e[2:]))
+    i = 0
+    while i in d:
+        i += 1
+    return f"e_{i}"
+
+
 def rlv2BuyGoods():
     request_data = request.get_json()
     select = int(request_data["select"][0])
@@ -2101,6 +2145,14 @@ def rlv2BuyGoods():
             "count": 1,
             "ts": 1695000000
         }
+    elif item_id.find("_explore_tool_") != -1:
+        explore_tool_id = getNextExploreToolIndex(rlv2)
+        rlv2["inventory"]["exploreTool"][explore_tool_id] = {
+            "index": explore_tool_id,
+            "id": item_id,
+            "count": 1,
+            "ts": 1695000000
+        }
     write_json(rlv2, RLV2_JSON_PATH)
 
     data = {
@@ -2121,9 +2173,13 @@ def rlv2LeaveShop():
     rlv2 = read_json(RLV2_JSON_PATH)
     rlv2["player"]["state"] = "WAIT_MOVE"
     rlv2["player"]["pending"] = []
-    if rlv2["player"]["cursor"]["position"]["x"] > 0:
+    if rlv2["player"]["cursor"]["position"]["x"] > 1:
         rlv2["player"]["cursor"]["zone"] += 1
         rlv2["player"]["cursor"]["position"] = None
+    elif rlv2["player"]["cursor"]["position"]["x"] == 1:
+        rlv2["player"]["cursor"]["position"]["x"] = 0
+        rlv2["player"]["cursor"]["position"]["y"] = 0
+        rlv2["player"]["trace"].pop()
     write_json(rlv2, RLV2_JSON_PATH)
 
     data = {

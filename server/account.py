@@ -1,6 +1,6 @@
 import json
 from os.path import exists
-from time import time
+from faketime import time
 from copy import deepcopy
 from base64 import b64encode
 from hashlib import md5
@@ -9,11 +9,11 @@ from flask import request
 from constants import USER_JSON_PATH, CONFIG_PATH, BATTLE_REPLAY_JSON_PATH, \
                     SKIN_TABLE_URL, CHARACTER_TABLE_URL, EQUIP_TABLE_URL, STORY_TABLE_URL, STAGE_TABLE_URL, \
                     SYNC_DATA_TEMPLATE_PATH, BATTLEEQUIP_TABLE_URL, DM_TABLE_URL, RETRO_TABLE_URL, \
-                    HANDBOOK_INFO_TABLE_URL, MAILLIST_PATH, CHARM_TABLE_URL, ACTIVITY_TABLE_URL, SQUADS_PATH
+                    HANDBOOK_INFO_TABLE_URL, MAILLIST_PATH, CHARM_TABLE_URL, ACTIVITY_TABLE_URL, SQUADS_PATH, STORY_REVIEW_TABLE_URL, ENEMY_HANDBOOK_TABLE_URL, MEDAL_TABLE_URL
 from utils import read_json, write_json
 from core.function.update import updateData
 import uuid
-
+from building import buildingSync
 
 def accountLogin():
     try:
@@ -159,7 +159,6 @@ def accountSyncData():
                 myCharList[int(cntInstId)]["skills"][index]["specializeLevel"] = edit_json["skillsSpecializeLevel"]
 
         # Add equips
-        
         if myCharList[int(cntInstId)]["charId"] in equip_keys:
 
             for equip in equip_table["charEquip"][myCharList[int(cntInstId)]["charId"]]:
@@ -199,7 +198,7 @@ def accountSyncData():
                 "currentTmpl": "char_002_amiya",
                 "tmpl": {
                     "char_002_amiya": {
-                        "skinId": "char_002_amiya@winter#1",
+                        "skinId": "char_002_amiya@test#1",
                         "defaultSkillIndex": 2,
                         "skills": [
                             {
@@ -242,6 +241,8 @@ def accountSyncData():
                     }
                 })
             myCharList[int(cntInstId)]["tmpl"]["char_002_amiya"]["currentEquip"] = equip_table["charEquip"]["char_002_amiya"][-1]
+        elif operatorKeys[cnt] == "char_512_aprot":
+            myCharList[int(cntInstId)]["skin"] = "char_512_aprot#1"
 
 
         buildingChars.update({
@@ -267,7 +268,7 @@ def accountSyncData():
         })
 
         cnt += 1
-    cntInstId = maxInstId+1
+    cntInstId = 10000
 
     dupe_characters = edit_json["duplicateUnits"]
     for dupeChar in dupe_characters:
@@ -400,12 +401,13 @@ def accountSyncData():
         })
     player_data["user"]["background"]["bgs"] = bgs
 
-    themes = {}
-    for theme in display_meta_table["homeBackgroundData"]["themeList"]:
-        themes[theme["id"]] = {
-            "unlock": 1695000000
-        }
-    player_data["user"]["homeTheme"]["themes"] = themes
+    if "themeList" in display_meta_table["homeBackgroundData"]:
+        themes = {}
+        for theme in display_meta_table["homeBackgroundData"]["themeList"]:
+            themes[theme["id"]] = {
+                "unlock": 1695000000
+            }
+        player_data["user"]["homeTheme"]["themes"] = themes
 
     # Update charms
     for charm in charm_table["charmList"]:
@@ -420,40 +422,6 @@ def accountSyncData():
                     "num": len(activity_table["carData"]["carDict"][car_gear]["posList"])
                 }
             })
-
-    # Event
-
-    player_data["user"]["activity"] = {
-        "TYPE_ACT29SIDE": {
-                "act29side": {
-                    "isOpen": True,
-                    "coin": 1000,
-                    "favorList": []
-                }
-            }
-    }
-
-    missions_data = {
-        "ACTIVITY": {
-
-        }
-    }
-
-    for mission in activity_table['missionData']:
-        if mission['id'].startswith('29sideActivity'):
-            missions_data['ACTIVITY'].update({
-                mission['id']: {
-                    'stage': 2,
-                    'progress': [
-                        {
-                            'target': 1,
-                            'value': 1
-                        }
-                    ]
-                }
-            })
-
-    player_data['user']['mission']['missions'] = missions_data
 
     # Update Stultifera Navis
     activity_data = activity_table["activity"]["TYPE_ACT17SIDE"]["act17side"]
@@ -521,8 +489,6 @@ def accountSyncData():
     #     is2_data = read_json(RLV2_JSON_PATH)
     #     player_data["user"]["rlv2"] = is2_data
 
-    
-
     # Enable battle replays
     if replay_data["currentCharConfig"] in list(replay_data["saved"].keys()):
         for replay in replay_data["saved"][replay_data["currentCharConfig"]]:
@@ -539,13 +505,17 @@ def accountSyncData():
                 break
             charId = slot["charId"]
             del slot["charId"]
-            instId = 1
             if charId in charId2instId:
                 instId = charId2instId[charId]
-            slot["charInstId"] = instId
+                slot["charInstId"] = instId
+                if slot["currentEquip"] not in player_data["user"]["troop"]["chars"][instId]["equip"]:
+                    slot["currentEquip"] = None
+            else:
+                squads_data[i]["slots"][j] = None
             j += 1
         for k in range(j, 12):
             squads_data[i]["slots"].append(None)
+        squads_data[i]["slots"] = squads_data[i]["slots"][:12]
 
     player_data["user"]["troop"]["squads"] = squads_data
 
@@ -580,8 +550,56 @@ def accountSyncData():
 
     player_data["user"]["tower"]["season"]["id"] = season
 
+    story_review_table = updateData(STORY_REVIEW_TABLE_URL)
+    story_review_groups = {}
+    for i in story_review_table:
+        story_review_groups[i] = {
+            "rts": -1,
+            "stories": []
+        }
+        for j in story_review_table[i]["infoUnlockDatas"]:
+            story_review_groups[i]["stories"].append(
+                {
+                    "id": j["storyId"],
+                    "uts": 1695000000,
+                    "rc": 1
+                }
+            )
+    player_data["user"]["storyreview"]["groups"] = story_review_groups
+
+    enemy_handbook_table = updateData(ENEMY_HANDBOOK_TABLE_URL)
+    enemies = {}
+    if "enemyData" in enemy_handbook_table:
+        for i in enemy_handbook_table["enemyData"]:
+            enemies[i] = 1
+    else:
+        for i in enemy_handbook_table:
+            enemies[i] = 1
+    player_data["user"]["dexNav"]["enemy"]["enemies"] = enemies
+
+    for i in activity_table["activity"]:
+        if i not in player_data["user"]["activity"]:
+            player_data["user"]["activity"][i] = {}
+        for j in activity_table["activity"][i]:
+            if j not in player_data["user"]["activity"][i]:
+                player_data["user"]["activity"][i][j] = {}
+
+    player_data["user"]["medal"] = {"medals": {}}
+    medal_table = updateData(MEDAL_TABLE_URL)
+    for i in medal_table["medalList"]:
+        medalId = i["medalId"]
+        player_data["user"]["medal"]["medals"][medalId] = {
+            "id": medalId,
+            "val": [],
+            "fts": 1695000000,
+            "rts": 1695000000
+        }
+
     write_json(player_data, USER_JSON_PATH)
-    
+
+    building = buildingSync()
+    player_data["user"]["building"] = building["playerDataDelta"]["modified"]["building"]
+
     return player_data
 
 
@@ -613,9 +631,9 @@ def accountYostarAuthSubmit():
     data = request.data
     data = {
         "result": 0,
-        "yostar_account": "copjing@gmail.com",
+        "yostar_account": "Doctorate@doctorate.com",
         "yostar_token": "a",
-        "yostar_uid": "72537754"
+        "yostar_uid": "1"
     }
 
     return data

@@ -1,4 +1,4 @@
-from time import time
+from faketime import time
 
 from flask import request
 
@@ -175,27 +175,33 @@ def questSquadFormation():
 def questGetAssistList():
 
     data = request.data
-    assist_unit_config = read_json(CONFIG_PATH)["charConfig"]["assistUnit"]
+    assist_unit_configs = read_json(CONFIG_PATH)["assistUnits"]
     saved_data = read_json(USER_JSON_PATH)["user"]["troop"]["chars"]
-    assist_unit = {}
+    assist_units = []
+    for assist_unit_config in assist_unit_configs:
+        assist_unit = {}
 
-    for _, char in saved_data.items():
-        if char["charId"] == assist_unit_config["charId"]:
-            assist_unit.update({
-                "charId": char["charId"],
-                "skinId": assist_unit_config["skinId"],
-                "skills": char["skills"],
-                "mainSkillLvl": char["mainSkillLvl"],
-                "skillIndex": assist_unit_config["skillIndex"],
-                "evolvePhase": char["evolvePhase"],
-                "favorPoint": char["favorPoint"],
-                "potentialRank": char["potentialRank"],
-                "level": char["level"],
-                "crisisRecord": {},
-                "currentEquip": char["currentEquip"],
-                "equip": char["equip"]
-            })
-            break
+        flag = False
+        for _, char in saved_data.items():
+            if char["charId"] == assist_unit_config["charId"]:
+                assist_unit.update({
+                    "charId": char["charId"],
+                    "skinId": char["skin"],
+                    "skills": char["skills"],
+                    "mainSkillLvl": char["mainSkillLvl"],
+                    "skillIndex": assist_unit_config["skillIndex"],
+                    "evolvePhase": char["evolvePhase"],
+                    "favorPoint": char["favorPoint"],
+                    "potentialRank": char["potentialRank"],
+                    "level": char["level"],
+                    "crisisRecord": {},
+                    "currentEquip": assist_unit_config["currentEquip"] if assist_unit_config["currentEquip"] in char["equip"] else None,
+                    "equip": char["equip"]
+                })
+                flag = True
+                break
+        if flag:
+            assist_units.append(assist_unit)
 
     data = {
         "allowAskTs": int(time()),
@@ -219,7 +225,7 @@ def questGetAssistList():
                 "isFriend": True,
                 "canRequestFriend": False,
                 "assistSlotIndex": 0
-            }
+            } for assist_unit in assist_units
         ],
         "playerDataDelta": {
             "modified": {},
@@ -233,6 +239,8 @@ def questGetAssistList():
 def markStoryAcceKnown():
     return {"playerDataDelta": {"modified": {"storyreview": {"tags": {"knownStoryAcceleration": 1}}}, "deleted": {}}}
 
+def readStory():
+    return {"readCount": 1, "playerDataDelta": {"modified": {}, "deleted": {}}}
 
 def confirmBattleCar():
     return {
@@ -252,3 +260,32 @@ def typeAct20side_competitionStart():
 
 def typeAct20side_competitionFinish():
     return {"performance": 0, "expression": 0, "operation": 0, "total": 0, "level": "B", "isNew": False, "playerDataDelta": {"modified": {}, "deleted": {}}}
+
+def questBattleContinue():
+    return {"result": 0, "battleId": "abcdefgh-1234-5678-a1b2c3d4e5f6", "playerDataDelta": {"modified": {}, "deleted": {}}}
+
+def setTool():
+    request_data = request.get_json()
+    tool = {
+        "tool_trap": 1,
+        "tool_wirebug": 1,
+        "tool_flashbomb": 1,
+        "tool_bomb": 1
+    }
+    for i in request_data["tools"]:
+        tool[i] = 2
+    data = {
+        "playerDataDelta": {
+            "modified": {
+                "activity": {
+                    "TYPE_ACT24SIDE": {
+                        "act24side": {
+                            "tool": tool
+                        }
+                    }
+                }
+            },
+            "deleted": {}
+        }
+    }
+    return data

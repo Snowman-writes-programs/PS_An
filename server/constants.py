@@ -12,9 +12,10 @@ USER_JSON_PATH = "data/user/user.json"
 BATTLE_REPLAY_JSON_PATH = "data/user/battleReplays.json"
 RLV2_JSON_PATH = "data/user/rlv2.json"
 RLV2_TEMPBUFF_JSON_PATH = "data/user/rlv2TempBuffs.json"
-CRISISV2_JSON_BASE_PATH = "data/crisisv2/"
 CRISIS_JSON_BASE_PATH = "data/crisis/"
+CRISIS_V2_JSON_BASE_PATH = "data/crisisV2/"
 RUNE_JSON_PATH = "data/user/rune.json"
+BUILDING_JSON_PATH = "data/user/building.json"
 
 # RLV2 Options
 RLV2_CHOICEBUFFS = "data/rlv2/choiceBuffs.json"
@@ -26,10 +27,10 @@ TOWERDATA_PATH = "data/tower/towerData.json"
 
 config = read_json(CONFIG_PATH)
 mode = config["server"]["mode"]
-if mode == "cn":
-    BASE_URL = "https://raw.githubusercontent.com/Kengxxiao/ArknightsGameData/master/zh_CN/gamedata"
-else:
+if mode == "global":
     BASE_URL = "https://raw.githubusercontent.com/Kengxxiao/ArknightsGameData/master/en_US/gamedata"
+elif mode == "cn":
+    BASE_URL = "https://raw.githubusercontent.com/Kengxxiao/ArknightsGameData/master/zh_CN/gamedata"
 
 # TABLE Urls
 ACTIVITY_TABLE_URL = BASE_URL + "/excel/activity_table.json"
@@ -45,3 +46,7 @@ DM_TABLE_URL = BASE_URL + "/excel/display_meta_table.json"
 RETRO_TABLE_URL = BASE_URL + "/excel/retro_table.json"
 HANDBOOK_INFO_TABLE_URL = BASE_URL + "/excel/handbook_info_table.json"
 TOWER_TABLE_URL = BASE_URL + "/excel/climb_tower_table.json"
+BUILDING_TABLE_URL = BASE_URL + "/excel/building_data.json"
+STORY_REVIEW_TABLE_URL = BASE_URL + "/excel/story_review_table.json"
+ENEMY_HANDBOOK_TABLE_URL = BASE_URL + "/excel/enemy_handbook_table.json"
+MEDAL_TABLE_URL = BASE_URL + "/excel/medal_table.json"

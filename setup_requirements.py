@@ -2,14 +2,11 @@ import os
 import sys
 import lzma
 import subprocess
-import time
 from zipfile import ZipFile
 from contextlib import suppress
 
 import requests
 from ppadb.client import Client as AdbClient
-
-subprocess.Popen("start_local_server.bat", creationflags=subprocess.CREATE_NEW_CONSOLE)
 
 ADB_PATH = "platform-tools\\adb.exe"
 
@@ -86,7 +83,4 @@ if not frida_exists:
     os.remove("frida-server.xz")
 
 print("\nFrida-server is installed!")
-
-subprocess.Popen("start_frida-server.bat", creationflags=subprocess.CREATE_NEW_CONSOLE)
-time.sleep(2)
-subprocess.Popen("start_frida-hook.bat", creationflags=subprocess.CREATE_NEW_CONSOLE)
+input("Press enter to exit...")
