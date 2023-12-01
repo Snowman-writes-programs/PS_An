@@ -1,6 +1,6 @@
 import re
 import logging
-import datetime
+from datetime import datetime
 
 from flask import Flask
 
@@ -191,7 +191,7 @@ app.add_url_rule(
 
 
 def writeLog(data):
-    print(f'[{datetime.datetime.now(datetime.UTC)}] {data}')
+    print(f'[{datetime.utcnow()}] {data}')
 
 if __name__ == "__main__":
     writeLog('[SERVER] Server started at http://' + host + ":" + str(port))

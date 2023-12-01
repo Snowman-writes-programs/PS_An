@@ -1,8 +1,18 @@
+/adb.zip
+/frida-server-*.xz
 /_.static.js
 # User files
 TestLevel/
 
-data/user/
+data/user/user.json
+data/crisis/test.json
+data/crisis/cccustom.json
+
+fridahookglobal.py
+test.py
+mitmproxy-cn1.py
+integrated_strategy.
+start_doctorate.bat
 
 mods/*
 !mods/.placeholder
@@ -54,6 +64,7 @@ MANIFEST
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
+!/odpy.spec
 
 # Installer logs
 pip-log.txt
@@ -176,7 +187,3 @@ cython_debug/
 
 # Visual Studio
 .vs/
-
-data/user/
-data/user/rlv2.json
-data/user/battleReplays.json
