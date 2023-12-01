@@ -185,7 +185,6 @@ def userAgreement():
     data = request.data
     data = {
         "data": [
-            "¯\_(ツ)_/¯"
         ],
         "version": "4.0.0"
     }
