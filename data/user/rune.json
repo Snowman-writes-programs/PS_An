@@ -1,5 +1,9 @@
 {
-    "chosenCrisis": "cc12",
-    "chosenRisks": [],
-    "totalRisks": 0
+    "mapId": "crisis_v2_01-01",
+    "runeSlots": [
+        "node_2",
+        "node_3",
+        "node_11",
+        "node_12"
+    ]
 }
