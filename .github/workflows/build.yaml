@@ -1,4 +1,10 @@
-on: push
+on: 
+  schedule:
+    - cron: '53 20,8 * * *'
+  push:
+
+  workflow-dispatch:
+
 
 jobs:
   win:
