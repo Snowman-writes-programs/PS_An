@@ -4,7 +4,7 @@ It's a pity that DoctoratePy is no longer maintained. Therefore, this repo aims 
 
 Python server implementation of a certain anime tower defense game. This repo is for the CN TapTap Version.
 
-Discord: [https://discord.com/invite/SmuB88RR5W](https://discord.com/invite/SmuB88RR5W)
+[Discord Server](https://discord.com/invite/SmuB88RR5W)
 
 ## Currently tested emulator to be working
 
@@ -39,7 +39,7 @@ Discord: [https://discord.com/invite/SmuB88RR5W](https://discord.com/invite/SmuB
 6. Run `start_frida-hook.bat`. It should automatically open up the game. The window should stay open if no error occurs.
 
 ## Changing contengency contract season
-Change the value of key `selectedCrisis` in `config\config.json` to whatever you want. The avaiable seasons are under `data\crisis`.
+Change the value of key `selectedCrisisV2` in `config\config.json` to whatever you want. The avaiable seasons are under `data\crisisV2`.
 
 ## Customizing indivual operators level, potentials, skill ranks and others
 Customize each operator indivually by adding new info in `customUnitInfo` key in `config\config.json`. You can find <operator_key_name> from [here](https://raw.githubusercontent.com/Kengxxiao/ArknightsGameData/master/zh_CN/gamedata/excel/character_table.json). By default, all characters will have max level, max potentials, max mastery.
