@@ -263,6 +263,11 @@
             "charId": "char_1029_yato2",
             "skillIndex": 2,
             "currentEquip": "uniequip_002_yato2"
-        }
+        },
+        {
+            "charId": "char_136_hsguma",
+            "skillIndex": 1,
+            "currentEquip": "uniequip_003_hsguma"
+        },
     ]
 }
