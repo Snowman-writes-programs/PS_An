@@ -1,8 +1,10 @@
 /adb.zip
+/.code
 /frida-server-*.xz
 /_.static.js
 # User files
 TestLevel/
+
 
 data/user/user.json
 data/crisis/test.json
