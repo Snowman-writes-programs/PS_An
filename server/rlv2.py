@@ -8,7 +8,27 @@ import random
 
 
 def rlv2GiveUpGame():
-    return {"result": "ok", "playerDataDelta": {"modified": {"rlv2": {"current": {"player": None, "record": None, "map": None, "troop": None, "inventory": None, "game": None, "buff": None, "module": None}}}, "deleted": {}}}
+    return 
+    {"result": "ok", 
+    "playerDataDelta": 
+        {"modified": 
+            {"rlv2": 
+                {"current": 
+                    {
+                        "player": None, 
+                        "record": None, 
+                        "map": None, 
+                        "troop": None, 
+                        "inventory": None, 
+                        "game": None, 
+                        "buff": None, 
+                        "module": None
+                        }
+                    }
+                },
+                 "deleted": {}
+                }
+            }
 
 
 def getChars():
@@ -125,7 +145,7 @@ def rlv2CreateGame():
                     "current": 10000,
                     "max": 10000
                 },
-                "gold": 8,
+                "gold": 450,
                 "shield": 0,
                 "capacity": 13,
                 "population": {
