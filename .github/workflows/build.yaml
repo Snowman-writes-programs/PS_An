@@ -1,9 +1,8 @@
-on: 
-  schedule:
-    - cron: '53 20,8 * * *'
+on:
   push:
-
-  workflow-dispatch:
+    branches:
+      - master
+  workflow_dispatch:
 
 
 jobs:
