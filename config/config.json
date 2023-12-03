@@ -283,6 +283,16 @@
             "charId": "char_245_cello",
             "skillIndex": 2,
             "currentEquip": null 
+        },
+        {
+            "charId": "char_4088_hodrer",
+            "skillIndex": 2,
+            "currentEquip": null 
+        },
+        {
+            "charId": "char_377_gdglow",
+            "skillIndex": 2,
+            "currentEquip": null
         }
     ]
 }
