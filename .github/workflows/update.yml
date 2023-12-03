@@ -15,7 +15,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           ref: master
       - uses: actions/setup-python@v4
@@ -26,7 +26,7 @@ jobs:
       - run: python update_game.py
       - run: rm -rf data/excel/
       - run: mkdir -p tmp/
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           repository: Kengxxiao/ArknightsGameData
           path: tmp/
