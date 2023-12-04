@@ -13,4 +13,4 @@ cd ArknightsGameData/
 git sparse-checkout set --no-cone zh_CN/gamedata/excel/
 git checkout
 
-rm -r ArknightsGameData/
+git rm --cached ArknightsGameData
