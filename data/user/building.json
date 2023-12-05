@@ -2364,6 +2364,25 @@
             },
             "workTime": 0
         },
+        "194": {
+            "charId": "char_194_leto",
+            "lastApAddTime": 1695000000,
+            "ap": 8640000,
+            "roomSlotId": "",
+            "index": -1,
+            "changeScale": 0,
+            "bubble": {
+                "normal": {
+                    "add": -1,
+                    "ts": 0
+                },
+                "assist": {
+                    "add": -1,
+                    "ts": 0
+                }
+            },
+            "workTime": 0
+        },
         "4083": {
             "charId": "char_4083_chimes",
             "lastApAddTime": 1695000000,
@@ -3411,6 +3430,25 @@
         },
         "449": {
             "charId": "char_449_glider",
+            "lastApAddTime": 1695000000,
+            "ap": 8640000,
+            "roomSlotId": "",
+            "index": -1,
+            "changeScale": 0,
+            "bubble": {
+                "normal": {
+                    "add": -1,
+                    "ts": 0
+                },
+                "assist": {
+                    "add": -1,
+                    "ts": 0
+                }
+            },
+            "workTime": 0
+        },
+        "4114": {
+            "charId": "char_4114_harold",
             "lastApAddTime": 1695000000,
             "ap": 8640000,
             "roomSlotId": "",
@@ -5900,6 +5938,25 @@
         },
         "4009": {
             "charId": "char_4009_irene",
+            "lastApAddTime": 1695000000,
+            "ap": 8640000,
+            "roomSlotId": "",
+            "index": -1,
+            "changeScale": 0,
+            "bubble": {
+                "normal": {
+                    "add": -1,
+                    "ts": 0
+                },
+                "assist": {
+                    "add": -1,
+                    "ts": 0
+                }
+            },
+            "workTime": 0
+        },
+        "4116": {
+            "charId": "char_4116_blkkgt",
             "lastApAddTime": 1695000000,
             "ap": 8640000,
             "roomSlotId": "",
@@ -11941,6 +11998,142 @@
             "count": 9999,
             "inUse": 0
         },
+        "furni_postOffice_cabinet_01": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_postOffice_tapestry_01": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_postOffice_cabinet_02": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_postOffice_cabinet_03": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_postOffice_scale_01": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_postOffice_ceilingLights_01": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_postOffice_cabinet_04": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_postOffice_mailBox_01": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_postOffice_carpet_01": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_postOffice_chair_01": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_postOffice_decor_01": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_postOffice_desk_01": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_postOffice_pillar_01": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_postOffice_hangSheet_01": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_postOffice_bed_01": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_postOffice_bag_01": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_postOffice_stove_01": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_postOffice_wallpaper_01": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_postOffice_floor_01": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_laundry_signboard_01": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_laundry_washer_01": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_laundry_basket_01": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_laundry_longchair_01": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_laundry_newspaper_01": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_laundry_poor_01": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_laundry_shelf_01": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_laundry_desk_01": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_laundry_cart_01": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_laundry_highchair_01": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_laundry_longdesk_01": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_laundry_plant_01": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_laundry_carpet_01": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_laundry_wallpaper_01": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_laundry_floor_01": {
+            "count": 9999,
+            "inUse": 0
+        },
         "furni_oct1st_deckChair_01": {
             "count": 9999,
             "inUse": 0
@@ -12606,6 +12799,10 @@
             "inUse": 0
         },
         "furni_terratimes_Leithanien_01": {
+            "count": 9999,
+            "inUse": 0
+        },
+        "furni_terratimes_Kjerag_01": {
             "count": 9999,
             "inUse": 0
         },
